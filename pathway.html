@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目进阶路径 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<style>
+  .hub-nav { gap: 10px; }
+  .hub-nav a { font-size: 13px; }
+  @media (max-width: 720px) { .hub-nav { gap: 8px; } .hub-nav a { font-size: 12px; } }
+
+  /* 阶段流水线 */
+  .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+  .flow .step {
+    flex: 1 1 150px; min-width: 140px; background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 14px 14px 12px; box-shadow: var(--shadow);
+    border-top: 3px solid var(--accent); position: relative;
+  }
+  .flow .step .n { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .5px; }
+  .flow .step h4 { margin: 4px 0 6px; font-size: 14.5px; color: var(--ink); }
+  .flow .step p { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+  .flow .step .go { display:inline-block; margin-top: 8px; font-size: 11.5px; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .flow .step .go:hover { text-decoration: underline; }
+
+  /* 路径卡 */
+  .path-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px; }
+  .path-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px 16px; box-shadow: var(--shadow); border-left: 5px solid var(--accent); }
+  .path-card .ph { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .path-card .ph .emoji { font-size: 28px; }
+  .path-card .ph h3 { margin: 0; font-size: 17px; color: var(--ink); }
+  .path-card .meta { font-size: 11.5px; color: var(--muted); margin-bottom: 10px; }
+  .path-card ol { margin: 0; padding-left: 18px; }
+  .path-card ol li { font-size: 13px; line-height: 1.7; color: var(--ink); margin-bottom: 2px; }
+  .path-card ol li b { color: var(--accent); }
+  .path-card ol li a { color: var(--accent); text-decoration: none; }
+  .path-card ol li a:hover { text-decoration: underline; }
+  .path-card .time { margin-top: 10px; font-size: 11.5px; font-weight: 600; color: var(--muted); }
+
+  /* 选路决策 */
+  .pick { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .pick .pc { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
+  .pick .pc h4 { margin: 0 0 6px; font-size: 14px; color: var(--accent); }
+  .pick .pc p { margin: 0; font-size: 12.8px; color: var(--muted); line-height: 1.6; }
+  .pick .pc code { background: var(--accent-soft); color: var(--accent); padding: 1px 5px; border-radius: 4px; font-size: 11.5px; }
+</style>
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links hub-nav">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html">API</a>
+    <a href="playbook.html">实战</a>
+    <a href="pathway.html" class="active">进阶</a>
+    <a href="roadmap.html">规划</a>
+    <a href="index.html">Kaggle 站</a>
+    <a href="search.html">🔍 搜索</a>
+  </span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🧭 项目进阶路径</h1>
+    <p>把枢纽的 8 大资源（数据集 / 模型 / 技术栈 / AI 编码 / 智能体 / 模板 / API / 实战）串成<strong>可执行的进阶流程</strong>——从"想要做一个东西"到"上线一个产品"，每一步该看哪里、用什么。</p>
+  </div>
+
+  <div class="note">
+    <strong>本页定位：</strong>这是 vibecoding 时代的「项目进阶地图」。它不是又一个清单，而是一条<strong>流水线</strong>——你顺着阶段走，每个阶段都指向枢纽里对应的子站资源，避免在不同工具间反复迷失上下文。
+  </div>
+
+  <div class="section">
+    <h2>通用 8 阶段流水线 <span class="hint">任何 vibecoding 项目都大致遵循这条主线</span></h2>
+    <div class="flow">
+      <div class="step">
+        <div class="n">01 · 想法</div>
+        <h4>定义目标</h4>
+        <p>用一句话说清"为谁解决什么问题"。模糊的需求是项目失败的首要原因。</p>
+        <a class="go" href="playbook.html">🎯 实战案例参考 →</a>
+      </div>
+      <div class="step">
+        <div class="n">02 · 数据</div>
+        <h4>找数据集</h4>
+        <p>数据驱动型项目先定数据：本地 13 数据集可直接玩，远程 648 看画像。</p>
+        <a class="go" href="datasets.html">📊 数据集中心 →</a>
+      </div>
+      <div class="step">
+        <div class="n">03 · 技术栈</div>
+        <h4>选技术栈</h4>
+        <p>前端 / 后端 / 数据库 / DevOps / AI·ML，按场景选型，不盲目追新。</p>
+        <a class="go" href="stacks.html">🏗 技术栈百科 →</a>
+      </div>
+      <div class="step">
+        <div class="n">04 · 编码</div>
+        <h4>AI 辅助编码</h4>
+        <p>Cursor / Copilot / Claude Code 写骨架，Prompt 工程决定上限。</p>
+        <a class="go" href="ai-coding.html">🧠 AI 编码工具箱 →</a>
+      </div>
+      <div class="step">
+        <div class="n">05 · 智能</div>
+        <h4>接智能体</h4>
+        <p>需要多步自主执行时上 Agent：LangGraph / CrewAI / ReAct 范式。</p>
+        <a class="go" href="agents.html">🦾 智能体框架 →</a>
+      </div>
+      <div class="step">
+        <div class="n">06 · 模板</div>
+        <h4>套脚手架</h4>
+        <p>全栈 / AI 应用 / 数据管线 / API 模板，省去重复搭地基。</p>
+        <a class="go" href="templates.html">📐 项目模板 →</a>
+      </div>
+      <div class="step">
+        <div class="n">07 · 能力</div>
+        <h4>接外部 API</h4>
+        <p>支付 / 通信 / 数据 / AI 模型 API，给产品接上真实世界能力。</p>
+        <a class="go" href="apis.html">🔌 公共 API 目录 →</a>
+      </div>
+      <div class="step">
+        <div class="n">08 · 上线</div>
+        <h4>部署与复盘</h4>
+        <p>版本控制 + CI + 托管；密钥存钥匙串、数据不入库、成本控制。</p>
+        <a class="go" href="playbook.html#best">✅ 最佳实践 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4 条典型进阶路径 <span class="hint">按你的角色和起点选一条，照着走</span></h2>
+    <div class="path-grid">
+
+      <div class="path-card">
+        <div class="ph"><span class="emoji">🌟</span><h3>零基础入门者</h3></div>
+        <div class="meta">目标：30 分钟内做出第一个能访问的网站</div>
+        <ol>
+          <li><b>想法</b>：照 <a href="playbook.html">实战案例①</a>「个人作品集博客」定目标。</li>
+          <li><b>技术栈</b>：选 <a href="stacks.html">Next.js + Vercel</a>（零运维部署）。</li>
+          <li><b>编码</b>：用 <a href="ai-coding.html">Cursor / Copilot</a> 生成页面骨架。</li>
+          <li><b>模板</b>：套 <a href="templates.html">Next.js 全栈模板</a> 起步。</li>
+          <li><b>上线</b>：按 <a href="playbook.html#best">部署最佳实践</a> 推 Vercel。</li>
+        </ol>
+        <div class="time">⏱ 预计 30–45 分钟 · 难度 ★☆☆</div>
+      </div>
+
+      <div class="path-card">
+        <div class="ph"><span class="emoji">📊</span><h3>数据科学 / ML</h3></div>
+        <div class="meta">目标：用真实数据做一个可交互的分析产品</div>
+        <ol>
+          <li><b>数据</b>：从 <a href="datasets.html">数据集中心</a> 选本地数据集（wine / iris / students）。</li>
+          <li><b>可视化</b>：看 <a href="datasets.html">详情页「⑩ 数据可视化」</a> 派生分布。</li>
+          <li><b>技术栈</b>：<a href="stacks.html">pandas + Streamlit</a> 做看板。</li>
+          <li><b>模板</b>：用 <a href="templates.html">数据管线模板</a>。</li>
+          <li><b>实战</b>：参考 <a href="playbook.html">实战案例③</a>「交互数据看板」。</li>
+        </ol>
+        <div class="time">⏱ 预计 45 分钟–1 小时 · 难度 ★★☆</div>
+      </div>
+
+      <div class="path-card">
+        <div class="ph"><span class="emoji">🤖</span><h3>AI 应用开发者</h3></div>
+        <div class="meta">目标：做一个 RAG 问答或自动化 Agent</div>
+        <ol>
+          <li><b>模型</b>：从 <a href="models.html">模型中心</a> 选 LLM（OpenAI / Claude / Ollama 本地）。</li>
+          <li><b>编码</b>：用 <a href="ai-coding.html">RAG + Prompt 模式</a> 搭检索。</li>
+          <li><b>智能体</b>：上 <a href="agents.html">LangGraph / CrewAI</a> 做多步编排。</li>
+          <li><b>API</b>：接 <a href="apis.html">OpenAI + 向量库（Pinecone / Qdrant）</a>。</li>
+          <li><b>模板+实战</b>：<a href="templates.html">RAG 模板</a> + <a href="playbook.html">实战②③</a>。</li>
+        </ol>
+        <div class="time">⏱ 预计 1–2 小时 · 难度 ★★★</div>
+      </div>
+
+      <div class="path-card">
+        <div class="ph"><span class="emoji">🏗</span><h3>全栈工程师</h3></div>
+        <div class="meta">目标：生产级服务（前端 + API + 数据库 + 部署）</div>
+        <ol>
+          <li><b>技术栈</b>：<a href="stacks.html">React + FastAPI + PostgreSQL + Docker</a> 组合。</li>
+          <li><b>模板</b>：套 <a href="templates.html">微服务 / API 服务模板</a>。</li>
+          <li><b>编码</b>：<a href="ai-coding.html">AI 辅助 + 代码审查</a> 提速。</li>
+          <li><b>API</b>：接 <a href="apis.html">Stripe（支付）/ Twilio（通信）</a>。</li>
+          <li><b>上线</b>：<a href="playbook.html#best">部署与成本控制</a> 最佳实践。</li>
+        </ol>
+        <div class="time">⏱ 预计 2–4 小时 · 难度 ★★★</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>怎么选路 <span class="hint">对号入座，别硬套</span></h2>
+    <div class="pick">
+      <div class="pc">
+        <h4>我只会说需求，不会写代码</h4>
+        <p>走 <b>🌟 入门者</b> 或 <b>📊 数据科学</b>。先让 AI 生成骨架，你只做审查和描述。模板能省掉 80% 搭地基工作。</p>
+      </div>
+      <div class="pc">
+        <h4>我有数据，想做个东西</h4>
+        <p>走 <b>📊 数据科学</b>。先在本站 <a href="datasets.html">数据集中心</a> 确认数据形态，再选 pandas/Streamlit 看板路线。</p>
+      </div>
+      <div class="pc">
+        <h4>我想做"会思考"的产品</h4>
+        <p>走 <b>🤖 AI 应用</b>。模型 → RAG → Agent → API 四步，<a href="agents.html">智能体框架</a> 页帮你选型。</p>
+      </div>
+      <div class="pc">
+        <h4>我要做能赚钱的服务</h4>
+        <p>走 <b>🏗 全栈</b>。重点在 <a href="apis.html">支付/通信 API</a> 与 <a href="playbook.html#best">部署成本控制</a>，别让账单失控。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>案例解析：把路径走一遍 <span class="hint">照着做，别空想</span></h2>
+    <div class="results">
+
+      <div class="result">
+        <h4>🤖 走「AI 应用」路径做 RAG 知识库</h4>
+        <p><b>① 选模型：</b>看 <a href="models.html#cases">模型·企业 RAG 案例</a>——BGE 本地 Embedding + Cohere Rerank + GPT-4o。</p>
+        <p><b>② 套模板：</b>用 <a href="templates.html#cases">模板·文档问答案例</a> 的 RAG 脚手架，只换数据源。</p>
+        <p><b>③ 接 API：</b>按 <a href="apis.html#cases">API·知识库案例</a> 接 Jina Reader + pgvector + Claude。</p>
+        <p><b>④ 写代码：</b>用 <a href="ai-coding.html#cases">AI 编码·RAG+Reflection</a> 的 Prompt 模式降低幻觉。</p>
+        <p><b>解析：</b>四个子站的案例板块在此串成一条线——你不再需要在工具间反复切换上下文。</p>
+      </div>
+
+      <div class="result">
+        <h4>📊 走「数据科学」路径做交互看板</h4>
+        <p><b>① 取数据：</b>从 <a href="datasets.html">数据集中心</a> 选本地 wine/iris，看详情页「⑩ 可视化」派生分布。</p>
+        <p><b>② 选技术栈：</b>参考 <a href="stacks.html#cases">技术栈·实时看板案例</a>，轻量版用 pandas + Streamlit。</p>
+        <p><b>③ 套模板：</b>用 <a href="templates.html#cases">模板·ETL 案例</a> 做清洗，再接 Streamlit 渲染。</p>
+        <p><b>④ 避坑：</b>遵循 <a href="playbook.html">实战·常见陷阱</a>：数据不入库、先小样再全量。</p>
+        <p><b>解析：</b>数据型项目最短路径就是「本地数据集 + 轻量栈 + 看板模板」，30 分钟出活。</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>后续计划 <span class="hint">升级路线不遗漏</span></h2>
+    <div class="vision-grid">
+      <div class="vision-card">
+        <h4>✅ 子站内锚点（已完成）</h4>
+        <p>各子站已加 <code>id="cases"</code> 锚点，本页「案例解析」与路径步骤已可一键跳到对应案例板块（如 <a href="models.html#cases">模型案例</a> / <a href="apis.html#cases">API 案例</a>）。</p>
+      </div>
+      <div class="vision-card">
+        <h4>🎚 难度分级</h4>
+        <p>为每条路径标注前置知识与可选加速包，并补充"进阶路径"：插件 → 多 Agent 协作 → 微调自有模型。</p>
+      </div>
+      <div class="vision-card">
+        <h4>🧭 交互式选路器</h4>
+        <p>用几个选择题（角色 / 目标 / 时间）动态生成专属路径，并联动 <a href="search.html">全局搜索</a> 预填关键词。</p>
+      </div>
+      <div class="vision-card">
+        <h4>📦 可复制仓库</h4>
+        <p>为每条路径配 GitHub 模板仓库 + 一键部署脚本，点"开始"即拉起脚手架（v3.2 子站内容深化一并推进）。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>当前状态：</strong>本页（v2.19）将枢纽 8 大资源串成 1 条通用流水线 + 4 条典型路径 + 2 个「案例解析」走查，所有链接指向已上线子站。
+    已完成：子站 <code>#cases</code> 锚点深链。「案例解析」把各子站案例板块串成可执行的端到端示例。
+    尚未做：交互式选路器、可复制仓库（见上方「后续计划」）。
+    <strong>未推送 GitHub</strong>，本地开发中。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · v2.19 已上线 · 数据不入库 · 凭证存钥匙串 · <a href="roadmap.html" style="color:var(--muted)">版本规划</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='pathway.html',enPage='pathway_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智能体框架 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦾</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html" class="active">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html">API</a>
+    <a href="roadmap.html">规划</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🦾 智能体框架</h1>
+    <p>AI Agent 开发框架与设计范式 · ReAct / Plan-Execute / Tool Use / 多智能体协作</p>
+  </div>
+
+  <div class="section">
+    <h2>Agent 框架 <span class="hint">从单工具调用到多智能体协作</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">框架</th><th style="width:12%">语言</th><th style="width:10%">GitHub ★</th><th>核心特点 / 适用场景</th><th style="width:12%">许可证</th></tr></thead>
+      <tbody>
+        <tr><td><b>LangGraph</b></td><td>Python / JS</td><td>10K+</td><td>LangChain 出品，状态机 + 图结构编排 Agent 流程，支持循环 / 分支 / 人机协作 / 持久化</td><td>MIT</td></tr>
+        <tr><td><b>CrewAI</b></td><td>Python</td><td>25K+</td><td>角色驱动多智能体协作，Crew + Agent + Task 模型，简洁 API，适合业务流程自动化</td><td>MIT</td></tr>
+        <tr><td><b>AutoGen</b></td><td>Python</td><td>40K+</td><td>微软出品，多智能体对话框架，GroupChat + 可编程 Agent，支持代码执行 + 人工介入</td><td>MIT</td></tr>
+        <tr><td><b>OpenAI Swarm</b></td><td>Python</td><td>18K+</td><td>极简多 Agent 编排（实验性），Handoff 机制 + 轻量 Routine，概念验证和学习用</td><td>MIT</td></tr>
+        <tr><td><b>MetaGPT</b></td><td>Python</td><td>45K+</td><td>多 Agent 软件开发模拟（PM / 架构师 / 工程师），输入需求→输出完整项目</td><td>MIT</td></tr>
+        <tr><td><b>AutoGPT</b></td><td>Python</td><td>168K+</td><td>最早的自主 Agent，目标驱动 + 自主规划 + 工具调用，概念验证里程碑</td><td>MIT</td></tr>
+        <tr><td><b>AgentScope</b></td><td>Python</td><td>5K+</td><td>阿里出品，分布式多 Agent 框架，中文文档友好，支持本地 / 分布式部署</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Pydantic AI</b></td><td>Python</td><td>6K+</td><td>类型安全 Agent 框架，Pydantic 团队出品，强类型 + 结构化输出 + 多模型支持</td><td>MIT</td></tr>
+        <tr><td><b>Smolagents</b></td><td>Python</td><td>10K+</td><td>HuggingFace 出品，极简 Agent（<1000 行），Code Agent 范式（直接写 Python 代码作为 Action）</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Mastra</b></td><td>TypeScript</td><td>10K+</td><td>TypeScript Agent 框架，Workflow + Agent + Memory + RAG，前端全栈友好</td><td>MIT</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Agent 设计范式 <span class="hint">核心模式与适用场景</span></h2>
+    <table>
+      <thead><tr><th style="width:16%">范式</th><th style="width:12%">复杂度</th><th>流程</th><th style="width:18%">适用场景</th></tr></thead>
+      <tbody>
+        <tr><td><b>ReAct</b></td><td>中</td><td>Thought → Action → Observation → Thought → ... → Answer</td><td>通用 Agent / 工具调用 / 信息检索</td></tr>
+        <tr><td><b>Plan-and-Execute</b></td><td>高</td><td>先规划完整步骤列表 → 逐步执行 → 根据结果调整计划</td><td>复杂任务 / 多步骤工作流 / 项目级任务</td></tr>
+        <tr><td><b>Tool Use</b></td><td>低</td><td>模型输出 Function Call → 执行工具 → 结果回传模型</td><td>API 调用 / 数据库查询 / 代码执行</td></tr>
+        <tr><td><b>Reflection</b></td><td>中</td><td>生成 → 自我评估 → 修正 → 再生成，迭代提升质量</td><td>代码生成 / 文案写作 / 质量敏感任务</td></tr>
+        <tr><td><b>Memory</b></td><td>高</td><td>短期（对话上下文）+ 长期（向量库 / 知识图谱）记忆管理</td><td>长期对话 / 个人助手 / 知识积累</td></tr>
+        <tr><td><b>Multi-Agent</b></td><td>高</td><td>多角色分工协作（如 PM / 开发 / 测试），通过消息传递协调</td><td>软件开发 / 复杂研究 / 角色扮演</td></tr>
+        <tr><td><b>Human-in-the-Loop</b></td><td>中</td><td>Agent 执行关键步骤时暂停，等待人类审批后继续</td><td>高风险操作 / 合规审查 / 用户体验</td></tr>
+        <tr><td><b>Code Agent</b></td><td>中</td><td>模型直接生成 Python 代码作为 Action，而非 JSON Function Call</td><td>数据分析 / 灵活工具组合 / 复杂逻辑</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Agent 关键组件 <span class="hint">构建生产级 Agent 的基础设施</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>🧠 推理引擎</h4>
+        <p>LLM 作为 Agent 大脑：GPT-4o / Claude 3.5 / Llama 3.1 / DeepSeek V3。选型维度：推理能力 / 工具调用 / 上下文长度 / 成本。</p>
+      </div>
+      <div class="result">
+        <h4>🔧 工具集成</h4>
+        <p>Function Calling / MCP (Model Context Protocol) / 自定义 Tools。MCP 是 Anthropic 提出的通用工具协议，正在成为标准。</p>
+      </div>
+      <div class="result">
+        <h4>💾 记忆系统</h4>
+        <p>短期：对话窗口 / Scratchpad。长期：向量数据库（Qdrant / pgvector）+ 知识图谱。工具：Mem0 / Zep / Letta。</p>
+      </div>
+      <div class="result">
+        <h4>📋 任务规划</h4>
+        <p>任务分解（Task Decomposition）+ 依赖管理 + 状态追踪。工具：LangGraph State / CrewAI Tasks / AutoGen GroupChat。</p>
+      </div>
+      <div class="result">
+        <h4>👁 可观测性</h4>
+        <p>Trace 每一步推理 / 工具调用 / Token 消耗。工具：LangSmith / Phoenix / Langfuse / Weave。</p>
+      </div>
+      <div class="result">
+        <h4>🛡 安全防护</h4>
+        <p>Prompt Injection 防御 / 输出过滤 / 权限控制 / 审计日志。工具：Guardrails AI / NeMo Guardrails / Llama Guard。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>案例展示与解析 <span class="hint">框架选型 + 架构权衡</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>🎧 LangGraph 客服 Agent <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>多轮客服，需要查订单、走退款流程、敏感操作人工介入。</p>
+        <p><b>选型：</b><b>LangGraph</b>(状态机 + 图编排)，因支持循环/分支/持久化与 Human-in-the-Loop。</p>
+        <p><b>步骤：</b>① 定义 State(对话/上下文/工具结果) ② 节点：意图识别→工具调用→回答 ③ 退款等高风险节点加 <code>interrupt_before</code> 人工审批 ④ 用 Checkpointer 持久化。</p>
+        <p><b>解析：</b>图结构比线性链更适合有「回退/分支」的业务流；持久化让对话可恢复。<a href="templates.html">模板</a>「Agent 应用」即此架构。</p>
+      </div>
+      <div class="result">
+        <h4>📝 CrewAI 自动周报 <span class="status badge b-ok">入门</span></h4>
+        <p><b>场景：</b>每周五汇总 Git/Issue 进展成结构化周报，发给团队。</p>
+        <p><b>选型：</b><b>CrewAI</b>(角色驱动多 Agent)，API 简洁，适合「研究员+写手」分工。</p>
+        <p><b>步骤：</b>① Researcher Agent 拉 GitHub/Issue 数据 ② Writer Agent 据模板成文 ③ Crew 顺序执行 ④ 定时触发(Cron/n8n)。</p>
+        <p><b>解析：</b>多角色把「收集」与「表达」解耦，输出更聚焦；比单 Agent 一步到位更可控。<a href="playbook.html">实战案例</a>「周报 Agent」即此。</p>
+      </div>
+      <div class="result">
+        <h4>🔍 AutoGen 代码评审 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>PR 提交后自动多视角审查（安全/性能/可读性）。</p>
+        <p><b>选型：</b><b>AutoGen</b> GroupChat，多 Agent 对话辩论，微软出品、可编程。</p>
+        <p><b>步骤：</b>① 建 Reviewer/security/perf 三个 Agent ② GroupChat 轮流发言给意见 ③ 汇总成评审报告 ④ 接 GitHub Action 评论 PR。</p>
+        <p><b>解析：</b>多 Agent 辩论能互相纠错，比单轮评审更全面；但 token 成本更高，适合关键 PR 而非每次提交。</p>
+      </div>
+      <div class="result">
+        <h4>🧭 架构解析：ReAct vs Plan-Execute <span class="status badge b-ok">深度</span></h4>
+        <p><b>选型逻辑：</b>任务可一步工具解决 → <b>Tool Use</b>；需边想边搜 → <b>ReAct</b>；步骤多且可预判 → <b>Plan-and-Execute</b>。</p>
+        <p><b>步骤：</b>① 评估任务不确定性 ② 低不确定用 Plan 先列全步骤再执行(省 token) ③ 高不确定用 ReAct 边走边调。</p>
+        <p><b>解析：</b>Plan-Execute 在稳定任务上更省、更可预测；ReAct 在探索型任务(检索/调试)上更鲁棒。误用会浪费成本或失控——这是 <a href="ai-coding.html">AI 编码</a>「成本感知」的延伸。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>后续计划：</strong>Agent 架构图解、各框架代码示例对比、生产部署 Checklist、Agent 评测基准（GAIA / SWE-bench / WebArena）。本页「案例展示与解析」已于 v2.19 补充。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · 智能体框架 · v3.4 已上线 · <a href="hub.html" style="color:var(--muted)">返回枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='agents.html',enPage='agents_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

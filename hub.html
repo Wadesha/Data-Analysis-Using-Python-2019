@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibecoding 资源枢纽 · 项目门户</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<style>
+  .hub-nav { gap: 10px; }
+  .hub-nav a { font-size: 13px; }
+  .sub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .sub-card {
+    display: block; background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 20px 18px; box-shadow: var(--shadow);
+    transition: .15s; color: var(--ink); text-decoration: none;
+    border-top: 4px solid var(--accent);
+  }
+  .sub-card:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(31,35,40,.12); }
+  .sub-card .icon { font-size: 32px; margin-bottom: 8px; }
+  .sub-card h3 { margin: 0 0 6px; font-size: 17px; color: var(--ink); }
+  .sub-card p { margin: 0 0 10px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .sub-card .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .sub-card .tags span { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+  .sub-card .status { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; margin-left: 6px; }
+  .vision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .vision-card { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
+  .vision-card h4 { margin: 0 0 6px; font-size: 14.5px; color: var(--accent); }
+  .vision-card p { margin: 0; font-size: 12.8px; color: var(--muted); line-height: 1.6; }
+  @media (max-width: 720px) { .sub-grid { grid-template-columns: 1fr; } .hub-nav { gap: 8px; } .hub-nav a { font-size: 12px; } }
+</style>
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links hub-nav">
+    <a href="hub.html" class="active">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html">API</a>
+    <a href="playbook.html">实战</a>
+    <a href="pathway.html">进阶</a>
+    <a href="roadmap.html">规划</a>
+    <a href="index.html">Kaggle 站</a>
+    <a href="search.html">🔍 搜索</a>
+  </span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🚀 Vibecoding 资源枢纽</h1>
+    <p>面向 AI 辅助开发时代的全栈资源门户 · 数据集 / 模型 / 技术栈 / AI 编码工具 / 智能体框架 / 项目模板 / 公共 API / 实战案例</p>
+    <form class="hub-search" action="search.html" method="get">
+      <input type="search" name="q" placeholder="🔍 跨全站检索：数据集 / 模型 / 技术栈 / 实战案例…" autocomplete="off" />
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="num">9</div><div class="label">子站点</div></div>
+    <div class="stat"><div class="num">661</div><div class="label">数据集</div></div>
+    <div class="stat"><div class="num">50+</div><div class="label">技术栈收录</div></div>
+    <div class="stat"><div class="num">20+</div><div class="label">AI 编码工具</div></div>
+    <div class="stat"><div class="num">15+</div><div class="label">智能体框架</div></div>
+    <div class="stat"><div class="num">100+</div><div class="label">公共 API</div></div>
+    <div class="stat"><div class="num">4</div><div class="label">进阶路径</div></div>
+  </div>
+
+  <div class="section">
+    <h2>子站点导航 <span class="hint">点击卡片进入对应子站</span></h2>
+    <div class="sub-grid">
+
+      <a class="sub-card" href="datasets.html">
+        <div class="icon">📊</div>
+        <h3>数据集中心<span class="status badge b-ok">已上线</span></h3>
+        <p>661 个 Kaggle 公开数据集（13 本地 + 648 远程），九段卡片详情 + 派生可视化 + 真实基准溯源。本项目起点。</p>
+        <div class="tags"><span>Kaggle</span><span>UCI</span><span>HuggingFace</span><span>OpenML</span></div>
+      </a>
+
+      <a class="sub-card" href="models.html">
+        <div class="icon">🤖</div>
+        <h3>模型中心<span class="status badge b-ok">已上线</span></h3>
+        <p>预训练模型注册与对比：HuggingFace / ModelScope / OpenAI / Anthropic / Google / Ollama，按任务类型（LLM / 视觉 / 语音 / 多模态）分类。</p>
+        <div class="tags"><span>LLM</span><span>Vision</span><span>Audio</span><span>本地部署</span></div>
+      </a>
+
+      <a class="sub-card" href="stacks.html">
+        <div class="icon">🏗</div>
+        <h3>技术栈百科<span class="status badge b-ok">已上线</span></h3>
+        <p>主流开发技术栈全景：前端 / 后端 / 数据库 / DevOps / 云平台 / AI·ML 库，含选型建议与对比。</p>
+        <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>K8s</span></div>
+      </a>
+
+      <a class="sub-card" href="ai-coding.html">
+        <div class="icon">🧠</div>
+        <h3>AI 编码工具箱<span class="status badge b-ok">已上线</span></h3>
+        <p>Vibecoding 核心工具：GitHub Copilot / Cursor / Claude Code / Windsurf / Codeium，含 Prompt 工程模式与 AI 原生开发实践。</p>
+        <div class="tags"><span>Copilot</span><span>Cursor</span><span>Prompt</span><span>RAG</span></div>
+      </a>
+
+      <a class="sub-card" href="agents.html">
+        <div class="icon">🦾</div>
+        <h3>智能体框架<span class="status badge b-ok">已上线</span></h3>
+        <p>AI Agent 开发框架与模式：LangGraph / CrewAI / AutoGPT / BabyAGI，含 ReAct / Plan-Execute / Tool Use 等设计范式。</p>
+        <div class="tags"><span>LangGraph</span><span>CrewAI</span><span>ReAct</span><span>Tool Use</span></div>
+      </a>
+
+      <a class="sub-card" href="templates.html">
+        <div class="icon">📐</div>
+        <h3>项目模板<span class="status badge b-ok">已上线</span></h3>
+        <p>vibecoding 时代开箱即用的项目脚手架：全栈 / AI 应用 / 数据管线 / API 服务，含一键启动配置。</p>
+        <div class="tags"><span>Next.js</span><span>RAG</span><span>ETL</span><span>Microservice</span></div>
+      </a>
+
+      <a class="sub-card" href="apis.html">
+        <div class="icon">🔌</div>
+        <h3>公共 API 目录<span class="status badge b-ok">已上线</span></h3>
+        <p>开发常用公共 API 汇总：AI/LLM / 数据 / 支付 / 通信 / 开发者工具，含认证方式、限额、定价参考。</p>
+        <div class="tags"><span>OpenAI</span><span>Stripe</span><span>GitHub</span><span>Twilio</span></div>
+      </a>
+
+      <a class="sub-card" href="playbook.html">
+        <div class="icon">🎯</div>
+        <h3>实战案例与最佳实践<span class="status badge b-ok">已上线</span></h3>
+        <p>零基础可上手的 6 个入门案例（博客 / RAG / 看板 / 插件 / 周报 Agent / 机器人）+ 7 条可复用的 Vibecoding 准则。</p>
+        <div class="tags"><span>入门案例</span><span>最佳实践</span><span>Spec-first</span><span>安全</span></div>
+      </a>
+
+      <a class="sub-card" href="pathway.html">
+        <div class="icon">🧭</div>
+        <h3>项目进阶路径<span class="status badge b-ok">已上线</span></h3>
+        <p>把 8 大资源串成可执行路线图：通用 8 阶段流水线 + 4 条典型路径（入门者 / 数据科学 / AI 应用 / 全栈），每步指向对应子站。</p>
+        <div class="tags"><span>进阶流程</span><span>选路决策</span><span>流水线</span><span>vibecoding</span></div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Vibecoding 时代 <span class="hint">为什么需要这个枢纽</span></h2>
+    <div class="vision-grid">
+      <div class="vision-card">
+        <h4>📋 什么是 Vibecoding</h4>
+        <p>由 Andrej Karpathy 提出，指通过自然语言描述需求、由 AI 生成代码的开发范式。开发者从"写代码"转向"描述意图 + 审查代码"。</p>
+      </div>
+      <div class="vision-card">
+        <h4>🎯 枢纽定位</h4>
+        <p>一站式资源门户：从数据→模型→技术栈→编码工具→智能体→模板→API→实战，覆盖 AI 辅助开发全链路，减少上下文切换。</p>
+      </div>
+      <div class="vision-card">
+        <h4>🔄 与 Kaggle 站的关系</h4>
+        <p>现有 Kaggle 数据集站点（<a href="index.html">index.html</a>）是枢纽的「数据集中心」子站，已上线 v2.14；其余子站随 v2.16 全部上线。</p>
+      </div>
+      <div class="vision-card">
+        <h4>📋 版本路线</h4>
+        <p>v2.15 英文内部测试 + 枢纽启动 → v2.16 产品首页 + 全子站上线（含实战案例）→ v3.0 深度收尾 → v4.0 部署。详见 <a href="roadmap.html">版本规划</a>。</p>
+      </div>
+      <div class="vision-card">
+        <h4>🔐 安全约束</h4>
+        <p>所有凭证（Kaggle API / GitHub PAT）存于 macOS 钥匙串，绝不入库；原始数据不入库；推送 GitHub 前需用户确认。</p>
+      </div>
+      <div class="vision-card">
+        <h4>🌐 双语策略</h4>
+        <p>中文为主、英文内部测试（<code>?beta=en</code> 访问）。英文版暂不前端展示，待内容完善后公开。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>当前状态：</strong>数据集中心已上线 v2.14（661 数据集 + 九段卡片 + 可视化 + 中英双语基础设施）；
+    v2.15 启动枢纽（英文内部测试 + Token 安全），v2.16 产品首页 + 模型 / 技术栈 / AI 编码 / 智能体 / 模板 / API / 实战 共 7 个子站全部上线，
+    v2.17 全站搜索，<strong>v2.18 项目进阶路径</strong>（把 9 个子站串成 1 条流水线 + 4 条典型路径）。
+    <strong>未推送 GitHub</strong>，本地开发中。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · v2.18 已上线 · 数据不入库 · 凭证存钥匙串 · <a href="roadmap.html" style="color:var(--muted)">版本规划</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='hub.html',enPage='hub_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

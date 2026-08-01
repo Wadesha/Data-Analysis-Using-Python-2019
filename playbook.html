@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实战案例与最佳实践 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html">API</a>
+    <a href="playbook.html" class="active">实战</a>
+    <a href="roadmap.html">规划</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🎯 实战案例与最佳实践</h1>
+    <p>从「会描述需求」到「能交付项目」· 6 个零基础可上手案例 + 7 条可复用的 Vibecoding 准则</p>
+  </div>
+
+  <div class="note">
+    <strong>怎么用本页：</strong>入门案例给你「照着做一遍」的最短路径，每个案例都标注了技术栈、耗时与可复用的枢纽资源；
+    最佳实践是你每次开新项目都应回看的检查清单。两者配合，避免「AI 生成了但跑不起来 / 上线即泄露」两类典型事故。
+  </div>
+
+  <div class="section">
+    <h2>入门案例 <span class="hint">零基础 · 30 分钟 ~ 2 小时可交付</span></h2>
+    <div class="results">
+
+      <div class="result">
+        <h4>🌟 个人作品集 / 博客 <span class="status badge b-ok">~30 分钟</span></h4>
+        <p><b>目标：</b>用 AI 生成一个响应式个人站并部署到公网。</p>
+        <p><b>技术栈：</b>Next.js (App Router) · Tailwind · Vercel · Cursor</p>
+        <p><b>步骤：</b>① 用 Cursor 生成 Next.js 骨架 → ② 描述布局让 AI 填充组件 → ③ 接 AI 写作助手生成文章 → ④ <code>vercel --prod</code> 一键部署。</p>
+        <p class="muted">复用：<a href="templates.html">模板</a>「Next.js 模板」· <a href="apis.html">API</a>「Vercel 部署」</p>
+      </div>
+
+      <div class="result">
+        <h4>📚 RAG 知识库问答 <span class="status badge b-ok">~1 小时</span></h4>
+        <p><b>目标：</b>上传文档，用自然语言提问得到基于文档的答案。</p>
+        <p><b>技术栈：</b>Python · LangChain · OpenAI/Claude · 向量库 (Qdrant/Pinecone) · Streamlit</p>
+        <p><b>步骤：</b>① 切分文档 + 向量化 → ② 建检索器 → ③ 拼「基于检索结果回答」的 Prompt → ④ 流式输出 → ⑤ 加 UI。</p>
+        <p class="muted">复用：<a href="ai-coding.html">AI 编码</a>「RAG 模式」· <a href="models.html">模型</a>「LLM」· <a href="apis.html">API</a>「向量库」</p>
+      </div>
+
+      <div class="result">
+        <h4>📊 交互数据看板 <span class="status badge b-ok">~45 分钟</span></h4>
+        <p><b>目标：</b>把一份 CSV 变成可筛选、可交互的仪表盘。</p>
+        <p><b>技术栈：</b>Python · pandas · Streamlit · 本项目 13 个本地数据集</p>
+        <p><b>步骤：</b>① 载入数据集 → ② 让 AI 写图表函数（柱/分布/缺失率）→ ③ 加筛选器与交互 → ④ 部署 Streamlit Cloud。</p>
+        <p class="muted">复用：<a href="datasets.html">数据集中心</a>「13 本地含图表」· <a href="dataset.html?id=rajyellow46/wine-quality">wine 示例</a></p>
+      </div>
+
+      <div class="result">
+        <h4>🔌 Chrome 插件（AI 总结） <span class="status badge b-ok">~1 小时</span></h4>
+        <p><b>目标：</b>选中网页文字，一键调用 LLM 生成摘要 / 翻译。</p>
+        <p><b>技术栈：</b>Manifest V3 · JavaScript · LLM API (OpenAI/DeepSeek)</p>
+        <p><b>步骤：</b>① 写 manifest + content script 捕获选区 → ② 调 LLM API → ③ 弹窗 UI 展示 → ④ 本地加载 (<code>chrome://extensions</code>) 测试。</p>
+        <p class="muted">复用：<a href="apis.html">API</a>「LLM」· <a href="agents.html">智能体</a>「Tool Use」</p>
+      </div>
+
+      <div class="result">
+        <h4>🤖 自动化周报 Agent <span class="status badge b-ok">~2 小时</span></h4>
+        <p><b>目标：</b>自动汇总本周 Git/Issue 进展，生成结构化周报。</p>
+        <p><b>技术栈：</b>n8n / CrewAI · GitHub API · LLM</p>
+        <p><b>步骤：</b>① 连 GitHub API 拉取提交/PR → ② 设计「分析员 + 写手」多角色 Agent → ③ 拼周报模板 → ④ 定时触发（每周五）。</p>
+        <p class="muted">复用：<a href="agents.html">智能体</a>「CrewAI / 多 Agent」· <a href="apis.html">API</a>「GitHub」</p>
+      </div>
+
+      <div class="result">
+        <h4>💬 Telegram / Slack 机器人 <span class="status badge b-ok">~1 小时</span></h4>
+        <p><b>目标：</b>用自然语言让机器人查数据 / 调 API / 发通知。</p>
+        <p><b>技术栈：</b>Python · python-telegram-bot · LLM · 任意后端 API</p>
+        <p><b>步骤：</b>① @BotFather 建 bot 拿 token → ② 写 message handler → ③ 接 LLM 理解意图 → ④ 部署 Railway（免费层）。</p>
+        <p class="muted">复用：<a href="apis.html">API</a>「Telegram / Slack」· <a href="models.html">模型</a>「LLM」</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>进阶案例 <span class="hint">有基础后挑战 · 2–4 小时</span></h2>
+    <div class="results">
+
+      <div class="result">
+        <h4>🎯 微调自有客服模型 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>目标：</b>通用 LLM 答不好你家业务术语，用领域数据定制一个小模型。</p>
+        <p><b>技术栈：</b>Python · PEFT · TRL · Unsloth · DeepEval · 本项目 13 数据集之一作训练样本</p>
+        <p><b>步骤：</b>① 整理问答对 SFT 数据 → ② Unsloth + LoRA 单卡训练 → ③ DeepEval 评测对比基线 → ④ 导出接推理。</p>
+        <p class="muted">复用：<a href="templates.html#cases">模板·微调案例</a> · <a href="models.html">模型·微调工具链</a> · <a href="datasets.html">数据集中心</a></p>
+      </div>
+
+      <div class="result">
+        <h4>🎨 多模态内容生成流水线 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>目标：</b>输入一篇文章，自动产出配图 + 语音播报 + 短视频。</p>
+        <p><b>技术栈：</b>GPT-4o Vision · SD/FLUX · OpenAI TTS · ffmpeg</p>
+        <p><b>步骤：</b>① LLM 拆脚本/写画面描述 → ② 文生图(本地 ComfyUI 省钱) → ③ TTS 配音 → ④ ffmpeg 合成视频。</p>
+        <p class="muted">复用：<a href="models.html#cases">模型·多模态案例</a> · <a href="apis.html#cases">API·语音转录案例</a></p>
+      </div>
+
+      <div class="result">
+        <h4>🗂 数据管线自动化 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>目标：</b>每天把多源 CSV 自动清洗、关联、生成可交互看板。</p>
+        <p><b>技术栈：</b>Python · Polars · DuckDB · Prefect · Streamlit · 本项目本地数据集</p>
+        <p><b>步骤：</b>① Prefect 编排每日任务 → ② Polars 清洗 + DuckDB 聚合 → ③ Streamlit 渲染 → ④ 异常用 Great Expectations 告警。</p>
+        <p class="muted">复用：<a href="templates.html#cases">模板·ETL 案例</a> · <a href="datasets.html">数据集中心</a> · <a href="stacks.html#cases">技术栈·实时看板</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>最佳实践 <span class="hint">每次开新项目都应回看的检查清单</span></h2>
+    <div class="results">
+
+      <div class="result">
+        <h4>📋 规格驱动（Spec-first）</h4>
+        <p>先写清楚「要做什么」（PRD / Spec / 用户故事），再让 AI 实现。结构化需求能显著降低 AI 幻觉与返工。</p>
+        <p class="muted">做法：用 GitHub Issue 或 spec-kit 把需求拆成可验证的小条目，逐条让 AI 交付并自查。</p>
+      </div>
+
+      <div class="result">
+        <h4>🎯 提示词工程原则</h4>
+        <p>稳定的「角色 + 任务 + 约束 + 示例 + 输出格式」五段式；大任务拆小步、逐步验证，不要一次丢给 AI 一个巨型需求。</p>
+        <p class="muted">进阶：结构化输出（JSON Schema）、Few-shot 示例、Reflection 自检。详见 <a href="ai-coding.html">AI 编码</a>「Prompt 模式」。</p>
+      </div>
+
+      <div class="result">
+        <h4>🔍 代码审查与测试</h4>
+        <p>AI 生成 ≠ 正确。必做：① 人工审查关键逻辑 ② 让 AI 补单元测试 / E2E ③ 接 AI 审查工具（CodeRabbit / Snyk Code）兜底。</p>
+        <p class="muted">本项目对所有页面改动都跑 <code>check_render.js</code> 回归门禁——这就是「AI 写的也要测」的实证。</p>
+      </div>
+
+      <div class="result">
+        <h4>🔐 密钥与凭证安全（本项目实证）</h4>
+        <p>凭证永不进代码 / 仓库：存 macOS 钥匙串（<code>security add-internet-password</code>），<code>.gitignore</code> 排除 <code>.env</code>、<code>*.token</code>；推送前确认。</p>
+        <p class="muted">教训：本项目曾因无防护把 GitHub token 推到仓库暴露——此后改为钥匙串 + 强 .gitignore 防护。</p>
+      </div>
+
+      <div class="result">
+        <h4>💰 成本控制</h4>
+        <p>简单任务用小模型（Haiku / DeepSeek），复杂推理才上大模型；加缓存与批量调用，监控 token 用量避免隐形超支。</p>
+        <p class="muted">架构上做「成本感知路由」：按任务难度自动选模型，详见 <a href="models.html">模型中心</a>「部署方式对比」。</p>
+      </div>
+
+      <div class="result">
+        <h4>🔄 版本控制与部署</h4>
+        <p>小步提交、写清 commit message；合并前让 CI 跑校验；优先无服务器部署（Vercel / Railway / Cloud Run）降低运维负担。</p>
+        <p class="muted">本项目静态站可直接 GitHub Pages，但<b>每次推送触发部署都需你确认</b>，避免额度消耗与误暴露。</p>
+      </div>
+
+      <div class="result">
+        <h4>⚠️ 常见陷阱规避</h4>
+        <p>① 盲信 AI 输出的版本号 / API 细节（务必查证）② 无测试就上线 ③ 把大文件 / 数据集 / 密钥入库 ④ 公开前未脱敏。</p>
+        <p class="muted">本项目原则：<b>原始数据不入库</b>（仅元数据 + 派生统计），可视化只用聚合值，从源头规避体积与版权风险。</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>当前进度（v2.19）：</strong>① 案例已做<b>难度分级</b>（入门 6 个 + 进阶 3 个， badge 标注耗时）② <b>联动导航已完成</b>——每个案例的「复用」行都链到对应子站（含 <a href="models.html#cases">模型</a> / <a href="stacks.html#cases">技术栈</a> / <a href="ai-coding.html#cases">AI 编码</a> / <a href="agents.html#cases">智能体</a> / <a href="templates.html#cases">模板</a> / <a href="apis.html#cases">API</a> 的「案例展示与解析」板块）。
+    <strong>待做：</strong>每个案例的可复制仓库 + 一键部署脚本、视频 / 动图演示。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · 实战案例与最佳实践 · v2.19 已上线 · <a href="hub.html" style="color:var(--muted)">返回枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='playbook.html',enPage='playbook_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

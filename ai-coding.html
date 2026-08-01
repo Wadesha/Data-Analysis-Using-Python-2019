@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 编码工具箱 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html" class="active">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html">API</a>
+    <a href="roadmap.html">规划</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🧠 AI 编码工具箱</h1>
+    <p>Vibecoding 核心工具 · AI 代码助手 / Prompt 工程模式 / AI 原生开发实践</p>
+  </div>
+
+  <div class="section">
+    <h2>AI 代码助手 <span class="hint">IDE 集成 / 独立编辑器 / CLI 工具</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">工具</th><th style="width:12%">类型</th><th style="width:10%">模型</th><th>核心能力 / 适用场景</th><th style="width:12%">定价</th></tr></thead>
+      <tbody>
+        <tr><td><b>GitHub Copilot</b></td><td>IDE 插件</td><td>GPT-4o</td><td>行内补全 + Chat + CLI，VS Code / JetBrains 原生集成，企业版有知识库检索</td><td>$10-39/月</td></tr>
+        <tr><td><b>Cursor</b></td><td>独立 IDE</td><td>多模型</td><td>VS Code fork，Composer 多文件编辑 + Agent 模式 + 代码库索引，vibecoding 首选</td><td>$20/月起</td></tr>
+        <tr><td><b>Claude Code</b></td><td>CLI 终端</td><td>Claude 3.5</td><td>终端原生 AI 编码，文件读写 + 命令执行 + Git 操作，适合后端 / DevOps</td><td>API 计费</td></tr>
+        <tr><td><b>Windsurf</b></td><td>独立 IDE</td><td>多模型</td><td>Codeium 出品，Cascade 流程编排 + 深度上下文，类似 Cursor 定位</td><td>$15/月起</td></tr>
+        <tr><td><b>Codeium</b></td><td>IDE 插件</td><td>自研</td><td>免费 Copilot 替代，70+ 语言支持，个人免费无限补全 + Chat</td><td>免费 / $19/月</td></tr>
+        <tr><td><b>Tabnine</b></td><td>IDE 插件</td><td>自研</td><td>隐私优先，支持本地部署，企业级代码安全，不上传代码</td><td>免费 / $12/月</td></tr>
+        <tr><td><b>Amazon Q Developer</b></td><td>IDE 插件</td><td>自研</td><td>前 CodeWhisperer，AWS 生态集成，Cloud9 / VS Code，IAM 引用检测</td><td>免费 / $19/月</td></tr>
+        <tr><td><b>Replit AI</b></td><td>云端 IDE</td><td>多模型</td><td>全云端开发环境，AI Agent + 协作 + 部署，零配置即写即跑</td><td>免费 / $25/月</td></tr>
+        <tr><td><b>Zed AI</b></td><td>独立编辑器</td><td>多模型</td><td>Rust 高性能编辑器，内置 AI Assistant，极低延迟，macOS 原生</td><td>免费</td></tr>
+        <tr><td><b>Aider</b></td><td>CLI 终端</td><td>多模型</td><td>开源终端 AI 编码，Git 自动提交 + 多文件编辑 + 架构讨论</td><td>开源免费</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Prompt 工程模式 <span class="hint">AI 交互的核心技能</span></h2>
+    <table>
+      <thead><tr><th style="width:16%">模式</th><th style="width:12%">复杂度</th><th>原理 / 适用场景</th><th style="width:18%">示例触发词</th></tr></thead>
+      <tbody>
+        <tr><td><b>Zero-shot</b></td><td>低</td><td>不给示例，直接描述任务。简单任务有效（翻译 / 摘要 / 分类）</td><td>"将以下英文翻译成中文：..."</td></tr>
+        <tr><td><b>Few-shot</b></td><td>低</td><td>给 2-5 个示例，隐式教模型输出格式和风格</td><td>"示例：输入X→输出Y。现在处理：Z"</td></tr>
+        <tr><td><b>Chain-of-Thought</b></td><td>中</td><td>要求模型逐步推理，提高复杂推理准确率（数学 / 逻辑）</td><td>"一步步思考，然后给出答案"</td></tr>
+        <tr><td><b>Self-Consistency</b></td><td>高</td><td>多次采样 CoT 推理路径，投票取多数，降低单次推理偏差</td><td>多次调用 + 结果聚合</td></tr>
+        <tr><td><b>RAG</b></td><td>中</td><td>检索增强生成：先检索知识库，再让模型基于检索结果回答</td><td>"基于以下文档回答：..."</td></tr>
+        <tr><td><b>Function Calling</b></td><td>中</td><td>模型输出结构化函数调用，实现 Tool Use / API 调用</td><td>JSON Schema 定义工具</td></tr>
+        <tr><td><b>ReAct</b></td><td>高</td><td>Reason + Act 循环：思考→行动→观察→再思考，Agent 核心范式</td><td>"Thought: ... Action: ... Observation: ..."</td></tr>
+        <tr><td><b>Reflection</b></td><td>中</td><td>模型自我审查输出，发现问题并修正，提升质量</td><td>"检查你的回答是否有错误，如有则修正"</td></tr>
+        <tr><td><b>Tree of Thoughts</b></td><td>高</td><td>树状探索多条推理路径，回溯剪枝，适合搜索 / 规划问题</td><td>多分支探索 + 评估剪枝</td></tr>
+        <tr><td><b>Structured Output</b></td><td>低</td><td>用 JSON Schema / Pydantic 约束输出格式，确保可解析</td><td>"以 JSON 格式输出，包含字段：name, age"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>AI 原生开发实践 <span class="hint">vibecoding 时代的工作方式</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>📝 规格驱动开发</h4>
+        <p>先写 PRD / Spec 文档（人类），再让 AI 逐段实现。Spec 即"源码"，代码是"编译产物"。工具：spec-kit / GitHub Issues → AI PR。</p>
+      </div>
+      <div class="result">
+        <h4>🔍 代码审查自动化</h4>
+        <p>AI 审查 AI 生成的代码：安全漏洞 / 性能问题 / 最佳实践偏离。工具：CodeRabbit / Bito / Snyk Code。</p>
+      </div>
+      <div class="result">
+        <h4>🧪 AI 测试生成</h4>
+        <p>AI 根据代码自动生成单元测试 / 集成测试 / E2E 测试。工具：Codium / Diffblue / Mabl。</p>
+      </div>
+      <div class="result">
+        <h4>📊 Eval 框架</h4>
+        <p>评估 AI 应用质量：准确率 / 幻觉率 / 延迟 / 成本。工具：LangSmith / Phoenix / DeepEval / promptfoo。</p>
+      </div>
+      <div class="result">
+        <h4>🔧 AI-first 架构</h4>
+        <p>从"AI 辅助编码"到"AI 原生架构"：Prompt 即配置 / 模型可替换 / 流式优先 / 降级策略 / 成本感知路由。</p>
+      </div>
+      <div class="result">
+        <h4>🔄 持续微调闭环</h4>
+        <p>用户反馈 → 数据标注 → 模型微调 → 部署 → 监控 → 再收集。工具：Argilla / Label Studio / TRL + PEFT。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>案例展示与解析 <span class="hint">工具落地 + Prompt 实战</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>🔧 Cursor 重构遗留脚本 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>一份 800 行的 Python 数据处理脚本，无测试、函数耦合，要拆成可维护模块。</p>
+        <p><b>选型：</b><b>Cursor</b> Composer 多文件编辑 + 代码库索引（@Codebase 引用上下文）。</p>
+        <p><b>步骤：</b>① 让 Cursor 生成模块拆分方案 ② Composer 批量改写并在多文件间保持一致 ③ 让它补单元测试 ④ 人工审关键逻辑。</p>
+        <p><b>解析：</b>Composer 比单文件补全强在「跨文件一致性」；但拆分类名/接口必须人工确认，避免 AI 改一半留悬空引用。<a href="playbook.html">最佳实践</a>「代码审查」在此关键。</p>
+      </div>
+      <div class="result">
+        <h4>🧪 Copilot 单测生成 <span class="status badge b-ok">入门</span></h4>
+        <p><b>场景：</b>给已有业务函数补单元测试，覆盖边界与异常。</p>
+        <p><b>选型：</b><b>GitHub Copilot</b> 行内补全 + Chat 生成测试骨架。</p>
+        <p><b>步骤：</b>① 注释写「为该函数写 pytest，覆盖空输入/越界/正常」② Copilot 生成用例 ③ 跑测试补缺失分支 ④ 接 CI 防回归。</p>
+        <p><b>解析：</b>测试是最适合 AI 生成的低风险任务（有断言可验证）；但要审它是否「测了假东西」——断言恒为真的测试等于没测。</p>
+      </div>
+      <div class="result">
+        <h4>🚀 Claude Code 写 CI/CD <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>从零配 Dockerfile + GitHub Actions 流水线，团队无 DevOps。</p>
+        <p><b>选型：</b><b>Claude Code</b>(CLI，能读写文件、跑命令、查 Git)。</p>
+        <p><b>步骤：</b>① 让它读项目生成多阶段 Dockerfile ② 写 .github/workflows/ci.yml(测试+构建+镜像推送) ③ 本地跑 actions 验证 ④ 提交。</p>
+        <p><b>解析：</b>CLI 型工具适合「能执行命令」的任务；但密钥/权限类配置必须人工复核，别让它把 <code>secrets</code> 写死进文件（见 <a href="playbook.html">密钥安全</a>）。</p>
+      </div>
+      <div class="result">
+        <h4>🎯 Prompt：RAG + Reflection 实战 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>让模型基于检索文档回答，且减少编造。</p>
+        <p><b>选型：</b><b>RAG</b>(检索增强) + <b>Reflection</b>(自我审查) 两段式 Prompt。</p>
+        <p><b>步骤：</b>① 拼「仅用以下片段回答，超出则说不知道」② 拿到初稿后加「检查引用是否准确、有无臆测」再修正 ③ 输出带出处。</p>
+        <p><b>解析：</b>单轮 RAG 仍可能幻觉；Reflection 让模型二次核对来源，幻觉率明显下降。<a href="agents.html">智能体</a>「Reflection 范式」即此模式的工程化。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>后续计划：</strong>各工具深度对比评测、Prompt 模板库、AI 编码最佳实践 checklist、vibecoding 项目工作流模板。本页「案例展示与解析」已于 v2.19 补充。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · AI 编码工具箱 · v3.3 已上线 · <a href="hub.html" style="color:var(--muted)">返回枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='ai-coding.html',enPage='ai-coding_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

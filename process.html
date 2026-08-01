@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>过程实现 · Kaggle 数据集集合</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">📊 Kaggle 数据集集合</span>
+
+  <span class="links">
+    <a href="hub.html">🚀 枢纽</a>
+    <a href="index.html" data-i18n="nav_overview">总览</a>
+    <a href="datasets.html" data-i18n="nav_datasets">数据集</a>
+    <a href="process.html" class="active" data-i18n="nav_process">过程</a>
+    <a href="roadmap.html" data-i18n="nav_roadmap">版本规划</a>
+    <a href="versions.html" data-i18n="nav_versions">历史版本</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1 data-i18n="pt_process">过程实现</h1>
+    <p>从 Kaggle 搜索、下载、本地处理到生成说明文档与网页展示的完整链路</p>
+  </div>
+
+  <div class="section">
+    <h2>处理流程 <span class="hint">五步流水线</span></h2>
+    <div class="flow">
+      <svg viewBox="0 0 940 170" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, PingFang SC, Microsoft YaHei, sans-serif">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#0969da"></path>
+          </marker>
+        </defs>
+        <g>
+          <rect x="20" y="55" width="150" height="64" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="1.5"></rect>
+          <text x="95" y="82" text-anchor="middle" font-size="14" font-weight="700" fill="#0969da">① 搜索</text>
+          <text x="95" y="102" text-anchor="middle" font-size="11" fill="#555">API 检索数据集</text>
+        </g>
+        <g>
+          <rect x="225" y="55" width="150" height="64" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="1.5"></rect>
+          <text x="300" y="82" text-anchor="middle" font-size="14" font-weight="700" fill="#0969da">② 下载</text>
+          <text x="300" y="102" text-anchor="middle" font-size="11" fill="#555">小文件 / 缺失补全</text>
+        </g>
+        <g>
+          <rect x="430" y="55" width="150" height="64" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="1.5"></rect>
+          <text x="505" y="82" text-anchor="middle" font-size="14" font-weight="700" fill="#0969da">③ 处理</text>
+          <text x="505" y="102" text-anchor="middle" font-size="11" fill="#555">校验 / 规整结构</text>
+        </g>
+        <g>
+          <rect x="635" y="55" width="150" height="64" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="1.5"></rect>
+          <text x="710" y="82" text-anchor="middle" font-size="14" font-weight="700" fill="#0969da">④ 生成说明</text>
+          <text x="710" y="102" text-anchor="middle" font-size="11" fill="#555">批量写介绍文档</text>
+        </g>
+        <g>
+          <rect x="840" y="55" width="80" height="64" rx="10" fill="#1a7f37" stroke="#1a7f37" stroke-width="1.5"></rect>
+          <text x="880" y="82" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">⑤ 展示</text>
+          <text x="880" y="102" text-anchor="middle" font-size="11" fill="#eafff0">网页</text>
+        </g>
+        <line x1="170" y1="87" x2="222" y2="87" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"></line>
+        <line x1="375" y1="87" x2="427" y2="87" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"></line>
+        <line x1="580" y1="87" x2="632" y2="87" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"></line>
+        <line x1="785" y1="87" x2="837" y2="87" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"></line>
+      </svg>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>分步详解 <span class="hint">每步的目标 / 输入 / 工具 / 输出 / 产物</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-h"><span class="step-no">1</span><h4>搜索 Kaggle</h4></div>
+        <dl class="kv">
+          <dt>目标</dt><dd>按关键词定位公开数据集，沉淀候选列表（含 slug）。</dd>
+          <dt>输入</dt><dd>关键词 / 类别名称。</dd>
+          <dt>工具</dt><dd><code>search_kaggle_datasets.py</code></dd>
+          <dt>输出</dt><dd>候选数据集清单（owner/slug、标题、规模）。</dd>
+          <dt>产物</dt><dd>检索结果 JSON，作为下载阶段的输入。</dd>
+        </dl>
+      </div>
+      <div class="step">
+        <div class="step-h"><span class="step-no">2</span><h4>下载数据集</h4></div>
+        <dl class="kv">
+          <dt>目标</dt><dd>把候选数据集落到本地 <code>datasets/</code>，优先小文件与缺失项。</dd>
+          <dt>输入</dt><dd>slug 列表 / <code>small_datasets.json</code> 预设清单。</dd>
+          <dt>工具</dt><dd><code>download_small_datasets.py</code>、<code>download_small_datasets_cli.py</code>、<code>search_and_download.py</code></dd>
+          <dt>输出</dt><dd>各数据集文件夹 + 原始数据文件（CSV/JSON 等）。</dd>
+          <dt>产物</dt><dd><code>datasets/*</code> 实际数据（本地保留，不入库）。</dd>
+        </dl>
+      </div>
+      <div class="step">
+        <div class="step-h"><span class="step-no">3</span><h4>本地处理</h4></div>
+        <dl class="kv">
+          <dt>目标</dt><dd>校验完整性、规整目录结构、标记数据状态。</dd>
+          <dt>输入</dt><dd>下载后的数据集文件夹。</dd>
+          <dt>工具</dt><dd><code>download_missing_datasets.py</code>（补全）、<code>test_kaggle_auth.py</code>（凭证校验）</dd>
+          <dt>输出</dt><dd>状态标记：有数据 / 仅文档 / 缺失（<code>NO_DATA_*</code>）。</dd>
+          <dt>产物</dt><dd><code>数据集总览.txt</code>、<code>完成情况.txt</code>。</dd>
+        </dl>
+      </div>
+      <div class="step">
+        <div class="step-h"><span class="step-no">4</span><h4>生成说明</h4></div>
+        <dl class="kv">
+          <dt>目标</dt><dd>批量为每个数据集生成中文介绍文档。</dd>
+          <dt>输入</dt><dd>数据集字段定义与样本数据。</dd>
+          <dt>工具</dt><dd><code>bulk_create_dataset_txts.py</code>、<code>create_remaining_txts.py</code></dd>
+          <dt>输出</dt><dd>每个文件夹的「数据集介绍.txt + README.md」。</dd>
+          <dt>产物</dt><dd>26 套双文档，构成说明文档体系。</dd>
+        </dl>
+      </div>
+      <div class="step">
+        <div class="step-h"><span class="step-no">5</span><h4>网页展示</h4></div>
+        <dl class="kv">
+          <dt>目标</dt><dd>把元数据与说明固化为可浏览静态站点。</dd>
+          <dt>输入</dt><dd>说明文档 + 统计指标 + 来源校验结果。</dd>
+          <dt>工具</dt><dd>手写静态页（index/process/roadmap/versions）+ <code>style.css</code>。</dd>
+          <dt>输出</dt><dd>四页互通的轻量站点（本页即其中之一）。</dd>
+          <dt>产物</dt><dd><code>web/</code> 站点，可离线打开或部署。</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>脚本 → 产物 映射 <span class="hint">每个脚本落在哪一步、产出什么</span></h2>
+    <table>
+      <thead><tr><th style="width:38%">脚本</th><th style="width:14%">阶段</th><th>产物</th></tr></thead>
+      <tbody>
+        <tr><td><code>search_kaggle_datasets.py</code></td><td>① 搜索</td><td>候选 slug 列表（JSON）</td></tr>
+        <tr><td><code>search_and_download.py</code></td><td>② 下载</td><td><code>datasets/</code> 数据文件</td></tr>
+        <tr><td><code>download_small_datasets.py</code></td><td>② 下载</td><td>预设小数据集文件</td></tr>
+        <tr><td><code>download_small_datasets_cli.py</code></td><td>② 下载</td><td>小数据集文件（CLI 方式）</td></tr>
+        <tr><td><code>download_missing_datasets.py</code></td><td>③ 处理</td><td>补全 <code>NO_DATA_*</code> 项</td></tr>
+        <tr><td><code>test_kaggle_auth.py</code></td><td>③ 处理</td><td>凭证有效性报告</td></tr>
+        <tr><td><code>bulk_create_dataset_txts.py</code></td><td>④ 说明</td><td>数据集介绍.txt</td></tr>
+        <tr><td><code>create_remaining_txts.py</code></td><td>④ 说明</td><td>剩余 / 缺失项文档</td></tr>
+        <tr><td><code>verify_datasets_meta.py</code></td><td>⑤ 校验</td><td><code>datasets_meta.json</code>（来源 / 许可证）</td></tr>
+        <tr><td><code>*.ps1</code>（4 个）</td><td>全阶段</td><td>Windows PowerShell 等价脚本</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Kaggle 来源校验 <span class="hint">新增 · 确保 slug 有效、授权可追溯</span></h2>
+    <div class="step">
+      <dl class="kv">
+        <dt>做什么</dt><dd>用 Kaggle API 逐个校验各数据集 <code>slug</code> 是否存在，并抓取许可证（license）、下载量、可用性评分等公开元数据。</dd>
+        <dt>脚本</dt><dd><code>verify_datasets_meta.py</code>（遍历 24 个 ref，含失败重试退避）。</dd>
+        <dt>产物</dt><dd><code>datasets/datasets_meta.json</code> —— 因 <code>datasets/</code> 已被 <code>.gitignore</code> 排除，仅本地留存，不入库。</dd>
+        <dt>价值</dt><dd>① 验证页面中的 slug 真实有效；② 标注各数据集授权类型（如 CC0、CC BY），避免误用受限数据；③ 为后续详情页提供可溯源的来源链接。</dd>
+        <dt>安全</dt><dd>脚本仅读取项目本地 <code>.kaggle/kaggle.json</code>，<strong>绝不输出密钥</strong>；抓取到的元数据均为 Kaggle 公开信息，可安全展示。</dd>
+      </dl>
+    </div>
+
+    <div class="flow">
+    <table>
+      <thead><tr><th>Kaggle slug</th><th>标题</th><th>许可证</th><th style="text-align:right">下载量</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.kaggle.com/datasets/andrewmvd/heart-failure-clinical-data" target="_blank" rel="noopener">andrewmvd/heart-failure-clinical-data</a></td><td>Heart Failure Prediction</td><td>CC BY 4.0</td><td style="text-align:right">185,440</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset" target="_blank" rel="noopener">fedesoriano/stroke-prediction-dataset</a></td><td>Stroke Prediction Dataset</td><td>copyright-authors</td><td style="text-align:right">304,734</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database" target="_blank" rel="noopener">uciml/pima-indians-diabetes-database</a></td><td>Pima Indians Diabetes Database</td><td>CC0-1.0</td><td style="text-align:right">820,831</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/adityakadiwal/water-potability" target="_blank" rel="noopener">adityakadiwal/water-potability</a></td><td>Water Quality</td><td>CC0-1.0</td><td style="text-align:right">131,610</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/uciml/iris" target="_blank" rel="noopener">uciml/iris</a></td><td>Iris Species</td><td>CC0-1.0</td><td style="text-align:right">906,170</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams" target="_blank" rel="noopener">spscientist/students-performance-in-exams</a></td><td>Students Performance in Exams</td><td>unknown</td><td style="text-align:right">501,013</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/rajyellow46/wine-quality" target="_blank" rel="noopener">rajyellow46/wine-quality</a></td><td>Wine Quality</td><td>other</td><td style="text-align:right">57,690</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/uciml/mushroom-classification" target="_blank" rel="noopener">uciml/mushroom-classification</a></td><td>Mushroom Classification</td><td>CC0-1.0</td><td style="text-align:right">190,321</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/rdoume/beerreviews" target="_blank" rel="noopener">rdoume/beerreviews</a></td><td>Beer Reviews</td><td>unknown</td><td style="text-align:right">9,993</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/datasnaek/youtube-new" target="_blank" rel="noopener">datasnaek/youtube-new</a></td><td>Trending YouTube Video Statistics</td><td>CC0-1.0</td><td style="text-align:right">315,682</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho" target="_blank" rel="noopener">nehalbirla/vehicle-dataset-from-cardekho</a></td><td>Vehicle dataset</td><td>DbCL-1.0</td><td style="text-align:right">230,960</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset" target="_blank" rel="noopener">clmentbisaillon/fake-and-real-news-dataset</a></td><td>fake-and-real-news-dataset</td><td>CC-BY-NC-SA-4.0</td><td style="text-align:right">115,023</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/venky73/spam-mails-dataset" target="_blank" rel="noopener">venky73/spam-mails-dataset</a></td><td>Spam Mails Dataset</td><td>CC0-1.0</td><td style="text-align:right">62,490</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data" target="_blank" rel="noopener">uciml/breast-cancer-wisconsin-data</a></td><td>Breast Cancer Wisconsin (Diagnostic)</td><td>CC-BY-NC-SA-4.0</td><td style="text-align:right">552,055</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/yasserh/wine-quality-dataset" target="_blank" rel="noopener">yasserh/wine-quality-dataset</a></td><td>Wine Quality Dataset</td><td>CC0-1.0</td><td style="text-align:right">134,259</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/yasserh/titanic-dataset" target="_blank" rel="noopener">yasserh/titanic-dataset</a></td><td>Titanic Dataset</td><td>CC0-1.0</td><td style="text-align:right">364,355</td></tr>
+        <tr><td><a href="https://www.kaggle.com/datasets/sudalairajkumar/covid19-in-india" target="_blank" rel="noopener">sudalairajkumar/covid19-in-india</a></td><td>COVID-19 in India</td><td>CC0-1.0</td><td style="text-align:right">318,307</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="cat-desc" style="margin-top:12px">
+      <strong>待处理（7 个）</strong>：以下 ref 抓取元数据时返回 <code>403</code>，多为数据集自身要求接受使用条款或访问受限（如规范 slug <code>aungpyaeap/supermarket-sales</code>、<code>nytimes/covid-19-data</code> 仍受限），另有 2 个为猜测 slug 待校准（<code>uciml/heart-disease</code>、<code>kasikrit/amazon-books-dataset</code>）。
+      这些项不影响其余 17 个的校验结论，留待后续用 OAuth 登录或人工确认处理。完整机器结果见本地 <code>datasets/datasets_meta.json</code>（已被忽略，不入库）。
+    </p>
+  </div>
+
+  <div class="note">
+    <strong>凭证安全：</strong><code>.kaggle/kaggle.json</code> 含 Kaggle API 密钥，<strong>绝不</strong>随仓库或网页公开；已写入根目录 <code>.gitignore</code> 强制忽略。
+    原始 <code>datasets/</code> 同样被忽略，站点仅承载元数据与说明。
+  </div>
+</div>
+
+<footer>Kaggle 数据集集合 · 静态展示站点 v2.18（产品型首页 + 子站上线） · 数据不入库 · <a href="versions.html" style="color:var(--muted)">历史版本</a> · <a href="hub.html" style="color:var(--muted)">🚀 枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

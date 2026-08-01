@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Frameworks · Vibecoding Hub</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦾</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links">
+    <a href="hub_en.html">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html">Models</a>
+    <a href="stacks_en.html">Tech Stacks</a>
+    <a href="ai-coding_en.html">AI Coding</a>
+    <a href="agents_en.html" class="active">Agents</a>
+    <a href="templates_en.html">Templates</a>
+    <a href="apis_en.html">API</a>
+    <a href="roadmap.html">Roadmap</a>
+  <a href="pathway_en.html">Pathway</a> <a href="search.html">🔍 Search</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🦾 Agent Frameworks</h1>
+    <p>AI agent development frameworks and design paradigms · ReAct / Plan-Execute / Tool Use / multi-agent collaboration</p>
+  </div>
+
+  <div class="section">
+    <h2>Agent Frameworks <span class="hint">From single tool calls to multi-agent collaboration</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">Framework</th><th style="width:12%">Language</th><th style="width:10%">GitHub ★</th><th>Core features / use cases</th><th style="width:12%">License</th></tr></thead>
+      <tbody>
+        <tr><td><b>LangGraph</b></td><td>Python / JS</td><td>10K+</td><td>From LangChain; state machine + graph-structured orchestration of agent flows, supporting loops / branches / human-in-the-loop / persistence</td><td>MIT</td></tr>
+        <tr><td><b>CrewAI</b></td><td>Python</td><td>25K+</td><td>Role-driven multi-agent collaboration with a Crew + Agent + Task model; concise API, great for business process automation</td><td>MIT</td></tr>
+        <tr><td><b>AutoGen</b></td><td>Python</td><td>40K+</td><td>From Microsoft; multi-agent conversation framework with GroupChat + programmable agents, supporting code execution + human intervention</td><td>MIT</td></tr>
+        <tr><td><b>OpenAI Swarm</b></td><td>Python</td><td>18K+</td><td>Minimal multi-agent orchestration (experimental) with a Handoff mechanism + lightweight Routines; for proof-of-concepts and learning</td><td>MIT</td></tr>
+        <tr><td><b>MetaGPT</b></td><td>Python</td><td>45K+</td><td>Multi-agent software development simulation (PM / architect / engineer); input requirements → output a complete project</td><td>MIT</td></tr>
+        <tr><td><b>AutoGPT</b></td><td>Python</td><td>168K+</td><td>The earliest autonomous agent: goal-driven + autonomous planning + tool calls; a proof-of-concept milestone</td><td>MIT</td></tr>
+        <tr><td><b>AgentScope</b></td><td>Python</td><td>5K+</td><td>From Alibaba; distributed multi-agent framework with Chinese-friendly docs, supporting local / distributed deployment</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Pydantic AI</b></td><td>Python</td><td>6K+</td><td>Type-safe agent framework from the Pydantic team: strong typing + structured output + multi-model support</td><td>MIT</td></tr>
+        <tr><td><b>Smolagents</b></td><td>Python</td><td>10K+</td><td>From HuggingFace; a minimal agent (&lt;1000 lines) using the Code Agent paradigm (writes Python code directly as actions)</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Mastra</b></td><td>TypeScript</td><td>10K+</td><td>TypeScript agent framework with Workflow + Agent + Memory + RAG; friendly for frontend full-stack developers</td><td>MIT</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Agent Design Paradigms <span class="hint">Core patterns and applicable scenarios</span></h2>
+    <table>
+      <thead><tr><th style="width:16%">Paradigm</th><th style="width:12%">Complexity</th><th>Flow</th><th style="width:18%">Use cases</th></tr></thead>
+      <tbody>
+        <tr><td><b>ReAct</b></td><td>Medium</td><td>Thought → Action → Observation → Thought → ... → Answer</td><td>General-purpose agents / tool calls / information retrieval</td></tr>
+        <tr><td><b>Plan-and-Execute</b></td><td>High</td><td>Plan the full step list first → execute step by step → adjust the plan based on results</td><td>Complex tasks / multi-step workflows / project-level tasks</td></tr>
+        <tr><td><b>Tool Use</b></td><td>Low</td><td>The model outputs a Function Call → execute the tool → feed the result back to the model</td><td>API calls / database queries / code execution</td></tr>
+        <tr><td><b>Reflection</b></td><td>Medium</td><td>Generate → self-evaluate → revise → regenerate, iterating to improve quality</td><td>Code generation / copywriting / quality-sensitive tasks</td></tr>
+        <tr><td><b>Memory</b></td><td>High</td><td>Short-term (conversation context) + long-term (vector store / knowledge graph) memory management</td><td>Long-running conversations / personal assistants / knowledge accumulation</td></tr>
+        <tr><td><b>Multi-Agent</b></td><td>High</td><td>Multiple roles collaborating (e.g., PM / dev / QA), coordinated via message passing</td><td>Software development / complex research / role-playing</td></tr>
+        <tr><td><b>Human-in-the-Loop</b></td><td>Medium</td><td>The agent pauses at critical steps and waits for human approval before continuing</td><td>High-risk operations / compliance review / user experience</td></tr>
+        <tr><td><b>Code Agent</b></td><td>Medium</td><td>The model directly generates Python code as the action instead of a JSON Function Call</td><td>Data analysis / flexible tool composition / complex logic</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Key Agent Components <span class="hint">Infrastructure for production-grade agents</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>🧠 Reasoning Engine</h4>
+        <p>The LLM as the agent's brain: GPT-4o / Claude 3.5 / Llama 3.1 / DeepSeek V3. Selection criteria: reasoning ability / tool calling / context length / cost.</p>
+      </div>
+      <div class="result">
+        <h4>🔧 Tool Integration</h4>
+        <p>Function Calling / MCP (Model Context Protocol) / custom tools. MCP, a universal tool protocol proposed by Anthropic, is becoming the standard.</p>
+      </div>
+      <div class="result">
+        <h4>💾 Memory System</h4>
+        <p>Short-term: conversation window / scratchpad. Long-term: vector databases (Qdrant / pgvector) + knowledge graphs. Tools: Mem0 / Zep / Letta.</p>
+      </div>
+      <div class="result">
+        <h4>📋 Task Planning</h4>
+        <p>Task decomposition + dependency management + state tracking. Tools: LangGraph State / CrewAI Tasks / AutoGen GroupChat.</p>
+      </div>
+      <div class="result">
+        <h4>👁 Observability</h4>
+        <p>Trace every reasoning step / tool call / token consumption. Tools: LangSmith / Phoenix / Langfuse / Weave.</p>
+      </div>
+      <div class="result">
+        <h4>🛡 Safety Guardrails</h4>
+        <p>Prompt injection defense / output filtering / permission control / audit logs. Tools: Guardrails AI / NeMo Guardrails / Llama Guard.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>Case Studies &amp; Analysis <span class="hint">Framework selection + architecture trade-offs</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>🎧 LangGraph customer-service agent <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Scenario:</b> Multi-turn customer service that needs to look up orders, run refund workflows, and involve humans for sensitive operations.</p>
+        <p><b>Choice:</b> <b>LangGraph</b> (state machine + graph orchestration), because it supports loops / branches / persistence and Human-in-the-Loop.</p>
+        <p><b>Steps:</b> ① Define the State (conversation / context / tool results) ② Nodes: intent recognition → tool call → answer ③ Add <code>interrupt_before</code> for manual approval on high-risk nodes like refunds ④ Persist with a Checkpointer.</p>
+        <p><b>Analysis:</b> Graph structures fit business flows with "rollback / branching" better than linear chains; persistence makes conversations resumable. The "Agent application" in <a href="templates_en.html">Templates</a> is exactly this architecture.</p>
+      </div>
+      <div class="result">
+        <h4>📝 Automated weekly reports with CrewAI <span class="status badge b-ok">Beginner</span></h4>
+        <p><b>Scenario:</b> Every Friday, aggregate Git/Issue progress into a structured weekly report and send it to the team.</p>
+        <p><b>Choice:</b> <b>CrewAI</b> (role-driven multi-agent); its concise API fits a "researcher + writer" division of labor.</p>
+        <p><b>Steps:</b> ① A Researcher agent pulls GitHub/Issue data ② A Writer agent drafts from a template ③ The Crew runs sequentially ④ Trigger on a schedule (Cron/n8n).</p>
+        <p><b>Analysis:</b> Multiple roles decouple "collecting" from "expressing", making the output more focused and more controllable than a single agent doing everything in one shot. The "weekly report agent" in <a href="playbook_en.html">Playbook Cases</a> is exactly this.</p>
+      </div>
+      <div class="result">
+        <h4>🔍 Code review with AutoGen <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Scenario:</b> After a PR is submitted, automatically review it from multiple angles (security / performance / readability).</p>
+        <p><b>Choice:</b> <b>AutoGen</b> GroupChat — multi-agent conversational debate; from Microsoft and programmable.</p>
+        <p><b>Steps:</b> ① Create three agents: Reviewer / security / perf ② GroupChat takes turns giving feedback ③ Aggregate into a review report ④ Comment on the PR via a GitHub Action.</p>
+        <p><b>Analysis:</b> Multi-agent debate lets agents correct each other and is more thorough than single-pass review; but the token cost is higher, so reserve it for critical PRs rather than every commit.</p>
+      </div>
+      <div class="result">
+        <h4>🧭 Architecture analysis: ReAct vs Plan-Execute <span class="status badge b-ok">Deep dive</span></h4>
+        <p><b>Selection logic:</b> If the task can be solved with one tool call → <b>Tool Use</b>; if it needs thinking while searching → <b>ReAct</b>; if it has many predictable steps → <b>Plan-and-Execute</b>.</p>
+        <p><b>Steps:</b> ① Assess task uncertainty ② For low uncertainty, use Plan to list all steps first, then execute (saves tokens) ③ For high uncertainty, use ReAct to adjust as you go.</p>
+        <p><b>Analysis:</b> Plan-Execute is cheaper and more predictable on stable tasks; ReAct is more robust on exploratory tasks (retrieval / debugging). Misuse wastes budget or spins out of control — an extension of "cost-awareness" in <a href="ai-coding_en.html">AI Coding</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Coming next:</strong> agent architecture diagrams, code-example comparisons across frameworks, a production-deployment checklist, and agent benchmarks (GAIA / SWE-bench / WebArena). This page's "Case Studies &amp; Analysis" section was added in v2.19.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · Agent Frameworks · v3.4 live · <a href="hub_en.html" style="color:var(--muted)">Back to Hub</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='agents.html',enPage='agents_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Pathways · Vibecoding Hub</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<style>
+  .hub-nav { gap: 10px; }
+  .hub-nav a { font-size: 13px; }
+  @media (max-width: 720px) { .hub-nav { gap: 8px; } .hub-nav a { font-size: 12px; } }
+
+  /* stage pipeline */
+  .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+  .flow .step {
+    flex: 1 1 150px; min-width: 140px; background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 14px 14px 12px; box-shadow: var(--shadow);
+    border-top: 3px solid var(--accent); position: relative;
+  }
+  .flow .step .n { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .5px; }
+  .flow .step h4 { margin: 4px 0 6px; font-size: 14.5px; color: var(--ink); }
+  .flow .step p { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+  .flow .step .go { display:inline-block; margin-top: 8px; font-size: 11.5px; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .flow .step .go:hover { text-decoration: underline; }
+
+  /* path cards */
+  .path-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px; }
+  .path-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px 16px; box-shadow: var(--shadow); border-left: 5px solid var(--accent); }
+  .path-card .ph { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .path-card .ph .emoji { font-size: 28px; }
+  .path-card .ph h3 { margin: 0; font-size: 17px; color: var(--ink); }
+  .path-card .meta { font-size: 11.5px; color: var(--muted); margin-bottom: 10px; }
+  .path-card ol { margin: 0; padding-left: 18px; }
+  .path-card ol li { font-size: 13px; line-height: 1.7; color: var(--ink); margin-bottom: 2px; }
+  .path-card ol li b { color: var(--accent); }
+  .path-card ol li a { color: var(--accent); text-decoration: none; }
+  .path-card ol li a:hover { text-decoration: underline; }
+  .path-card .time { margin-top: 10px; font-size: 11.5px; font-weight: 600; color: var(--muted); }
+
+  /* path picking */
+  .pick { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .pick .pc { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
+  .pick .pc h4 { margin: 0 0 6px; font-size: 14px; color: var(--accent); }
+  .pick .pc p { margin: 0; font-size: 12.8px; color: var(--muted); line-height: 1.6; }
+  .pick .pc code { background: var(--accent-soft); color: var(--accent); padding: 1px 5px; border-radius: 4px; font-size: 11.5px; }
+</style>
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links hub-nav">
+    <a href="hub_en.html">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html">Models</a>
+    <a href="stacks_en.html">Tech Stacks</a>
+    <a href="ai-coding_en.html">AI Coding</a>
+    <a href="agents_en.html">Agents</a>
+    <a href="templates_en.html">Templates</a>
+    <a href="apis_en.html">API</a>
+    <a href="playbook_en.html">Playbook</a>
+    <a href="pathway_en.html" class="active">Pathway</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="index.html">Kaggle Site</a>
+    <a href="search.html">🔍 Search</a>
+  </span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🧭 Project Pathways</h1>
+    <p>The hub's 8 resource categories (datasets / models / tech stacks / AI coding / agents / templates / APIs / playbook) strung into an <strong>executable progression</strong> — from "I want to build something" to "shipping a product", with what to read and what to use at every step.</p>
+  </div>
+
+  <div class="note">
+    <strong>What this page is:</strong> the "project roadmap" for the vibecoding era. It is not another list — it is a <strong>pipeline</strong>. Walk the stages in order; each one points to the matching sub-site resources in the hub, so you never lose context bouncing between tools.
+  </div>
+
+  <div class="section">
+    <h2>The Universal 8-Stage Pipeline <span class="hint">almost every vibecoding project follows this backbone</span></h2>
+    <div class="flow">
+      <div class="step">
+        <div class="n">01 · Idea</div>
+        <h4>Define the Goal</h4>
+        <p>Say in one sentence "for whom, solving what problem". Vague requirements are the #1 cause of project failure.</p>
+        <a class="go" href="playbook_en.html">🎯 Playbook cases →</a>
+      </div>
+      <div class="step">
+        <div class="n">02 · Data</div>
+        <h4>Find Datasets</h4>
+        <p>Data-driven projects should lock down data first: 13 local datasets ready to play with, 648 remote with profiles.</p>
+        <a class="go" href="datasets.html">📊 Datasets Hub →</a>
+      </div>
+      <div class="step">
+        <div class="n">03 · Stack</div>
+        <h4>Pick the Stack</h4>
+        <p>Frontend / backend / database / DevOps / AI·ML — pick by scenario, don't chase hype.</p>
+        <a class="go" href="stacks_en.html">🏗 Stack Encyclopedia →</a>
+      </div>
+      <div class="step">
+        <div class="n">04 · Coding</div>
+        <h4>AI-assisted Coding</h4>
+        <p>Cursor / Copilot / Claude Code write the skeleton; prompt engineering sets the ceiling.</p>
+        <a class="go" href="ai-coding_en.html">🧠 AI Coding Toolbox →</a>
+      </div>
+      <div class="step">
+        <div class="n">05 · Intelligence</div>
+        <h4>Add Agents</h4>
+        <p>When you need multi-step autonomous execution, bring in agents: LangGraph / CrewAI / ReAct paradigms.</p>
+        <a class="go" href="agents_en.html">🦾 Agent Frameworks →</a>
+      </div>
+      <div class="step">
+        <div class="n">06 · Templates</div>
+        <h4>Apply Scaffolds</h4>
+        <p>Full-stack / AI app / data pipeline / API templates — skip rebuilding the foundation.</p>
+        <a class="go" href="templates_en.html">📐 Project Templates →</a>
+      </div>
+      <div class="step">
+        <div class="n">07 · Capabilities</div>
+        <h4>Wire External APIs</h4>
+        <p>Payments / comms / data / AI model APIs give your product real-world capabilities.</p>
+        <a class="go" href="apis_en.html">🔌 Public API Directory →</a>
+      </div>
+      <div class="step">
+        <div class="n">08 · Launch</div>
+        <h4>Deploy &amp; Retro</h4>
+        <p>Version control + CI + hosting; credentials in keychain, no data in repo, cost control.</p>
+        <a class="go" href="playbook_en.html#best">✅ Best Practices →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4 Typical Pathways <span class="hint">pick one by role and starting point, then follow it</span></h2>
+    <div class="path-grid">
+
+      <div class="path-card">
+        <div class="ph"><span class="emoji">🌟</span><h3>Absolute Beginner</h3></div>
+        <div class="meta">Goal: build your first accessible website within 30 minutes</div>
+        <ol>
+          <li><b>Idea</b>: set your goal following <a href="playbook_en.html">Playbook case ①</a> "Personal Portfolio Blog".</li>
+          <li><b>Stack</b>: pick <a href="stacks_en.html">Next.js + Vercel</a> (zero-ops deployment).</li>
+          <li><b>Coding</b>: use <a href="ai-coding_en.html">Cursor / Copilot</a> to generate the page skeleton.</li>
+          <li><b>Templates</b>: start from the <a href="templates_en.html">Next.js full-stack template</a>.</li>
+          <li><b>Launch</b>: push to Vercel per the <a href="playbook_en.html#best">deployment best practices</a>.</li>
+        </ol>
+        <div class="time">⏱ ~30–45 min · difficulty ★☆☆</div>
+      </div>
+
+      <div class="path-card">
+        <div class="ph"><span class="emoji">📊</span><h3>Data Science / ML</h3></div>
+        <div class="meta">Goal: build an interactive analytics product with real data</div>
+        <ol>
+          <li><b>Data</b>: pick a local dataset from <a href="datasets.html">Datasets Hub</a> (wine / iris / students).</li>
+          <li><b>Visualization</b>: see the <a href="datasets.html">detail page "⑩ Data Visualization"</a> for derived distributions.</li>
+          <li><b>Stack</b>: <a href="stacks_en.html">pandas + Streamlit</a> for the dashboard.</li>
+          <li><b>Templates</b>: use the <a href="templates_en.html">data pipeline template</a>.</li>
+          <li><b>Playbook</b>: follow <a href="playbook_en.html">Playbook case ③</a> "Interactive Data Dashboard".</li>
+        </ol>
+        <div class="time">⏱ ~45 min – 1 hr · difficulty ★★☆</div>
+      </div>
+
+      <div class="path-card">
+        <div class="ph"><span class="emoji">🤖</span><h3>AI App Developer</h3></div>
+        <div class="meta">Goal: build a RAG Q&amp;A or an automation agent</div>
+        <ol>
+          <li><b>Model</b>: pick an LLM from <a href="models_en.html">Model Hub</a> (OpenAI / Claude / local Ollama).</li>
+          <li><b>Coding</b>: build retrieval with <a href="ai-coding_en.html">RAG + prompt patterns</a>.</li>
+          <li><b>Agents</b>: use <a href="agents_en.html">LangGraph / CrewAI</a> for multi-step orchestration.</li>
+          <li><b>APIs</b>: wire <a href="apis_en.html">OpenAI + a vector DB (Pinecone / Qdrant)</a>.</li>
+          <li><b>Templates + Playbook</b>: <a href="templates_en.html">RAG template</a> + <a href="playbook_en.html">Playbook cases ②③</a>.</li>
+        </ol>
+        <div class="time">⏱ ~1–2 hrs · difficulty ★★★</div>
+      </div>
+
+      <div class="path-card">
+        <div class="ph"><span class="emoji">🏗</span><h3>Full-Stack Engineer</h3></div>
+        <div class="meta">Goal: production-grade service (frontend + API + database + deployment)</div>
+        <ol>
+          <li><b>Stack</b>: the <a href="stacks_en.html">React + FastAPI + PostgreSQL + Docker</a> combo.</li>
+          <li><b>Templates</b>: apply the <a href="templates_en.html">microservice / API service template</a>.</li>
+          <li><b>Coding</b>: speed up with <a href="ai-coding_en.html">AI assistance + code review</a>.</li>
+          <li><b>APIs</b>: wire <a href="apis_en.html">Stripe (payments) / Twilio (comms)</a>.</li>
+          <li><b>Launch</b>: <a href="playbook_en.html#best">deployment &amp; cost-control</a> best practices.</li>
+        </ol>
+        <div class="time">⏱ ~2–4 hrs · difficulty ★★★</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>How to Pick a Path <span class="hint">match your situation — don't force it</span></h2>
+    <div class="pick">
+      <div class="pc">
+        <h4>I can describe requirements but can't code</h4>
+        <p>Take <b>🌟 Beginner</b> or <b>📊 Data Science</b>. Let AI generate the skeleton; you only review and describe. Templates save 80% of the groundwork.</p>
+      </div>
+      <div class="pc">
+        <h4>I have data and want to build something</h4>
+        <p>Take <b>📊 Data Science</b>. First confirm your data shape in our <a href="datasets.html">Datasets Hub</a>, then choose the pandas/Streamlit dashboard route.</p>
+      </div>
+      <div class="pc">
+        <h4>I want to build a product that "thinks"</h4>
+        <p>Take <b>🤖 AI Apps</b>. Four steps: model → RAG → agent → API; the <a href="agents_en.html">Agent Frameworks</a> page helps you choose.</p>
+      </div>
+      <div class="pc">
+        <h4>I want to build a money-making service</h4>
+        <p>Take <b>🏗 Full-Stack</b>. Focus on <a href="apis_en.html">payment/comms APIs</a> and <a href="playbook_en.html#best">deployment cost control</a> — don't let the bill run away.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Case Walkthroughs: Run a Path End to End <span class="hint">follow along — don't just daydream</span></h2>
+    <div class="results">
+
+      <div class="result">
+        <h4>🤖 Building a RAG knowledge base on the "AI Apps" path</h4>
+        <p><b>① Pick the model:</b> see <a href="models_en.html#cases">Models · Enterprise RAG case</a> — BGE local embeddings + Cohere Rerank + GPT-4o.</p>
+        <p><b>② Apply a template:</b> use the RAG scaffold from <a href="templates_en.html#cases">Templates · doc Q&amp;A case</a>, just swapping the data source.</p>
+        <p><b>③ Wire the APIs:</b> per <a href="apis_en.html#cases">API · knowledge base case</a>, connect Jina Reader + pgvector + Claude.</p>
+        <p><b>④ Write the code:</b> use <a href="ai-coding_en.html#cases">AI Coding · RAG+Reflection</a> prompt patterns to reduce hallucination.</p>
+        <p><b>Analysis:</b> the case sections of four sub-sites connect into one line here — no more context switching between tools.</p>
+      </div>
+
+      <div class="result">
+        <h4>📊 Building an interactive dashboard on the "Data Science" path</h4>
+        <p><b>① Get the data:</b> pick local wine/iris from <a href="datasets.html">Datasets Hub</a>; see the detail page "⑩ Visualization" for derived distributions.</p>
+        <p><b>② Pick the stack:</b> reference <a href="stacks_en.html#cases">Tech Stacks · real-time dashboard case</a>; for the lightweight version use pandas + Streamlit.</p>
+        <p><b>③ Apply a template:</b> use <a href="templates_en.html#cases">Templates · ETL case</a> for cleaning, then render with Streamlit.</p>
+        <p><b>④ Avoid pitfalls:</b> follow <a href="playbook_en.html">Playbook · common pitfalls</a>: no raw data in repo, sample first then full scale.</p>
+        <p><b>Analysis:</b> the shortest path for data projects is "local dataset + lightweight stack + dashboard template" — done in 30 minutes.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Roadmap <span class="hint">nothing falls off the upgrade path</span></h2>
+    <div class="vision-grid">
+      <div class="vision-card">
+        <h4>✅ In-page Anchors (done)</h4>
+        <p>All sub-sites now have <code>id="cases"</code> anchors; this page's case walkthroughs and path steps can deep-link to the matching case sections (e.g. <a href="models_en.html#cases">Models cases</a> / <a href="apis_en.html#cases">API cases</a>).</p>
+      </div>
+      <div class="vision-card">
+        <h4>🎚 Difficulty Tiers</h4>
+        <p>Annotate prerequisites and optional accelerators for each path, plus an "advanced path": plugins → multi-agent collaboration → fine-tuning your own model.</p>
+      </div>
+      <div class="vision-card">
+        <h4>🧭 Interactive Path Picker</h4>
+        <p>A few multiple-choice questions (role / goal / time) dynamically generate a personalized path, with <a href="search.html">site-wide search</a> prefilled keywords.</p>
+      </div>
+      <div class="vision-card">
+        <h4>📦 Copyable Repos</h4>
+        <p>Each path gets a GitHub template repo + one-click deploy script — hit "Start" to spin up the scaffold (shipping together with v3.2 sub-site content deepening).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Current status:</strong> this page (v2.19) strings the hub's 8 resources into 1 universal pipeline + 4 typical paths + 2 end-to-end case walkthroughs; all links point to live sub-sites.
+    Done: <code>#cases</code> deep links on sub-sites. The walkthroughs connect each sub-site's case section into executable end-to-end examples.
+    Not yet: interactive path picker, copyable repos (see "Roadmap" above).
+    <strong>Not pushed to GitHub</strong>; in local development.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · v2.19 live · no data hosted · credentials in keychain · <a href="roadmap.html" style="color:var(--muted)">Version Roadmap</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='pathway.html',enPage='pathway_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model Center · Vibecoding Hub</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links">
+    <a href="hub_en.html">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html" class="active">Models</a>
+    <a href="stacks_en.html">Stacks</a>
+    <a href="ai-coding_en.html">AI Coding</a>
+    <a href="agents_en.html">Agents</a>
+    <a href="templates_en.html">Templates</a>
+    <a href="apis_en.html">API</a>
+    <a href="roadmap.html">Roadmap</a>
+  <a href="pathway_en.html">Pathway</a> <a href="search.html">🔍 Search</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🤖 Model Center</h1>
+    <p>Pre-trained model registry &amp; comparison · Organized by platform / task type / deployment · Covering LLM / vision / speech / multimodal</p>
+  </div>
+
+  <div class="section">
+    <h2>Model Platforms <span class="hint">Major model hosting &amp; distribution platforms</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">Platform</th><th style="width:10%">Type</th><th>Description</th><th style="width:12%">Deployment</th><th style="width:10%">License</th></tr></thead>
+      <tbody>
+        <tr><td><b>HuggingFace</b></td><td>Open model hub</td><td>The world's largest open model hosting platform, 500K+ models, supporting the Transformers / Diffusers / PEFT ecosystem — Hub + Inference API + Spaces</td><td>Cloud / Local</td><td>Apache 2.0 (framework)</td></tr>
+        <tr><td><b>ModelScope</b></td><td>Open model hub</td><td>Model community from Alibaba DAMO Academy, rich in Chinese models (Qwen / ChatGLM / Baichuan), compatible with HuggingFace APIs</td><td>Cloud / Local</td><td>Apache 2.0</td></tr>
+        <tr><td><b>OpenAI API</b></td><td>Closed API</td><td>GPT-4o / o1 / o3 / DALL·E 3 / Whisper / TTS — the industry benchmark; Function Calling / Assistants API / Batch API</td><td>API only</td><td>Commercial</td></tr>
+        <tr><td><b>Anthropic API</b></td><td>Closed API</td><td>Claude 3.5 Sonnet / Opus / Haiku, 200K context window; Tool Use / Vision / Prompt Caching</td><td>API only</td><td>Commercial</td></tr>
+        <tr><td><b>Google Gemini</b></td><td>Closed API</td><td>Gemini 2.0 Flash / Pro / Ultra, natively multimodal (text + image + audio + video), 1M+ context</td><td>API / Vertex AI</td><td>Commercial</td></tr>
+        <tr><td><b>Ollama</b></td><td>Local runtime</td><td>One-command local deployment of open LLMs (Llama 3 / Qwen / Mistral / Phi-3), cross-platform, REST API + CLI</td><td>Local</td><td>MIT</td></tr>
+        <tr><td><b>vLLM</b></td><td>Inference engine</td><td>High-throughput LLM inference engine, PagedAttention optimization, tensor parallelism / quantization / streaming output, OpenAI-compatible API</td><td>Local / Cloud</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Replicate</b></td><td>Cloud inference</td><td>Pay-per-call model inference platform, one-click deployment of any open model, auto-scaling GPUs</td><td>API only</td><td>Commercial</td></tr>
+        <tr><td><b>Together AI</b></td><td>Cloud inference</td><td>Hosted open-LLM platform with APIs for Llama / Qwen / DeepSeek and more, Fine-tuning supported</td><td>API only</td><td>Commercial</td></tr>
+        <tr><td><b>llama.cpp</b></td><td>Local inference</td><td>C++ implementation of LLaMA inference, GGUF quantization format, CPU/GPU hybrid inference, extremely low resource usage</td><td>Local</td><td>MIT</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>By Task Type <span class="hint">Model capability matrix</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">Task Type</th><th style="width:22%">Representative Models</th><th>Typical Use Cases</th><th style="width:14%">Recommended Starter</th></tr></thead>
+      <tbody>
+        <tr><td><b>💬 LLM Chat</b></td><td>GPT-4o / Claude 3.5 / Llama 3.1 / Qwen 2.5 / DeepSeek V3</td><td>Chat assistants / code generation / document summarization / translation / QA systems</td><td>Ollama + Llama 3.1</td></tr>
+        <tr><td><b>👁 Vision Understanding</b></td><td>GPT-4o Vision / Claude 3.5 Vision / LLaVA / Qwen-VL</td><td>Image captioning / OCR / chart understanding / visual QA / defect detection</td><td>LLaVA (local)</td></tr>
+        <tr><td><b>🎨 Image Generation</b></td><td>Stable Diffusion 3 / DALL·E 3 / FLUX / Midjourney</td><td>Text-to-image / image-to-image / inpainting / style transfer / logo design</td><td>SD WebUI / ComfyUI</td></tr>
+        <tr><td><b>🎙 Speech Recognition</b></td><td>Whisper / Paraformer / SenseVoice</td><td>Speech-to-text / meeting minutes / subtitle generation / real-time translation</td><td>Whisper (local)</td></tr>
+        <tr><td><b>🔊 Speech Synthesis</b></td><td>OpenAI TTS / ChatTTS / CosyVoice / Bark</td><td>Text-to-speech / audiobooks / virtual-person voiceover / multilingual broadcasting</td><td>CosyVoice</td></tr>
+        <tr><td><b>🔗 Multimodal</b></td><td>GPT-4o / Gemini 2.0 / Qwen-Omni</td><td>Mixed image+text input / video understanding / cross-modal retrieval / multimodal reasoning</td><td>Gemini API</td></tr>
+        <tr><td><b>📐 Embedding</b></td><td>text-embedding-3 / BGE / GTE / Jina</td><td>Semantic search / RAG retrieval / cluster analysis / similarity matching</td><td>BGE-large (local)</td></tr>
+        <tr><td><b>🎯 Reranking</b></td><td>Cohere Rerank / BGE-Reranker / Jina Reranker</td><td>Two-stage RAG retrieval / search result optimization / recommendation ranking</td><td>BGE-Reranker</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Deployment Comparison <span class="hint">Selection reference</span></h2>
+    <table>
+      <thead><tr><th style="width:16%">Method</th><th style="width:12%">Latency</th><th style="width:12%">Cost</th><th style="width:12%">Privacy</th><th>Best For</th></tr></thead>
+      <tbody>
+        <tr><td><b>Closed API</b> (OpenAI/Claude)</td><td>Low (200-800ms)</td><td>Pay per token</td><td>Data uploaded to third party</td><td>Rapid prototyping / non-sensitive data / need top capability</td></tr>
+        <tr><td><b>Open-model API</b> (Together/Replicate)</td><td>Medium (300-1200ms)</td><td>Pay per call / hour</td><td>Data uploaded to third party</td><td>Need open models / cost-sensitive / elastic scaling</td></tr>
+        <tr><td><b>Local GPU</b> (vLLM/Ollama)</td><td>Very low (10-100ms)</td><td>One-time hardware investment</td><td>Fully private</td><td>Sensitive data / high-frequency calls / offline scenarios</td></tr>
+        <tr><td><b>Local CPU</b> (llama.cpp)</td><td>High (500-5000ms)</td><td>Zero extra cost</td><td>Fully private</td><td>No GPU / lightweight models / edge devices</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>Case Studies <span class="hint">Real-world selection decisions &amp; trade-offs</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>💬 Customer Service QA Bot <span class="status badge b-ok">Beginner</span></h4>
+        <p><b>Scenario:</b> An e-commerce site needs 24/7 automated answers for shipping / return questions, about 20K inquiries per day, including sensitive operations such as order lookups.</p>
+        <p><b>Selection:</b> General questions go to <b>Claude Haiku</b> (cheap, 200K context), handling 80%; when user orders are involved, switch to <b>Ollama + Llama 3.1</b> deployed locally so data never leaves the intranet.</p>
+        <p><b>Steps:</b> ① Use Claude to write an FAQ extraction script ② Wire up Function Calling to query the order API ③ Route cost-sensitive traffic to Haiku and privacy-sensitive traffic locally — a "cost-aware router".</p>
+        <p><b>Analysis:</b> Closed APIs have low latency but bill per token — at 20K inquiries/day the monthly cost stays manageable; fully local gives the best privacy but requires GPUs. Hybrid routing balances both — exactly the "cost-aware routing" pattern from <a href="ai-coding_en.html">AI Coding</a> in practice.</p>
+      </div>
+      <div class="result">
+        <h4>📚 Enterprise RAG Knowledge Base <span class="status badge b-ok">Advanced</span></h4>
+        <p><b>Scenario:</b> Turn 50K internal documents into a Q&amp;A knowledge base where answers must cite sources and never hallucinate.</p>
+        <p><b>Selection:</b> <b>BGE-large</b> for local Embedding (data stays in-domain) + <b>Cohere Rerank</b> for second-stage re-ranking + <b>GPT-4o</b> for generation; vectors stored in <b>pgvector</b>.</p>
+        <p><b>Steps:</b> ① Chunk documents (512 tokens) → embed with BGE into pgvector ② Recall Top-20 → Cohere reranks down to Top-5 ③ Build an "answer only from the context below" prompt so GPT-4o generates with citations.</p>
+        <p><b>Analysis:</b> Single-stage vector recall is limited; adding a Reranker significantly improves answer relevance; a local Embedding model both saves money and satisfies compliance. <a href="apis_en.html">API</a> "Cohere" and <a href="stacks_en.html">Stacks</a> "pgvector" come together here.</p>
+      </div>
+      <div class="result">
+        <h4>🖼 Multimodal Content Moderation <span class="status badge b-ok">Advanced</span></h4>
+        <p><b>Scenario:</b> A UGC platform must understand image and text together (user caption + image) to detect violations, with high peak QPS.</p>
+        <p><b>Selection:</b> Regular image-text content goes to <b>Gemini 2.0 Flash</b> (cheap, 1M context, native multimodal); tricky long images / video frames fall back to <b>GPT-4o</b>.</p>
+        <p><b>Steps:</b> ① Combine image + text into a single multimodal request ② Routing: short content → Gemini Flash, long context → Gemini Pro, disputed samples → GPT-4o plus a human review queue.</p>
+        <p><b>Analysis:</b> Multimodal models natively support mixed image-text input, far simpler than a two-stage "OCR + LLM" pipeline; apply the difficulty-based routing idea from the <a href="models_en.html#deploy">deployment comparison</a> and reserve expensive models for hard samples.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Roadmap:</strong> model comparison benchmarks (MMLU / HumanEval / MT-Bench), VRAM-based model recommendation table, fine-tuning toolchain guide (LoRA / QLoRA / DPO), and model quantization comparison (GGUF / AWQ / GPTQ). The "Case Studies" section on this page was added in v2.19.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · Model Center · v3.1 live · <a href="hub_en.html" style="color:var(--muted)">Back to Hub</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='models.html',enPage='models_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

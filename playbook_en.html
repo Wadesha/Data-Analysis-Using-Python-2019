@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playbook: Cases &amp; Best Practices · Vibecoding Hub</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links">
+    <a href="hub_en.html">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html">Models</a>
+    <a href="stacks_en.html">Tech Stacks</a>
+    <a href="ai-coding_en.html">AI Coding</a>
+    <a href="agents_en.html">Agents</a>
+    <a href="templates_en.html">Templates</a>
+    <a href="apis_en.html">API</a>
+    <a href="playbook_en.html" class="active">Playbook</a>
+    <a href="roadmap.html">Roadmap</a>
+  <a href="pathway_en.html">Pathway</a> <a href="search.html">🔍 Search</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🎯 Playbook: Cases &amp; Best Practices</h1>
+    <p>From "can describe requirements" to "can ship projects" · 6 beginner-friendly cases + 7 reusable vibecoding principles</p>
+  </div>
+
+  <div class="note">
+    <strong>How to use this page:</strong> the beginner cases give you the shortest "follow along" path — each case lists its tech stack, time cost, and reusable hub resources;
+    the best practices are a checklist you should revisit every time you start a new project. Together they help you avoid the two classic failures: "AI generated it but it won't run" and "leaked on launch".
+  </div>
+
+  <div class="section">
+    <h2>Beginner Cases <span class="hint">zero experience · shippable in 30 min – 2 hrs</span></h2>
+    <div class="results">
+
+      <div class="result">
+        <h4>🌟 Personal Portfolio / Blog <span class="status badge b-ok">~30 min</span></h4>
+        <p><b>Goal:</b> Generate a responsive personal site with AI and deploy it to the public web.</p>
+        <p><b>Stack:</b> Next.js (App Router) · Tailwind · Vercel · Cursor</p>
+        <p><b>Steps:</b> ① Use Cursor to scaffold the Next.js skeleton → ② describe the layout and let AI fill in the components → ③ use an AI writing assistant to generate articles → ④ <code>vercel --prod</code> one-command deploy.</p>
+        <p class="muted">Reuses: <a href="templates_en.html">Templates</a> "Next.js template" · <a href="apis_en.html">API</a> "Vercel deployment"</p>
+      </div>
+
+      <div class="result">
+        <h4>📚 RAG Knowledge Base Q&amp;A <span class="status badge b-ok">~1 hr</span></h4>
+        <p><b>Goal:</b> Upload documents and ask questions in natural language to get document-grounded answers.</p>
+        <p><b>Stack:</b> Python · LangChain · OpenAI/Claude · Vector DB (Qdrant/Pinecone) · Streamlit</p>
+        <p><b>Steps:</b> ① Chunk documents + embed → ② build the retriever → ③ compose the "answer based on retrieved results" prompt → ④ stream the output → ⑤ add a UI.</p>
+        <p class="muted">Reuses: <a href="ai-coding_en.html">AI Coding</a> "RAG pattern" · <a href="models_en.html">Models</a> "LLM" · <a href="apis_en.html">API</a> "vector DB"</p>
+      </div>
+
+      <div class="result">
+        <h4>📊 Interactive Data Dashboard <span class="status badge b-ok">~45 min</span></h4>
+        <p><b>Goal:</b> Turn a CSV into a filterable, interactive dashboard.</p>
+        <p><b>Stack:</b> Python · pandas · Streamlit · this project's 13 local datasets</p>
+        <p><b>Steps:</b> ① Load the dataset → ② let AI write chart functions (bars / distributions / missing rates) → ③ add filters and interactions → ④ deploy to Streamlit Cloud.</p>
+        <p class="muted">Reuses: <a href="datasets.html">Datasets Hub</a> "13 local datasets with charts" · <a href="dataset.html?id=rajyellow46/wine-quality">wine example</a></p>
+      </div>
+
+      <div class="result">
+        <h4>🔌 Chrome Extension (AI Summary) <span class="status badge b-ok">~1 hr</span></h4>
+        <p><b>Goal:</b> Select text on any webpage and get a one-click LLM summary / translation.</p>
+        <p><b>Stack:</b> Manifest V3 · JavaScript · LLM API (OpenAI/DeepSeek)</p>
+        <p><b>Steps:</b> ① Write the manifest + a content script to capture the selection → ② call the LLM API → ③ show results in a popup UI → ④ load locally (<code>chrome://extensions</code>) to test.</p>
+        <p class="muted">Reuses: <a href="apis_en.html">API</a> "LLM" · <a href="agents_en.html">Agents</a> "Tool Use"</p>
+      </div>
+
+      <div class="result">
+        <h4>🤖 Automated Weekly Report Agent <span class="status badge b-ok">~2 hrs</span></h4>
+        <p><b>Goal:</b> Automatically summarize this week's Git/Issue progress into a structured weekly report.</p>
+        <p><b>Stack:</b> n8n / CrewAI · GitHub API · LLM</p>
+        <p><b>Steps:</b> ① Connect the GitHub API to pull commits/PRs → ② design "analyst + writer" multi-role agents → ③ compose the report template → ④ schedule the trigger (every Friday).</p>
+        <p class="muted">Reuses: <a href="agents_en.html">Agents</a> "CrewAI / multi-agent" · <a href="apis_en.html">API</a> "GitHub"</p>
+      </div>
+
+      <div class="result">
+        <h4>💬 Telegram / Slack Bot <span class="status badge b-ok">~1 hr</span></h4>
+        <p><b>Goal:</b> Use natural language to make a bot query data / call APIs / send notifications.</p>
+        <p><b>Stack:</b> Python · python-telegram-bot · LLM · any backend API</p>
+        <p><b>Steps:</b> ① Create a bot via @BotFather and get the token → ② write the message handler → ③ connect an LLM for intent understanding → ④ deploy on Railway (free tier).</p>
+        <p class="muted">Reuses: <a href="apis_en.html">API</a> "Telegram / Slack" · <a href="models_en.html">Models</a> "LLM"</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Intermediate Cases <span class="hint">tackle after the basics · 2–4 hrs</span></h2>
+    <div class="results">
+
+      <div class="result">
+        <h4>🎯 Fine-tune Your Own Support Model <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Goal:</b> Generic LLMs can't handle your business terminology — customize a small model with domain data.</p>
+        <p><b>Stack:</b> Python · PEFT · TRL · Unsloth · DeepEval · one of this project's 13 datasets as training samples</p>
+        <p><b>Steps:</b> ① Prepare Q&amp;A-pair SFT data → ② Unsloth + LoRA single-GPU training → ③ DeepEval evaluation against the baseline → ④ export and wire up inference.</p>
+        <p class="muted">Reuses: <a href="templates_en.html#cases">Templates · fine-tuning case</a> · <a href="models_en.html">Models · fine-tuning toolchain</a> · <a href="datasets.html">Datasets Hub</a></p>
+      </div>
+
+      <div class="result">
+        <h4>🎨 Multimodal Content Generation Pipeline <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Goal:</b> Feed in an article and automatically produce illustrations + voice narration + a short video.</p>
+        <p><b>Stack:</b> GPT-4o Vision · SD/FLUX · OpenAI TTS · ffmpeg</p>
+        <p><b>Steps:</b> ① An LLM splits the script and writes scene descriptions → ② text-to-image (local ComfyUI to save money) → ③ TTS voiceover → ④ ffmpeg composes the video.</p>
+        <p class="muted">Reuses: <a href="models_en.html#cases">Models · multimodal case</a> · <a href="apis_en.html#cases">API · transcription case</a></p>
+      </div>
+
+      <div class="result">
+        <h4>🗂 Data Pipeline Automation <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Goal:</b> Every day, automatically clean, join, and visualize multi-source CSVs into an interactive dashboard.</p>
+        <p><b>Stack:</b> Python · Polars · DuckDB · Prefect · Streamlit · this project's local datasets</p>
+        <p><b>Steps:</b> ① Prefect orchestrates the daily jobs → ② Polars cleans + DuckDB aggregates → ③ Streamlit renders → ④ Great Expectations alerts on anomalies.</p>
+        <p class="muted">Reuses: <a href="templates_en.html#cases">Templates · ETL case</a> · <a href="datasets.html">Datasets Hub</a> · <a href="stacks_en.html#cases">Tech Stacks · real-time dashboard</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Best Practices <span class="hint">a checklist to revisit every time you start a new project</span></h2>
+    <div class="results">
+
+      <div class="result">
+        <h4>📋 Spec-driven (Spec-first)</h4>
+        <p>Write down "what to build" first (PRD / spec / user stories), then let AI implement it. Structured requirements significantly reduce AI hallucination and rework.</p>
+        <p class="muted">How: use GitHub Issues or spec-kit to break requirements into small verifiable items, and have AI deliver and self-check them one by one.</p>
+      </div>
+
+      <div class="result">
+        <h4>🎯 Prompt Engineering Principles</h4>
+        <p>Stick to a stable five-part structure: "role + task + constraints + examples + output format"; break big tasks into small steps and verify incrementally — never dump a giant requirement on AI at once.</p>
+        <p class="muted">Advanced: structured output (JSON Schema), few-shot examples, Reflection self-checks. See <a href="ai-coding_en.html">AI Coding</a> "Prompt patterns".</p>
+      </div>
+
+      <div class="result">
+        <h4>🔍 Code Review &amp; Testing</h4>
+        <p>AI-generated ≠ correct. Must-dos: ① manually review critical logic ② have AI add unit tests / E2E ③ wire AI review tools (CodeRabbit / Snyk Code) as a safety net.</p>
+        <p class="muted">This project runs the <code>check_render.js</code> regression gate on every page change — proof that "AI-written code needs testing too".</p>
+      </div>
+
+      <div class="result">
+        <h4>🔐 Secret &amp; Credential Security (battle-tested in this project)</h4>
+        <p>Credentials never enter code or the repo: store them in the macOS Keychain (<code>security add-internet-password</code>), exclude <code>.env</code> and <code>*.token</code> via <code>.gitignore</code>, and confirm before pushing.</p>
+        <p class="muted">Lesson: this project once pushed a GitHub token to a repo without protection and it leaked — since then we switched to Keychain + strict .gitignore protection.</p>
+      </div>
+
+      <div class="result">
+        <h4>💰 Cost Control</h4>
+        <p>Use small models (Haiku / DeepSeek) for simple tasks and reserve big models for complex reasoning; add caching and batch calls, and monitor token usage to avoid hidden overspend.</p>
+        <p class="muted">Architect "cost-aware routing": automatically pick the model by task difficulty — see <a href="models_en.html">Model Hub</a> "deployment options comparison".</p>
+      </div>
+
+      <div class="result">
+        <h4>🔄 Version Control &amp; Deployment</h4>
+        <p>Commit in small steps with clear commit messages; let CI run checks before merging; prefer serverless deployment (Vercel / Railway / Cloud Run) to reduce ops burden.</p>
+        <p class="muted">This project's static site can go straight to GitHub Pages, but <b>every push-triggered deploy requires your confirmation</b> to avoid quota burn and accidental exposure.</p>
+      </div>
+
+      <div class="result">
+        <h4>⚠️ Common Pitfall Avoidance</h4>
+        <p>① Blindly trusting AI-output version numbers / API details (always verify) ② shipping without tests ③ committing large files / datasets / secrets to the repo ④ going public without sanitization.</p>
+        <p class="muted">This project's principle: <b>no raw data in the repo</b> (metadata + derived stats only), and visualizations use aggregated values only — avoiding size and copyright risks at the source.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Current progress (v2.19):</strong> ① cases now have <b>difficulty tiers</b> (6 beginner + 3 intermediate, with time badges) ② <b>cross-navigation is done</b> — every case's "Reuses" line links to the corresponding sub-site (including the "Case Studies &amp; Analysis" sections of <a href="models_en.html#cases">Models</a> / <a href="stacks_en.html#cases">Tech Stacks</a> / <a href="ai-coding_en.html#cases">AI Coding</a> / <a href="agents_en.html#cases">Agents</a> / <a href="templates_en.html#cases">Templates</a> / <a href="apis_en.html#cases">API</a>).
+    <strong>To do:</strong> a copyable repo + one-click deploy script for each case, plus video / GIF demos.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · Playbook: Cases &amp; Best Practices · v2.19 live · <a href="hub_en.html" style="color:var(--muted)">Back to hub</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='playbook.html',enPage='playbook_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

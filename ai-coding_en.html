@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Coding Toolkit · Vibecoding Hub</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links">
+    <a href="hub_en.html">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html">Models</a>
+    <a href="stacks_en.html">Tech Stacks</a>
+    <a href="ai-coding_en.html" class="active">AI Coding</a>
+    <a href="agents_en.html">Agents</a>
+    <a href="templates_en.html">Templates</a>
+    <a href="apis_en.html">API</a>
+    <a href="roadmap.html">Roadmap</a>
+  <a href="pathway_en.html">Pathway</a> <a href="search.html">🔍 Search</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🧠 AI Coding Toolkit</h1>
+    <p>Core vibecoding tools · AI coding assistants / prompt engineering patterns / AI-native development practices</p>
+  </div>
+
+  <div class="section">
+    <h2>AI Code Assistants <span class="hint">IDE integrations / standalone editors / CLI tools</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">Tool</th><th style="width:12%">Type</th><th style="width:10%">Model</th><th>Core capabilities / use cases</th><th style="width:12%">Pricing</th></tr></thead>
+      <tbody>
+        <tr><td><b>GitHub Copilot</b></td><td>IDE plugin</td><td>GPT-4o</td><td>Inline completion + Chat + CLI, native VS Code / JetBrains integration; Enterprise adds knowledge-base retrieval</td><td>$10-39/mo</td></tr>
+        <tr><td><b>Cursor</b></td><td>Standalone IDE</td><td>Multi-model</td><td>VS Code fork with Composer multi-file editing + Agent mode + codebase indexing; the go-to choice for vibecoding</td><td>From $20/mo</td></tr>
+        <tr><td><b>Claude Code</b></td><td>CLI terminal</td><td>Claude 3.5</td><td>Terminal-native AI coding: file read/write + command execution + Git operations; great for backend / DevOps</td><td>API billing</td></tr>
+        <tr><td><b>Windsurf</b></td><td>Standalone IDE</td><td>Multi-model</td><td>From Codeium; Cascade flow orchestration + deep context; positioned similarly to Cursor</td><td>From $15/mo</td></tr>
+        <tr><td><b>Codeium</b></td><td>IDE plugin</td><td>In-house</td><td>Free Copilot alternative, 70+ languages, free unlimited completions + Chat for individuals</td><td>Free / $19/mo</td></tr>
+        <tr><td><b>Tabnine</b></td><td>IDE plugin</td><td>In-house</td><td>Privacy-first with on-prem deployment; enterprise-grade code security, code never uploaded</td><td>Free / $12/mo</td></tr>
+        <tr><td><b>Amazon Q Developer</b></td><td>IDE plugin</td><td>In-house</td><td>Formerly CodeWhisperer; AWS ecosystem integration, Cloud9 / VS Code, IAM reference detection</td><td>Free / $19/mo</td></tr>
+        <tr><td><b>Replit AI</b></td><td>Cloud IDE</td><td>Multi-model</td><td>Fully cloud-based dev environment: AI Agent + collaboration + deployment, zero-config write-and-run</td><td>Free / $25/mo</td></tr>
+        <tr><td><b>Zed AI</b></td><td>Standalone editor</td><td>Multi-model</td><td>High-performance Rust editor with built-in AI Assistant; ultra-low latency, native on macOS</td><td>Free</td></tr>
+        <tr><td><b>Aider</b></td><td>CLI terminal</td><td>Multi-model</td><td>Open-source terminal AI coding: automatic Git commits + multi-file editing + architecture discussions</td><td>Open source, free</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Prompt Engineering Patterns <span class="hint">The core skill of AI interaction</span></h2>
+    <table>
+      <thead><tr><th style="width:16%">Pattern</th><th style="width:12%">Complexity</th><th>Principle / use cases</th><th style="width:18%">Example trigger</th></tr></thead>
+      <tbody>
+        <tr><td><b>Zero-shot</b></td><td>Low</td><td>No examples; describe the task directly. Effective for simple tasks (translation / summarization / classification)</td><td>"Translate the following English into Chinese: ..."</td></tr>
+        <tr><td><b>Few-shot</b></td><td>Low</td><td>Provide 2-5 examples to implicitly teach the model the output format and style</td><td>"Example: input X → output Y. Now process: Z"</td></tr>
+        <tr><td><b>Chain-of-Thought</b></td><td>Medium</td><td>Ask the model to reason step by step, improving accuracy on complex reasoning (math / logic)</td><td>"Think step by step, then give the answer"</td></tr>
+        <tr><td><b>Self-Consistency</b></td><td>High</td><td>Sample multiple CoT reasoning paths and take a majority vote to reduce single-run bias</td><td>Multiple calls + result aggregation</td></tr>
+        <tr><td><b>RAG</b></td><td>Medium</td><td>Retrieval-augmented generation: retrieve from a knowledge base first, then answer based on the retrieved content</td><td>"Answer based on the following documents: ..."</td></tr>
+        <tr><td><b>Function Calling</b></td><td>Medium</td><td>The model outputs structured function calls, enabling Tool Use / API invocation</td><td>Tools defined with JSON Schema</td></tr>
+        <tr><td><b>ReAct</b></td><td>High</td><td>Reason + Act loop: think → act → observe → think again; the core agent paradigm</td><td>"Thought: ... Action: ... Observation: ..."</td></tr>
+        <tr><td><b>Reflection</b></td><td>Medium</td><td>The model reviews its own output, finds problems and fixes them, improving quality</td><td>"Check your answer for errors and fix them if any"</td></tr>
+        <tr><td><b>Tree of Thoughts</b></td><td>High</td><td>Tree-structured exploration of multiple reasoning paths with backtracking and pruning; good for search / planning problems</td><td>Multi-branch exploration + evaluation and pruning</td></tr>
+        <tr><td><b>Structured Output</b></td><td>Low</td><td>Constrain the output format with JSON Schema / Pydantic to ensure parseability</td><td>"Output in JSON format with fields: name, age"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>AI-Native Development Practices <span class="hint">How we work in the vibecoding era</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>📝 Spec-Driven Development</h4>
+        <p>Write the PRD / spec doc first (by humans), then have AI implement it section by section. The spec is the "source code"; the code is the "compiled artifact". Tools: spec-kit / GitHub Issues → AI PR.</p>
+      </div>
+      <div class="result">
+        <h4>🔍 Automated Code Review</h4>
+        <p>AI reviews AI-generated code: security vulnerabilities / performance issues / deviations from best practices. Tools: CodeRabbit / Bito / Snyk Code.</p>
+      </div>
+      <div class="result">
+        <h4>🧪 AI Test Generation</h4>
+        <p>AI automatically generates unit / integration / E2E tests from code. Tools: Codium / Diffblue / Mabl.</p>
+      </div>
+      <div class="result">
+        <h4>📊 Eval Frameworks</h4>
+        <p>Evaluate AI application quality: accuracy / hallucination rate / latency / cost. Tools: LangSmith / Phoenix / DeepEval / promptfoo.</p>
+      </div>
+      <div class="result">
+        <h4>🔧 AI-First Architecture</h4>
+        <p>From "AI-assisted coding" to "AI-native architecture": prompts as configuration / swappable models / streaming-first / fallback strategies / cost-aware routing.</p>
+      </div>
+      <div class="result">
+        <h4>🔄 Continuous Fine-Tuning Loop</h4>
+        <p>User feedback → data labeling → model fine-tuning → deployment → monitoring → re-collection. Tools: Argilla / Label Studio / TRL + PEFT.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>Case Studies &amp; Analysis <span class="hint">Tool adoption + prompt practice</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>🔧 Refactoring a legacy script with Cursor <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Scenario:</b> An 800-line Python data-processing script with no tests and tightly coupled functions that needs to be split into maintainable modules.</p>
+        <p><b>Choice:</b> <b>Cursor</b> — Composer multi-file editing + codebase indexing (@Codebase to reference context).</p>
+        <p><b>Steps:</b> ① Have Cursor generate a module-splitting plan ② Use Composer to batch-rewrite while keeping the files consistent ③ Have it add unit tests ④ Manually review the key logic.</p>
+        <p><b>Analysis:</b> Composer's edge over single-file completion is "cross-file consistency"; but the split's class names / interfaces must be confirmed by a human, or the AI may leave dangling references halfway. "Code review" in <a href="playbook_en.html">Best Practices</a> is critical here.</p>
+      </div>
+      <div class="result">
+        <h4>🧪 Unit test generation with Copilot <span class="status badge b-ok">Beginner</span></h4>
+        <p><b>Scenario:</b> Add unit tests to existing business functions, covering boundaries and exceptions.</p>
+        <p><b>Choice:</b> <b>GitHub Copilot</b> — inline completion + Chat to generate test skeletons.</p>
+        <p><b>Steps:</b> ① Write a comment: "Write pytest for this function, covering empty input / out-of-range / normal cases" ② Copilot generates the cases ③ Run the tests and fill in missing branches ④ Wire into CI to prevent regressions.</p>
+        <p><b>Analysis:</b> Testing is the best low-risk task for AI generation (assertions are verifiable); but review whether it "tested the wrong thing" — a test whose assertions always pass is as good as no test.</p>
+      </div>
+      <div class="result">
+        <h4>🚀 Writing CI/CD with Claude Code <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Scenario:</b> Set up a Dockerfile + GitHub Actions pipeline from scratch; the team has no DevOps.</p>
+        <p><b>Choice:</b> <b>Claude Code</b> (CLI; can read/write files, run commands, and inspect Git).</p>
+        <p><b>Steps:</b> ① Have it read the project and generate a multi-stage Dockerfile ② Write .github/workflows/ci.yml (test + build + image push) ③ Verify the actions locally ④ Commit.</p>
+        <p><b>Analysis:</b> CLI-type tools suit tasks that "can execute commands"; but secret/permission configs must be manually reviewed — don't let it hardcode <code>secrets</code> into files (see <a href="playbook_en.html">Secrets Security</a>).</p>
+      </div>
+      <div class="result">
+        <h4>🎯 Prompt: RAG + Reflection in practice <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Scenario:</b> Have the model answer based on retrieved documents while reducing fabrication.</p>
+        <p><b>Choice:</b> <b>RAG</b> (retrieval-augmented) + <b>Reflection</b> (self-review) as a two-stage prompt.</p>
+        <p><b>Steps:</b> ① Assemble "Answer using only the following excerpts; say you don't know beyond them" ② After the first draft, add "Check whether the citations are accurate and whether anything is assumed" and revise ③ Output with sources.</p>
+        <p><b>Analysis:</b> Single-turn RAG can still hallucinate; Reflection makes the model double-check sources, noticeably lowering the hallucination rate. The "Reflection paradigm" in <a href="agents_en.html">Agents</a> is the engineering formalization of this pattern.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Coming next:</strong> in-depth tool comparison reviews, a prompt template library, an AI coding best-practices checklist, and vibecoding project workflow templates. This page's "Case Studies &amp; Analysis" section was added in v2.19.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · AI Coding Toolkit · v3.3 live · <a href="hub_en.html" style="color:var(--muted)">Back to Hub</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='ai-coding.html',enPage='ai-coding_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

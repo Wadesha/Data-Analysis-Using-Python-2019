@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Stack Encyclopedia · Vibecoding Hub</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links">
+    <a href="hub_en.html">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html">Models</a>
+    <a href="stacks_en.html" class="active">Stacks</a>
+    <a href="ai-coding_en.html">AI Coding</a>
+    <a href="agents_en.html">Agents</a>
+    <a href="templates_en.html">Templates</a>
+    <a href="apis_en.html">API</a>
+    <a href="roadmap.html">Roadmap</a>
+  <a href="pathway_en.html">Pathway</a> <a href="search.html">🔍 Search</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🏗 Tech Stack Encyclopedia</h1>
+    <p>Panorama of mainstream dev stacks · Frontend / Backend / Databases / DevOps / Cloud / AI·ML · With selection advice</p>
+  </div>
+
+  <div class="section">
+    <h2>Frontend Frameworks <span class="hint">The React ecosystem still dominates; emerging frameworks focus on performance</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">Framework</th><th style="width:10%">Type</th><th style="width:10%">GitHub ★</th><th>Highlights / Use Cases</th><th style="width:14%">Learning Curve</th></tr></thead>
+      <tbody>
+        <tr><td><b>React</b></td><td>UI library</td><td>230K+</td><td>Largest ecosystem, maintained by Meta, JSX syntax, suited for large apps. Pair with Next.js for SSR/SSG.</td><td>Medium</td></tr>
+        <tr><td><b>Vue 3</b></td><td>Progressive framework</td><td>210K+</td><td>Composition API, friendly template syntax, strong Chinese community. Pair with Nuxt 3 for SSR.</td><td>Low</td></tr>
+        <tr><td><b>Svelte 5</b></td><td>Compile-time framework</td><td>81K+</td><td>No virtual DOM, compiles to vanilla JS, tiny bundle size, Runes reactivity system.</td><td>Low</td></tr>
+        <tr><td><b>Angular</b></td><td>Full-stack framework</td><td>96K+</td><td>Maintained by Google, TypeScript-native, DI + RxJS, ideal for enterprise-scale projects.</td><td>High</td></tr>
+        <tr><td><b>Next.js 15</b></td><td>React meta-framework</td><td>128K+</td><td>App Router + RSC + Turbopack, full-stack solution, one-click deployment on Vercel.</td><td>Medium</td></tr>
+        <tr><td><b>Nuxt 3</b></td><td>Vue meta-framework</td><td>55K+</td><td>Nitro engine, hybrid rendering, auto-imports, ideal for Vue full-stack apps.</td><td>Medium</td></tr>
+        <tr><td><b>Astro</b></td><td>Static-first</td><td>47K+</td><td>Islands architecture, zero JS by default, MDX support, ideal for content sites / blogs / docs.</td><td>Low</td></tr>
+        <tr><td><b>SolidJS</b></td><td>Fine-grained reactivity</td><td>32K+</td><td>JSX without a virtual DOM, compile-time optimizations, near-native performance for extreme-perf scenarios.</td><td>Medium</td></tr>
+        <tr><td><b>Qwik</b></td><td>Resumability</td><td>21K+</td><td>0 hydration, on-demand JS loading, blazing-fast first paint, ideal for SEO + performance-sensitive sites.</td><td>Medium</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Backend Frameworks <span class="hint">Python/Node dominate; Go/Rust rising</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">Framework</th><th style="width:10%">Language</th><th style="width:10%">Type</th><th>Highlights / Use Cases</th><th style="width:12%">Performance</th></tr></thead>
+      <tbody>
+        <tr><td><b>FastAPI</b></td><td>Python</td><td>Async API</td><td>Pydantic type validation + automatic OpenAPI docs, top choice for AI/ML backends, built on Starlette.</td><td>High</td></tr>
+        <tr><td><b>Express</b></td><td>Node.js</td><td>Minimalist Web</td><td>The most mature Node framework, rich middleware ecosystem, great for REST API / SSR.</td><td>Medium-high</td></tr>
+        <tr><td><b>NestJS</b></td><td>Node.js</td><td>Enterprise</td><td>Angular-style, DI + decorators + modules, TypeScript-native, ideal for large backends.</td><td>Medium-high</td></tr>
+        <tr><td><b>Django</b></td><td>Python</td><td>Full-stack MVC</td><td>Batteries-included, ORM + Admin + Auth, ideal for CMS / admin systems.</td><td>Medium</td></tr>
+        <tr><td><b>Flask</b></td><td>Python</td><td>Micro-framework</td><td>Minimal and flexible, ideal for small APIs / prototypes / microservices.</td><td>Medium</td></tr>
+        <tr><td><b>Gin</b></td><td>Go</td><td>HTTP framework</td><td>High performance, radix-tree routing + middleware, the hottest Go backend, ideal for high-concurrency APIs.</td><td>Extreme</td></tr>
+        <tr><td><b>Fiber</b></td><td>Go</td><td>Express-style</td><td>Built on fasthttp, extreme performance, Express-like API, friendly for Go newcomers.</td><td>Extreme</td></tr>
+        <tr><td><b>Spring Boot 3</b></td><td>Java</td><td>Enterprise</td><td>Strongest JVM ecosystem, GraalVM native image support, ideal for large enterprise systems.</td><td>High</td></tr>
+        <tr><td><b>Axum</b></td><td>Rust</td><td>Async Web</td><td>Tokio ecosystem, type-safe, zero-cost abstractions, for extreme performance + safety scenarios.</td><td>Extreme</td></tr>
+        <tr><td><b>Hono</b></td><td>TypeScript</td><td>Ultra-lightweight</td><td>Runs on Cloudflare Workers / Deno / Bun, edge-first, ultra-fast cold starts.</td><td>Extreme</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Databases <span class="hint">Relational + NoSQL + vector DBs — pick by scenario</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">Database</th><th style="width:12%">Type</th><th>Highlights / Use Cases</th><th style="width:14%">Managed Options</th></tr></thead>
+      <tbody>
+        <tr><td><b>PostgreSQL</b></td><td>Relational</td><td>The most powerful open-source RDBMS; JSONB / full-text search / extension ecosystem (pgvector / TimescaleDB) — covers every scenario.</td><td>Supabase / Neon / RDS</td></tr>
+        <tr><td><b>MySQL</b></td><td>Relational</td><td>The most widely used open-source RDBMS, mature replication, the standard for internet applications.</td><td>PlanetScale / RDS</td></tr>
+        <tr><td><b>SQLite</b></td><td>Embedded</td><td>Zero-config single file, DuckDB's sibling, ideal for mobile / edge / prototypes.</td><td>Local / Turso</td></tr>
+        <tr><td><b>MongoDB</b></td><td>Document</td><td>BSON document storage, flexible schema, ideal for content management / user profiles.</td><td>Atlas</td></tr>
+        <tr><td><b>Redis</b></td><td>Key-value / cache</td><td>In-memory database, Pub/Sub + Stream + Lua; the standard for caching / sessions / leaderboards.</td><td>Upstash / Redis Cloud</td></tr>
+        <tr><td><b>Elasticsearch</b></td><td>Search engine</td><td>Full-text search + log analytics, ELK ecosystem, ideal for search / observability.</td><td>Elastic Cloud</td></tr>
+        <tr><td><b>DuckDB</b></td><td>Analytical</td><td>Embedded OLAP, columnar + vectorized execution, ideal for data analysis / local BI.</td><td>Local</td></tr>
+        <tr><td><b>ClickHouse</b></td><td>Analytical</td><td>Columnar OLAP, extreme query performance, ideal for real-time analytics / log platforms.</td><td>ClickHouse Cloud</td></tr>
+        <tr><td><b>pgvector</b></td><td>Vector extension</td><td>PostgreSQL extension for vector similarity search, first choice for RAG (no separate vector DB needed).</td><td>Supabase / Neon</td></tr>
+        <tr><td><b>Qdrant</b></td><td>Vector database</td><td>Built in Rust, high-performance vector search with Filter + Payload, ideal for large-scale RAG.</td><td>Qdrant Cloud</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>DevOps &amp; Cloud Platforms <span class="hint">Containers + IaC + CI/CD are the modern standard</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">Tool / Platform</th><th style="width:12%">Category</th><th>Description</th><th style="width:14%">Alternatives</th></tr></thead>
+      <tbody>
+        <tr><td><b>Docker</b></td><td>Container runtime</td><td>The de facto standard for application packaging &amp; isolation: Dockerfile + Compose + Hub</td><td>Podman / containerd</td></tr>
+        <tr><td><b>Kubernetes</b></td><td>Container orchestration</td><td>Auto-scaling / rolling updates / service discovery; the cloud-native cornerstone with the declarative K8s API</td><td>Nomad / Docker Swarm</td></tr>
+        <tr><td><b>Terraform</b></td><td>IaC</td><td>Declarative multi-cloud resource management, HCL syntax, state management, versioned infrastructure</td><td>Pulumi / CDK</td></tr>
+        <tr><td><b>GitHub Actions</b></td><td>CI/CD</td><td>GitHub-native CI/CD, matrix builds + custom runners, generous free tier</td><td>GitLab CI / CircleCI</td></tr>
+        <tr><td><b>ArgoCD</b></td><td>GitOps</td><td>K8s-native GitOps tool, declarative deployment + multi-environment management</td><td>Flux / Jenkins X</td></tr>
+        <tr><td><b>Vercel</b></td><td>Frontend hosting</td><td>Native Next.js deployment, Edge Functions + preview deploys, frontend first choice</td><td>Netlify / Cloudflare Pages</td></tr>
+        <tr><td><b>Cloudflare</b></td><td>Edge network</td><td>Workers + R2 + D1 + KV; edge compute + CDN + DNS, low latency worldwide</td><td>Vercel Edge / Deno Deploy</td></tr>
+        <tr><td><b>AWS</b></td><td>Public cloud</td><td>The broadest cloud services (EC2 / Lambda / S3 / RDS / Bedrock), enterprise first choice</td><td>GCP / Azure</td></tr>
+        <tr><td><b>Railway</b></td><td>PaaS</td><td>One-click full-stack deployment, Dockerfile / Git auto-build, developer-friendly</td><td>Render / Fly.io</td></tr>
+        <tr><td><b>Sentry</b></td><td>Monitoring</td><td>Error tracking + performance monitoring + release tracking, full-stack observability</td><td>Datadog / Grafana</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>AI / ML Libraries <span class="hint">PyTorch still dominates research; the inference-optimization toolchain keeps maturing</span></h2>
+    <table>
+      <thead><tr><th style="width:16%">Library / Tool</th><th style="width:12%">Type</th><th>Description</th><th style="width:12%">License</th></tr></thead>
+      <tbody>
+        <tr><td><b>PyTorch</b></td><td>DL framework</td><td>Dynamic graphs + GPU acceleration, research first choice, the foundation of HuggingFace / vLLM</td><td>BSD</td></tr>
+        <tr><td><b>TensorFlow</b></td><td>DL framework</td><td>Maintained by Google, static graphs + Keras, mature production deployment ecosystem (TF Serving / TFLite)</td><td>Apache 2.0</td></tr>
+        <tr><td><b>JAX</b></td><td>Functional autodiff</td><td>Google Research, XLA compilation + functional API, native distributed training support</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Transformers</b></td><td>Model library</td><td>By HuggingFace, a unified API for 100K+ pre-trained models — NLP / Vision / Audio</td><td>Apache 2.0</td></tr>
+        <tr><td><b>scikit-learn</b></td><td>Classic ML</td><td>Classification / regression / clustering / dimensionality reduction, unified API, best entry point into ML</td><td>BSD</td></tr>
+        <tr><td><b>Polars</b></td><td>Data processing</td><td>Built in Rust, columnar + lazy execution, 10-100x faster than Pandas, extremely memory-efficient</td><td>MIT</td></tr>
+        <tr><td><b>ONNX Runtime</b></td><td>Inference engine</td><td>Cross-framework model format (PyTorch/TF→ONNX), quantization + hardware acceleration</td><td>MIT</td></tr>
+        <tr><td><b>PEFT</b></td><td>Parameter-efficient fine-tuning</td><td>LoRA / QLoRA / Prefix Tuning, fine-tune large models on a single GPU</td><td>Apache 2.0</td></tr>
+        <tr><td><b>TRL</b></td><td>RL fine-tuning</td><td>SFT / DPO / PPO / RLHF, the LLM alignment training toolchain</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Unsloth</b></td><td>Training acceleration</td><td>2-5x faster fine-tuning, half the VRAM, train 70B models on a single GPU</td><td>Apache 2.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>Case Studies <span class="hint">Pick stacks by scenario — don't blindly chase the newest</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>📝 Personal Tech Blog <span class="status badge b-ok">Beginner</span></h4>
+        <p><b>Scenario:</b> Writing tech articles — needs good SEO, fast loading, zero ops, and free hosting.</p>
+        <p><b>Selection:</b> <b>Astro</b> (zero JS by default, islands architecture) + <b>Cloudflare Pages</b> (global CDN, generous free tier).</p>
+        <p><b>Steps:</b> ① <code>npm create astro</code> with a blog template ② Write in Markdown/MDX ③ Connect GitHub for auto-deploy to CF Pages.</p>
+        <p><b>Analysis:</b> Content sites don't need React's runtime overhead; Astro's static output delivers a blazing-fast first paint; CF Pages beats Vercel on edge-caching convenience. The <a href="templates_en.html">Templates</a> "static-first" entry is exactly this idea.</p>
+      </div>
+      <div class="result">
+        <h4>🤖 Full-Stack RAG App <span class="status badge b-ok">Advanced</span></h4>
+        <p><b>Scenario:</b> Build an enterprise knowledge-base Q&amp;A with a UI, able to iterate backend logic continuously.</p>
+        <p><b>Selection:</b> Frontend <b>Next.js 15</b> + backend <b>FastAPI</b> (top choice in the Python AI ecosystem) + <b>pgvector</b> for vectors (reusing PostgreSQL) + deployment on <b>Railway/Vercel</b>.</p>
+        <p><b>Steps:</b> ① Next.js streaming chat UI ② FastAPI wrapping a LangChain retrieval chain ③ pgvector stores Embeddings ④ deploy from separate repos.</p>
+        <p><b>Analysis:</b> Frontend/backend separation lets AI generate and maintain each side independently; pgvector removes the need to operate a separate vector DB. See <a href="templates_en.html">Templates</a> "RAG app" and <a href="models_en.html">Models</a> "Embedding".</p>
+      </div>
+      <div class="result">
+        <h4>📊 Real-Time Dashboard <span class="status badge b-ok">Advanced</span></h4>
+        <p><b>Scenario:</b> Monitor millions of events in real time with sub-second aggregation queries and charts.</p>
+        <p><b>Selection:</b> <b>ClickHouse</b> (columnar OLAP) + <b>Go/Gin</b> (high-concurrency API) + <b>React</b> (frontend) + <b>Redis</b> (hot caching).</p>
+        <p><b>Steps:</b> ① Ingest events via Kafka into ClickHouse ② Gin serves aggregation query APIs ③ React renders charts via polling/WS ④ Redis caches Top-N.</p>
+        <p><b>Analysis:</b> Row-store databases full-scan on aggregation; columnar OLAP is the right answer for real-time analytics; Go's ultra-low latency suits the high-QPS query layer. Compare <a href="stacks_en.html">Databases</a> "ClickHouse vs DuckDB".</p>
+      </div>
+      <div class="result">
+        <h4>⚡ High-Concurrency API Service <span class="status badge b-ok">Advanced</span></h4>
+        <p><b>Scenario:</b> A public REST API expecting 10K QPS peaks, requiring stability and control.</p>
+        <p><b>Selection:</b> <b>Go + Gin</b> + <b>Redis</b> (cache/rate limiting) + <b>PostgreSQL</b> + <b>Kubernetes</b> (elastic scaling).</p>
+        <p><b>Steps:</b> ① Gin routes + middleware (auth/rate limit) ② Redis caches hot data ③ Docker packaging ④ K8s HPA auto-scales on CPU.</p>
+        <p><b>Analysis:</b> Go's goroutine model is naturally suited to high concurrency; K8s declarative scaling avoids manual ops. Pairs with <a href="apis_en.html">API</a> "rate limiting / caching". If you only need global low latency, consider <b>Hono + Cloudflare</b>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Roadmap:</strong> stack combination recommendations (full-stack / AI app / data pipeline scenarios), performance benchmark comparisons, learning path maps, and high-frequency interview topics. The "Case Studies" section on this page was added in v2.19.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · Tech Stack Encyclopedia · v3.2 live · <a href="hub_en.html" style="color:var(--muted)">Back to Hub</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='stacks.html',enPage='stacks_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

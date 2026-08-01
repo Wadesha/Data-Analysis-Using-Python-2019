@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>技术栈百科 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html" class="active">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html">API</a>
+    <a href="roadmap.html">规划</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🏗 技术栈百科</h1>
+    <p>主流开发技术栈全景 · 前端 / 后端 / 数据库 / DevOps / 云平台 / AI·ML · 含选型建议</p>
+  </div>
+
+  <div class="section">
+    <h2>前端框架 <span class="hint">React 生态仍占主导，新兴框架注重性能</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">框架</th><th style="width:10%">类型</th><th style="width:10%">GitHub ★</th><th>特点 / 适用场景</th><th style="width:14%">学习曲线</th></tr></thead>
+      <tbody>
+        <tr><td><b>React</b></td><td>UI 库</td><td>230K+</td><td>生态最大，Meta 维护，JSX 语法，适用大型应用。配 Next.js 做 SSR/SSG。</td><td>中等</td></tr>
+        <tr><td><b>Vue 3</b></td><td>渐进式框架</td><td>210K+</td><td>Composition API，模板语法友好，中文社区强。配 Nuxt 3 做 SSR。</td><td>低</td></tr>
+        <tr><td><b>Svelte 5</b></td><td>编译时框架</td><td>81K+</td><td>无虚拟 DOM，编译为原生 JS，包体积极小，Runes 响应式系统。</td><td>低</td></tr>
+        <tr><td><b>Angular</b></td><td>全栈框架</td><td>96K+</td><td>Google 维护，TypeScript 原生，DI + RxJS，适合企业级大型项目。</td><td>高</td></tr>
+        <tr><td><b>Next.js 15</b></td><td>React 元框架</td><td>128K+</td><td>App Router + RSC + Turbopack，全栈方案，Vercel 部署一键上线。</td><td>中等</td></tr>
+        <tr><td><b>Nuxt 3</b></td><td>Vue 元框架</td><td>55K+</td><td>Nitro 引擎，混合渲染，自动导入，适合 Vue 全栈应用。</td><td>中等</td></tr>
+        <tr><td><b>Astro</b></td><td>静态优先</td><td>47K+</td><td>岛屿架构，零 JS 默认，MDC 支持，适合内容站 / 博客 / 文档。</td><td>低</td></tr>
+        <tr><td><b>SolidJS</b></td><td>细粒度响应</td><td>32K+</td><td>JSX 但无虚拟 DOM，编译时优化，性能接近原生，适合极致性能场景。</td><td>中等</td></tr>
+        <tr><td><b>Qwik</b></td><td>可恢复性</td><td>21K+</td><td>0 hydration，按需加载 JS，首屏极快，适合 SEO + 性能敏感站。</td><td>中等</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>后端框架 <span class="hint">Python/Node 占多数，Go/Rust 崛起</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">框架</th><th style="width:10%">语言</th><th style="width:10%">类型</th><th>特点 / 适用场景</th><th style="width:12%">性能</th></tr></thead>
+      <tbody>
+        <tr><td><b>FastAPI</b></td><td>Python</td><td>异步 API</td><td>Pydantic 类型校验 + 自动 OpenAPI 文档，AI/ML 后端首选，Starlette 底座。</td><td>高</td></tr>
+        <tr><td><b>Express</b></td><td>Node.js</td><td>极简 Web</td><td>最成熟的 Node 框架，中间件生态丰富，适合 REST API / SSR。</td><td>中高</td></tr>
+        <tr><td><b>NestJS</b></td><td>Node.js</td><td>企业级</td><td>Angular 风格，DI + 装饰器 + 模块化，TypeScript 原生，适合大型后端。</td><td>中高</td></tr>
+        <tr><td><b>Django</b></td><td>Python</td><td>全栈 MVC</td><td>batteries-included，ORM + Admin + Auth，适合 CMS / 后台系统。</td><td>中</td></tr>
+        <tr><td><b>Flask</b></td><td>Python</td><td>微框架</td><td>极简灵活，适合小型 API / 原型 / 微服务。</td><td>中</td></tr>
+        <tr><td><b>Gin</b></td><td>Go</td><td>HTTP 框架</td><td>高性能，路由树 + 中间件，Go 后端最热门，适合高并发 API。</td><td>极高</td></tr>
+        <tr><td><b>Fiber</b></td><td>Go</td><td>Express 风格</td><td>fasthttp 底座，性能极致，API 类似 Express，Go 新手友好。</td><td>极高</td></tr>
+        <tr><td><b>Spring Boot 3</b></td><td>Java</td><td>企业级</td><td>JVM 生态最强，GraalVM 原生镜像支持，适合大型企业系统。</td><td>高</td></tr>
+        <tr><td><b>Axum</b></td><td>Rust</td><td>异步 Web</td><td>Tokio 生态，类型安全，零成本抽象，适合极致性能 + 安全场景。</td><td>极高</td></tr>
+        <tr><td><b>Hono</b></td><td>TypeScript</td><td>超轻量</td><td>Cloudflare Workers / Deno / Bun 通用，Edge 优先，极速冷启动。</td><td>极高</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>数据库 <span class="hint">关系型 + NoSQL + 向量库，按场景选型</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">数据库</th><th style="width:12%">类型</th><th>特点 / 适用场景</th><th style="width:14%">托管方案</th></tr></thead>
+      <tbody>
+        <tr><td><b>PostgreSQL</b></td><td>关系型</td><td>功能最强开源 RDBMS，JSONB / 全文检索 / 扩展生态（pgvector / TimescaleDB），全场景通吃。</td><td>Supabase / Neon / RDS</td></tr>
+        <tr><td><b>MySQL</b></td><td>关系型</td><td>最普及的开源 RDBMS，主从复制成熟，互联网应用标配。</td><td>PlanetScale / RDS</td></tr>
+        <tr><td><b>SQLite</b></td><td>嵌入式</td><td>零配置单文件，DuckDB 兄弟，适合移动 / 边缘 / 原型。</td><td>本地 / Turso</td></tr>
+        <tr><td><b>MongoDB</b></td><td>文档型</td><td>BSON 文档存储，灵活 schema，适合内容管理 / 用户画像。</td><td>Atlas</td></tr>
+        <tr><td><b>Redis</b></td><td>键值 / 缓存</td><td>内存数据库，Pub/Sub + Stream + Lua，缓存 / 会话 / 排行榜标配。</td><td>Upstash / Redis Cloud</td></tr>
+        <tr><td><b>Elasticsearch</b></td><td>搜索引擎</td><td>全文检索 + 日志分析，ELK 生态，适合搜索 / 可观测性。</td><td>Elastic Cloud</td></tr>
+        <tr><td><b>DuckDB</b></td><td>分析型</td><td>嵌入式 OLAP，列存 + 向量化，适合数据分析 / 本地 BI。</td><td>本地</td></tr>
+        <tr><td><b>ClickHouse</b></td><td>分析型</td><td>列式 OLAP，极致查询性能，适合实时分析 / 日志平台。</td><td>ClickHouse Cloud</td></tr>
+        <tr><td><b>pgvector</b></td><td>向量扩展</td><td>PostgreSQL 扩展，向量相似度搜索，RAG 场景首选（无需独立向量库）。</td><td>Supabase / Neon</td></tr>
+        <tr><td><b>Qdrant</b></td><td>向量数据库</td><td>Rust 实现，高性能向量检索，Filter + Payload，适合大规模 RAG。</td><td>Qdrant Cloud</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>DevOps & 云平台 <span class="hint">容器化 + IaC + CI/CD 是现代标配</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">工具 / 平台</th><th style="width:12%">类别</th><th>说明</th><th style="width:14%">替代方案</th></tr></thead>
+      <tbody>
+        <tr><td><b>Docker</b></td><td>容器运行时</td><td>应用打包与隔离的事实标准，Dockerfile + Compose + Hub</td><td>Podman / containerd</td></tr>
+        <tr><td><b>Kubernetes</b></td><td>容器编排</td><td>自动扩缩 / 滚动更新 / 服务发现，云原生基石，K8s 声明式 API</td><td>Nomad / Docker Swarm</td></tr>
+        <tr><td><b>Terraform</b></td><td>IaC</td><td>多云资源声明式管理，HCL 语法，state 管理，基础设施版本化</td><td>Pulumi / CDK</td></tr>
+        <tr><td><b>GitHub Actions</b></td><td>CI/CD</td><td>GitHub 原生 CI/CD，矩阵构建 + 自定义 Runner，免费额度充足</td><td>GitLab CI / CircleCI</td></tr>
+        <tr><td><b>ArgoCD</b></td><td>GitOps</td><td>K8s 原生 GitOps 工具，声明式部署 + 多环境管理</td><td>Flux / Jenkins X</td></tr>
+        <tr><td><b>Vercel</b></td><td>前端托管</td><td>Next.js 原生部署，Edge Functions + 预览部署，前端首选</td><td>Netlify / Cloudflare Pages</td></tr>
+        <tr><td><b>Cloudflare</b></td><td>边缘网络</td><td>Workers + R2 + D1 + KV，Edge 计算 + CDN + DNS，全球低延迟</td><td>Vercel Edge / Deno Deploy</td></tr>
+        <tr><td><b>AWS</b></td><td>公有云</td><td>最全的云服务（EC2 / Lambda / S3 / RDS / Bedrock），企业首选</td><td>GCP / Azure</td></tr>
+        <tr><td><b>Railway</b></td><td>PaaS</td><td>一键部署全栈应用，Dockerfile / Git 自动构建，开发者友好</td><td>Render / Fly.io</td></tr>
+        <tr><td><b>Sentry</b></td><td>监控</td><td>错误追踪 + 性能监控 + Release 追踪，全栈可观测性</td><td>Datadog / Grafana</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>AI / ML 库 <span class="hint">PyTorch 仍是研究主流，推理优化工具链日趋成熟</span></h2>
+    <table>
+      <thead><tr><th style="width:16%">库 / 工具</th><th style="width:12%">类型</th><th>说明</th><th style="width:12%">许可证</th></tr></thead>
+      <tbody>
+        <tr><td><b>PyTorch</b></td><td>深度学习框架</td><td>动态图 + GPU 加速，研究首选，HuggingFace / vLLM 底座</td><td>BSD</td></tr>
+        <tr><td><b>TensorFlow</b></td><td>深度学习框架</td><td>Google 维护，静态图 + Keras，生产部署生态成熟（TF Serving / TFLite）</td><td>Apache 2.0</td></tr>
+        <tr><td><b>JAX</b></td><td>函数式自动微分</td><td>Google 研究，XLA 编译 + 函数式 API，分布式训练原生支持</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Transformers</b></td><td>模型库</td><td>HuggingFace 出品，10 万+ 预训练模型统一接口，NLP / Vision / Audio</td><td>Apache 2.0</td></tr>
+        <tr><td><b>scikit-learn</b></td><td>传统 ML</td><td>分类 / 回归 / 聚类 / 降维，API 统一，入门 ML 首选</td><td>BSD</td></tr>
+        <tr><td><b>Polars</b></td><td>数据处理</td><td>Rust 实现，列式 + 惰性执行，比 Pandas 快 10-100x，内存效率极高</td><td>MIT</td></tr>
+        <tr><td><b>ONNX Runtime</b></td><td>推理引擎</td><td>跨框架模型格式（PyTorch/TF→ONNX），量化 + 硬件加速</td><td>MIT</td></tr>
+        <tr><td><b>PEFT</b></td><td>参数高效微调</td><td>LoRA / QLoRA / Prefix Tuning，单卡微调大模型</td><td>Apache 2.0</td></tr>
+        <tr><td><b>TRL</b></td><td>强化学习微调</td><td>SFT / DPO / PPO / RLHF，大模型对齐训练工具链</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Unsloth</b></td><td>训练加速</td><td>2-5x 微调加速，显存减半，单卡训练 70B 模型</td><td>Apache 2.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>案例展示与解析 <span class="hint">按场景选技术栈，不盲目追新</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>📝 个人技术博客 <span class="status badge b-ok">入门</span></h4>
+        <p><b>场景：</b>写技术文章，要 SEO 好、加载快、零运维、免费托管。</p>
+        <p><b>选型：</b><b>Astro</b>（默认零 JS、岛屿架构）+ <b>Cloudflare Pages</b>（全球 CDN、免费层充足）。</p>
+        <p><b>步骤：</b>① <code>npm create astro</code> 选博客模板 ② 用 Markdown/MDX 写文 ③ 连 GitHub 自动部署到 CF Pages。</p>
+        <p><b>解析：</b>内容站不需要 React 的运行时开销，Astro 静态输出首屏极快；CF Pages 比 Vercel 在边缘缓存上更省心。<a href="templates.html">模板</a>「静态优先」即此思路。</p>
+      </div>
+      <div class="result">
+        <h4>🤖 RAG 全栈应用 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>做一个带界面的企业知识库问答，要能持续迭代后端逻辑。</p>
+        <p><b>选型：</b>前端 <b>Next.js 15</b> + 后端 <b>FastAPI</b>(Python AI 生态首选) + 向量 <b>pgvector</b>(复用 PostgreSQL) + 部署 <b>Railway/Vercel</b>。</p>
+        <p><b>步骤：</b>① Next.js 写对话 UI(流式) ② FastAPI 封装 LangChain 检索链 ③ pgvector 存 Embedding ④ 分仓库部署。</p>
+        <p><b>解析：</b>前后端分离便于 AI 分别生成与维护；pgvector 省去独立向量库运维。对应 <a href="templates.html">模板</a>「RAG 应用」与 <a href="models.html">模型</a>「Embedding」。</p>
+      </div>
+      <div class="result">
+        <h4>📊 实时数据看板 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>实时监控百万级事件流，要亚秒级聚合查询与图表。</p>
+        <p><b>选型：</b><b>ClickHouse</b>(列式 OLAP) + <b>Go/Gin</b>(高并发 API) + <b>React</b>(前端) + <b>Redis</b>(缓存热点)。</p>
+        <p><b>步骤：</b>① Kafka 摄入事件入 ClickHouse ② Gin 写聚合查询 API ③ React 轮询/WS 渲染图表 ④ Redis 缓存 Top-N。</p>
+        <p><b>解析：</b>行存数据库做聚合会全表扫描，列式 OLAP 是实时分析正解；Go 的极低延迟适合高 QPS 查询层。对比见 <a href="stacks.html">数据库</a>「ClickHouse vs DuckDB」。</p>
+      </div>
+      <div class="result">
+        <h4>⚡ 高并发 API 服务 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>对外开放的 REST API，预期峰值 1 万 QPS，要求稳定可控。</p>
+        <p><b>选型：</b><b>Go + Gin</b> + <b>Redis</b>(缓存/限流) + <b>PostgreSQL</b> + <b>Kubernetes</b>(弹性扩缩)。</p>
+        <p><b>步骤：</b>① Gin 路由 + 中间件(鉴权/限流) ② Redis 缓存热点 ③ Docker 打包 ④ K8s HPA 按 CPU 自动扩缩。</p>
+        <p><b>解析：</b>Go 的 goroutine 模型天然适合高并发；K8s 声明式扩缩避免手动运维。<a href="apis.html">API</a>「限流/缓存」与之配合。若只需全球低延迟可选 <b>Hono + Cloudflare</b>。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>后续计划：</strong>技术栈组合推荐（全栈 / AI 应用 / 数据管线场景）、性能基准对比、学习路径图、面试高频考点。本页「案例展示与解析」已于 v2.19 补充。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · 技术栈百科 · v3.2 已上线 · <a href="hub.html" style="color:var(--muted)">返回枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='stacks.html',enPage='stacks_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

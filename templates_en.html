@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Templates · Vibecoding Hub</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links">
+    <a href="hub_en.html">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html">Models</a>
+    <a href="stacks_en.html">Tech Stacks</a>
+    <a href="ai-coding_en.html">AI Coding</a>
+    <a href="agents_en.html">Agents</a>
+    <a href="templates_en.html" class="active">Templates</a>
+    <a href="apis_en.html">API</a>
+    <a href="roadmap.html">Roadmap</a>
+  <a href="pathway_en.html">Pathway</a> <a href="search.html">🔍 Search</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>📐 Project Templates</h1>
+    <p>Ready-to-use project scaffolding for the vibecoding era · full-stack / AI apps / data pipelines / API services</p>
+  </div>
+
+  <div class="section">
+    <h2>Full-Stack App Templates <span class="hint">Frontend + backend + database + deployment in one</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">Template</th><th style="width:22%">Tech stack</th><th>Features / use cases</th><th style="width:14%">Deployment</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://github.com/vercel/next.js/tree/canary/examples" target="_blank" rel="noopener">Next.js Full-Stack</a></b></td><td>Next.js 15 + Prisma + PostgreSQL + Auth.js</td><td>App Router + RSC + Server Actions, full-stack monorepo, one-click Vercel deployment</td><td>Vercel</td></tr>
+        <tr><td><b><a href="https://create.t3.gg" target="_blank" rel="noopener">T3 Stack</a></b></td><td>Next.js + tRPC + Prisma + Tailwind + NextAuth</td><td>End-to-end type safety with a strong community ecosystem; great for small-to-medium full-stack apps</td><td>Vercel</td></tr>
+        <tr><td><b><a href="https://nuxt.com/docs/getting-started/installation" target="_blank" rel="noopener">Nuxt Full-Stack</a></b></td><td>Nuxt 3 + Drizzle ORM + PostgreSQL + NuxtAuth</td><td>Full-stack solution in the Vue ecosystem: Nitro server, hybrid rendering</td><td>Vercel / Netlify</td></tr>
+        <tr><td><b><a href="https://svelte.dev/docs/kit/introduction" target="_blank" rel="noopener">SvelteKit Full-Stack</a></b></td><td>SvelteKit 5 + Lucia Auth + Drizzle + PostgreSQL</td><td>Minimal full-stack with compile-time optimization and a small bundle size</td><td>Vercel / Netlify</td></tr>
+        <tr><td><b><a href="https://github.com/tiangolo/full-stack-fastapi-template" target="_blank" rel="noopener">FastAPI + React</a></b></td><td>FastAPI + SQLAlchemy + React + Vite</td><td>Python backend + decoupled frontend; the go-to architecture for AI/ML apps</td><td>Docker / Railway</td></tr>
+        <tr><td><b><a href="https://hono.dev/docs/getting-started/basic" target="_blank" rel="noopener">Hono + React SPA</a></b></td><td>Hono + Drizzle + React + Vite</td><td>Edge-first full-stack deployed on Cloudflare Workers, low latency worldwide</td><td>Cloudflare</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>AI App Templates <span class="hint">RAG / Chatbot / Agent / fine-tuning</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">Template</th><th style="width:26%">Tech stack</th><th>Features / use cases</th><th style="width:10%">Type</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://github.com/langchain-ai/rag-cookbook" target="_blank" rel="noopener">RAG App</a></b></td><td>FastAPI + LangChain + pgvector + OpenAI</td><td>Document upload → chunking → embedding → vector storage → retrieval-augmented generation; standard for enterprise knowledge bases</td><td>RAG</td></tr>
+        <tr><td><b><a href="https://github.com/vercel/ai-chatbot" target="_blank" rel="noopener">Chatbot UI</a></b></td><td>Next.js + Vercel AI SDK + OpenAI/Anthropic</td><td>Streaming output + multi-model switching + conversation history + Markdown rendering; a starting point for a ChatGPT clone</td><td>Chatbot</td></tr>
+        <tr><td><b><a href="https://github.com/langchain-ai/langgraph" target="_blank" rel="noopener">Agent App</a></b></td><td>FastAPI + LangGraph + Tools + Memory</td><td>ReAct agent + tool calling + state-machine orchestration, extensible with custom tools</td><td>Agent</td></tr>
+        <tr><td><b><a href="https://github.com/vercel/ai" target="_blank" rel="noopener">Multimodal App</a></b></td><td>Next.js + GPT-4o Vision + Whisper + TTS</td><td>Mixed image/voice/text input and output, supporting image upload + voice conversation</td><td>Multimodal</td></tr>
+        <tr><td><b><a href="https://github.com/unslothai/unsloth" target="_blank" rel="noopener">Model Fine-Tuning</a></b></td><td>Python + PEFT + TRL + Unsloth + WandB</td><td>LoRA/QLoRA fine-tuning pipeline: data prep → training → evaluation → export → deployment</td><td>Fine-tune</td></tr>
+        <tr><td><b><a href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener">AI Eval Platform</a></b></td><td>FastAPI + DeepEval + Promptfoo + Phoenix</td><td>Quality evaluation for LLM apps: accuracy / hallucination rate / latency / cost tracking</td><td>Eval</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Data Pipeline Templates <span class="hint">ETL / ML Pipeline / Stream Processing</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">Template</th><th style="width:26%">Tech stack</th><th>Features / use cases</th><th style="width:10%">Type</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://github.com/PrefectHQ/prefect" target="_blank" rel="noopener">ETL Pipeline</a></b></td><td>Python + DuckDB + Polars + Prefect</td><td>Local OLAP ETL: CSV/JSON → cleaning → transformation → DuckDB analytics; lightweight, no cluster needed</td><td>ETL</td></tr>
+        <tr><td><b><a href="https://github.com/mlflow/mlflow" target="_blank" rel="noopener">ML Pipeline</a></b></td><td>Python + MLflow + DVC + scikit-learn</td><td>Experiment tracking + data versioning + model registry + deployment; a reproducible ML pipeline</td><td>ML</td></tr>
+        <tr><td><b><a href="https://github.com/great-expectations/great_expectations" target="_blank" rel="noopener">Data Quality Monitoring</a></b></td><td>Python + Great Expectations + Pandas</td><td>Data quality assertions + anomaly detection + report generation; the foundation of data governance</td><td>Quality</td></tr>
+        <tr><td><b><a href="https://clickhouse.com/docs" target="_blank" rel="noopener">Real-Time Data Streaming</a></b></td><td>Python + Kafka + Faust + ClickHouse</td><td>Streaming ingestion → processing → real-time analytics dashboards; real-time data warehouse architecture</td><td>Stream</td></tr>
+        <tr><td><b><a href="https://github.com/duckdb/duckdb" target="_blank" rel="noopener">Data API Service</a></b></td><td>FastAPI + DuckDB + Arrow + Flight</td><td>High-performance data query API with columnar storage + Apache Arrow zero-copy transfer</td><td>Data API</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>API Service Templates <span class="hint">REST / GraphQL / gRPC / microservices</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">Template</th><th style="width:26%">Tech stack</th><th>Features / use cases</th><th style="width:10%">Type</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://github.com/tiangolo/fastapi" target="_blank" rel="noopener">REST API</a></b></td><td>FastAPI + Pydantic + SQLAlchemy + Alembic</td><td>Auto-generated OpenAPI docs + type validation + database migrations; the first choice for Python APIs</td><td>REST</td></tr>
+        <tr><td><b><a href="https://github.com/strawberry-graphql/strawberry" target="_blank" rel="noopener">GraphQL API</a></b></td><td>Python + Strawberry + SQLAlchemy + Ariadne</td><td>Schema-first / code-first GraphQL with flexible queries + subscriptions</td><td>GraphQL</td></tr>
+        <tr><td><b><a href="https://github.com/grpc/grpc-go" target="_blank" rel="noopener">gRPC Service</a></b></td><td>Go + grpc-go + Buf + Protocol Buffers</td><td>High-performance RPC + streaming communication + code generation; inter-microservice communication</td><td>gRPC</td></tr>
+        <tr><td><b><a href="https://github.com/gin-gonic/gin" target="_blank" rel="noopener">Microservice Scaffold</a></b></td><td>Go + Gin + Docker + K8s + Istio</td><td>Service mesh + health checks + distributed tracing + circuit breaking and degradation</td><td>Microservice</td></tr>
+        <tr><td><b><a href="https://github.com/trpc/trpc" target="_blank" rel="noopener">BFF Layer</a></b></td><td>TypeScript + tRPC + TRPC-OpenAPI</td><td>Backend-for-Frontend: APIs tailored per client, type-safe</td><td>BFF</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>Case Studies &amp; Analysis <span class="hint">Pick a template → customize it fast with AI</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>🚀 SaaS landing page <span class="status badge b-ok">Beginner</span></h4>
+        <p><b>Scenario:</b> A startup needs a marketing page that collects email subscriptions and shows pricing — live the same day.</p>
+        <p><b>Choice:</b> The <b>Next.js Full-Stack</b> template (App Router + Tailwind + Auth.js).</p>
+        <p><b>Steps:</b> ① Clone the template ② Have Cursor rewrite the Hero / pricing / FAQ copy and colors ③ Wire up <a href="apis_en.html">Resend</a> for subscriptions ④ Deploy with <code>vercel --prod</code>.</p>
+        <p><b>Analysis:</b> The template removes the routing/build/deployment groundwork; AI only changes the "presentation layer", while business logic (subscriptions) comes from an API. The "beginner" path in <a href="pathway_en.html">Learning Pathway</a> is exactly this shortest route.</p>
+      </div>
+      <div class="result">
+        <h4>📚 Company docs Q&amp;A <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Scenario:</b> Turn the internal Wiki into a Q&amp;A assistant so employees can ask about policies / processes in natural language.</p>
+        <p><b>Choice:</b> The <b>RAG App</b> template (FastAPI + LangChain + pgvector + OpenAI).</p>
+        <p><b>Steps:</b> ① Swap the data source for a Wiki export ② Tune chunk size and the embedding model ③ Add access authentication ④ Apply the UI template.</p>
+        <p><b>Analysis:</b> The template's "scaffolding" stays unchanged; only the data-ingestion layer is swapped — exactly the engineering implementation of the "enterprise RAG selection" <a href="models_en.html#cases">model case</a>.</p>
+      </div>
+      <div class="result">
+        <h4>🗂 Local data ETL <span class="status badge b-ok">Beginner</span></h4>
+        <p><b>Scenario:</b> Clean, join, and turn multiple daily CSV exports into analysis tables — no cluster.</p>
+        <p><b>Choice:</b> The <b>ETL Pipeline</b> template (Python + DuckDB + Polars + Prefect).</p>
+        <p><b>Steps:</b> ① Read and clean CSVs with Polars ② Do cross-table JOINs / aggregations with DuckDB ③ Orchestrate daily jobs with Prefect ④ Output Parquet / reports.</p>
+        <p><b>Analysis:</b> Embedded OLAP means no database ops; a single machine handles tens of millions of rows and is more memory-efficient than pandas. Details in <a href="stacks_en.html">Tech Stacks</a> "DuckDB".</p>
+      </div>
+      <div class="result">
+        <h4>🤖 Fine-tuning your own model <span class="status badge b-ok">Deep dive</span></h4>
+        <p><b>Scenario:</b> A general-purpose LLM handles your domain terminology poorly and needs customization.</p>
+        <p><b>Choice:</b> The <b>Model Fine-Tuning</b> template (PEFT + TRL + Unsloth + WandB).</p>
+        <p><b>Steps:</b> ① Prepare domain SFT data (Q&amp;A pairs) ② Speed up LoRA training with Unsloth ③ Evaluate with DeepEval ④ Export and hook up inference.</p>
+        <p><b>Analysis:</b> QLoRA lets a single GPU train 7B~13B models; evaluate before going live to avoid "thinking it got better". The "fine-tuning toolchain" in <a href="models_en.html">Models</a> will be completed later.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Coming next:</strong> GitHub repo links for each template + one-click deploy scripts + architecture diagrams + a vibecoding adaptation guide (how to quickly customize templates with AI). This page's "Case Studies &amp; Analysis" section was added in v2.19.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · Project Templates · v3.5 live · <a href="hub_en.html" style="color:var(--muted)">Back to Hub</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='templates.html',enPage='templates_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

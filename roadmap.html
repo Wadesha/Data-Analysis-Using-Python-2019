@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>版本规划 · Kaggle 数据集集合</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">📊 Kaggle 数据集集合</span>
+
+  <span class="links">
+    <a href="hub.html">🚀 枢纽</a>
+    <a href="index.html" data-i18n="nav_overview">总览</a>
+    <a href="datasets.html" data-i18n="nav_datasets">数据集</a>
+    <a href="process.html" data-i18n="nav_process">过程</a>
+    <a href="roadmap.html" class="active" data-i18n="nav_roadmap">版本规划</a>
+    <a href="versions.html" data-i18n="nav_versions">历史版本</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1 data-i18n="pt_roadmap">版本规划</h1>
+    <p>从静态骨架到交互式数据门户的演进路线（进度按实际情况调整）</p>
+  </div>
+
+  <div class="section">
+    <h2>路线图 <span class="hint">v1.0 → v4.0+，已发布 / 规划 / 展望分色；后续版本为前瞻规划，执行时按实际情况调整</span></h2>
+
+    <table style="margin:0 0 26px">
+      <thead><tr><th style="width:11%">版本</th><th style="width:22%">主题</th><th style="width:13%">状态</th><th>核心目标（前瞻，按实际情况调整）</th></tr></thead>
+      <tbody>
+        <tr><td><b>v3.0</b></td><td>数据集站深度收尾</td><td><span class="badge b-run">进行中</span></td><td>双语数据集站英文已实质完成（518 诚实+423 描述+领域模板+UI+cmu-mosi 修正，回归 518/518 零中文）；可视化 10/13（vehicle 已补，剩 3 云文件环境限制）、57 犹豫词、体积优化</td></tr>
+        <tr><td><b>v3.1</b></td><td>英文版公开转正</td><td><span class="badge b-ok">已完成</span></td><td>前端「中 / EN」切换器全站开放；9 个子站页面完整英文版（*_en.html，零中文残留）；搜索页双语</td></tr>
+        <tr><td><b>v3.2</b></td><td>子站内容深化 2.0</td><td><span class="badge b-run">进行中</span></td><td>模板 22 个已配 GitHub 仓库/官方链接；模型基准数字 / 智能体架构图解 / API 矩阵待补</td></tr>
+        <tr><td><b>v3.3</b></td><td>交互与检索增强</td><td><span class="badge b-ok">已完成</span></td><td>全局搜索双语 + 英文页索引（443 条）；图表悬停数值；数据集详情「⑪ 相关资源」联动子站 + 同领域数据集；暗色模式全站上线</td></tr>
+        <tr><td><b>v4.0</b></td><td>部署上线</td><td><span class="badge b-ok">已上线</span></td><td>已部署 GitHub Pages（gh-pages 分支）：<a href="https://wadesha.github.io/Data-Analysis-Using-Python-2019/" target="_blank" rel="noopener">wadesha.github.io/Data-Analysis-Using-Python-2019</a>；英文版同步公开</td></tr>
+        <tr><td><b>v4.1+</b></td><td>进阶功能</td><td><span class="badge b-doc">展望</span></td><td>更多子站（安全/前端框架/DevOps/数据工程）、用户贡献社区、AI 问答/RAG、多语言与暗色模式</td></tr>
+      </tbody>
+    </table>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="ver">v1.0 静态骨架 <span class="tag tag-done">已完成</span></div>
+        <ul>
+          <li>项目总览页：统计卡 + 分类清单</li>
+          <li>过程实现页：流程图 + 脚本说明</li>
+          <li>版本规划页：路线图时间线</li>
+          <li>明确「数据不入库」约束 · 📊 Favicon · 历史版本入口</li>
+          <li>全站无强制登录；互动页以<b>模拟示例</b>展示</li>
+          <li>🔍 Kaggle 来源校验：API 校验 17 个 slug + 许可证</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.0 浏览 + 五段结构 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>🚀 目录扩到 648 个 / 20 领域（Kaggle API 检索，仅元数据）</li>
+          <li>每个数据集详情页<b>五段结构</b>：① 介绍 ② 分析 ③ 指导 ④ 样例 ⑤ 过程</li>
+          <li>总览页支持<b>搜索 / 按领域筛选 / 排序</b></li>
+          <li>本地 13 个在 ④ 样例段渲染真实图表</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.1 内容深度升级 <span class="tag tag-now">当前</span></div>
+        <ul>
+          <li>🔥 <b>根因修正</b>：原详情页是「通用模板套话」，已改为 <b>八段数据集卡片</b>（新增 ② 数据集结构/字段 schema、③ 数据质量、⑤ 局限与偏差、⑦ 来源与许可）。</li>
+          <li>📚 <b>本地 13 个精选内容</b>（<code>local_rich.js</code>）：逐个手写<b>字段 schema、数据质量、推荐模型、局限与偏差、出处/许可证/引用</b>，含权威来源（如葡萄酒 Cortez 2009/UCI/CC BY 4.0；中风 fedesoriano/4.9% 不平衡；Pima NIDDK）。</li>
+          <li>🗂 <b>20 个领域定制模板</b>（<code>domain_templates.js</code>）：每个领域独立的分析要点、基线模型与局限提示，不再千篇一律。</li>
+          <li>🏗 <b>架构升级</b>：从「Python 生成通用模板」改为「<b>手写精选内容 + 生成元数据分离</b>」，生成器不再覆盖手写文件。</li>
+          <li>🌐 本轮<b>反复联网调研</b>数据集卡片最佳实践（Datasheets / Data Cards / HuggingFace），并校验关键事实。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.5 真实描述 + 分析结论 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>📝 <b>enrich_descriptions</b> 抓取 648 个远程中的 <b>423 个官方真实描述</b>（其余无描述/403），markdown 渲染（标题/代码/列表/链接 + 危险协议过滤），长文自动折叠。</li>
+          <li>🎯 详情页升为<b>九段卡片</b>：⑨ <b>分析结果与结论提到开头钩子位（②，紧跟 ① 概述）</b>，且全部改写为<b>「说人话」长文</b>——13 个本地数据集逐个联网核查经典基准（Iris 五折 CV LDA≈0.97、Mushroom 决策树 100%、Pima RF AUC≈0.88、Heart Failure AUC≈0.85…），每篇 ≥2000 字、术语首现即解释，彻底去除 jargon 堆砌。</li>
+          <li>🌐 <b>远程 ⑨ 全量提质</b>：试点 10 个 + 并行核查 120 个热门/经典远程数据集（候选按「含基准关键词/经典名/下载量」打分筛选），落 <code>web/data/remote_benchmarks.js</code>（共 <b>130 条真实基准（每条 ≥2000 字长文 + results/source 溯源）</b>，严格溯源：同行评审 IEEE·Nature·MDPI·arXiv / 权威源 UN·NOAA·CDC 优先，GitHub 复现明确标注「非同行评审」）；<b>其余 518 个远程诚实标注「暂无统一公开基准（无 SOTA）」+ 领域分析方向（600–1000 字诚实档案，不注水）</b>，根治旧版回退领域模板导致的内容质量过低。Node 桩校验三分支（本地 / 远程有基准 / 远程无基准）均正确渲染。</li>
+          <li>🧪 每结论标注可复现路径，并与 ⑤ 局限段联动负责任提示（「高精度 ≠ 好模型」「切勿据此采食」）。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.6 ② 段可读性收尾 + 速览体系 <span class="tag tag-now">已发布</span></div>
+        <ul>
+          <li>✅ <b>② 长文默认折叠</b>：首屏仅留「结论 lead 卡 / 首个标题」+「<b>小节导航 pill</b>」（自动从 <code>###</code> 标题生成，点击跳转并自动展开），点「阅读完整分析」看全文。纯前端、零数据改动、661 篇即时受益；折叠阈值 &gt;1100 字（130 基准 + 13 本地折叠，518 诚实短档不折叠）。</li>
+          <li>📌 <b>基准文长度压减</b>（待用户确认）：将 2000 字基准文逐步压到 1000–1200 字，保留同套层级与结论——触及 661 篇数据文件，与"≥2000 字"旧规冲突，需拍板后再跑。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.7 ② 段与全站体验收尾 <span class="tag tag-now">已发布</span></div>
+        <ul>
+          <li>✅ <b>速览卡</b>：从结构化 <code>results</code>（优先）或长文加粗术语（回退）抽 ≤4 个核心指标 chip，常驻 ② 顶部，<b>折叠态也能秒看硬指标</b>（iris→99%/96%/97%/95%；bitcoin→MSE≈1.76、RMSE≈1328）；基准 71/130、诚实 66/518 已带 chip。</li>
+          <li>✅ <b>响应式</b>：补齐全站缺失的 <code>@media</code>（此前零规则）——≤720px 收窄 hero/nav/段内边距、表格横向滚动、卡片网格降列、KV 收窄；≤460px 单列，移动端不再挤塌。</li>
+          <li>🔍 <b>一致性审计（已扫描）</b>：661 篇长度全达标、开头锚点 0 缺失；但 <b>57 篇（8.6%）高犹豫词（≥6 次"可能/大概/通常/似乎"）结论偏含糊</b>，修 outlier 待确认（重写量大、部分犹豫属合理）。</li>
+          <li>📌 <b>1.9MB 体积优化</b>（规划）：把 518 诚实小档拆出轻量文件、130 基准按需懒加载，降 <code>remote_benchmarks.js</code> 首屏负担。</li>
+          <li>📌 基准文压减（见 v2.6 待确认）。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.8 全站"不合理换行 / 影响阅读"扫描修复 <span class="tag tag-now">已发布</span></div>
+        <ul>
+          <li>✅ <b>浏览卡片 slug 换行</b>：<code>app.js</code> 在 <code>/</code>、<code>-</code> 注入 <code>&lt;wbr&gt;</code> 自然断行；CSS <code>word-break:break-all</code> → <code>overflow-wrap:anywhere</code>，几百张卡片不再任意字符硬截断。</li>
+          <li>✅ <b>长串溢出</b>：详情页 <code>基准来源</code> 裸长 URL（64 个 &gt;60 字符）、<code>&lt;code&gt;</code> 长 token 加 <code>overflow-wrap:anywhere</code>；<code>.seg</code> 加 <code>overflow-x:auto</code>，宽表（<code>table.sample/schema</code>）可横向滚动而非溢出页外。</li>
+          <li>✅ <b>TOC 双重转义 bug</b>：46 个标题含引号的条目目录曾显示字面 <code>&amp;quot;</code> → 改用 renderMd 已转义文本，恢复正常引号。</li>
+          <li>📌 <b>③/⑤/⑦ 领域模板事实偏差</b>（待确认）：远程数据集这三段仍用领域模板兜底，偶有事实错误（如 cmu-mosi 被写成"波形/语音识别"），需逐数据集生成或按主领域精化——工作量大。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.9 ① 概述换行语义修复 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>✅ 修复 <code>renderMd</code> 把 Kaggle 固定列宽硬换行当成独立段落导致语义割裂（cmu-mosi 等）；改为标准 Markdown 软换行语义（单换行=空格，空行=分段落）。</li>
+          <li>✅ <b>283/423</b> 条含硬换行描述重组为通顺段落；全量校验三分支 PASS。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.10 中英双语基础设施 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>🌐 <b>双语架构落地</b>：<code>i18n.js</code>（zh/en 字典）+ <code>lang.js</code>（切换器，localStorage 记忆、默认中文）+ 详情页 <code>window.__rerenderDetail</code> 钩子，切换零刷新重渲染。</li>
+          <li>✅ <b>全站 UI 文案双语</b>：导航 / 九段标题 / meta 标签 / tagline / 按钮 / 辅助说明全部走 <code>window.t()</code>，缺失回退中文。</li>
+          <li>✅ <b>3 个旗舰本地数据集英文精译</b>（iris / students / mushroom）：结构化字段 + 分析长文，经 <code>local_rich_en.js</code> 在 EN 模式 <code>Object.assign</code> 覆盖，零风险不改动 133KB 中文主文件。</li>
+          <li>🔧 顺带修复长文 ② 标题 HTML 转义不一致（<code>&amp;</code> vs <code>&</code>）；回归校验升级为「zh/en 双跑」，全绿。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.11 中英双语 · 本地 13 全覆盖 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>✅ 本地精选 13 个数据集<b>结构化字段 + 分析长文全部英译</b>（iris/students/mushroom/wine/Pima/stroke/…），<code>local_rich_en.js</code> 在 EN 模式覆盖合并，零风险不改动中文主文件。</li>
+          <li>✅ 回归校验（zh/en 双跑）全绿：130 基准 + 518 诚实 + 13 本地 + 13 英译，无中文泄漏。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.12 数据集基础可视化 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>✅ <b>通用可视化生成器</b> <code>bench_build/gen_viz.js</code>：流式读取 13 个本地 CSV（行上限规避 OneDrive 云文件超时），仅计算<b>派生聚合</b>（摘要 / 目标分布 / 数值直方图 / 缺失率 / 样例行），输出 <code>web/data/viz.js</code>，<b>不搬运完整数据</b>。</li>
+          <li>✅ <b>内联 SVG 渲染</b> <code>web/viz.js</code>（无 CDN，离线可用）：详情页新增「⑩ 数据可视化」段，含摘要条 + 目标分布柱/直方 + 特征直方图网格 + 缺失率条；⑦ 样例段改用 VIZ 样例表。</li>
+          <li>✅ 已覆盖 <b>9/13 本地数据集</b>（wine/Pima/iris/stroke/students/mushroom/water/heart/spam）；wine-quality 作为试点，目标分布 + 6 特征直方图 + 缺失率一屏呈现。</li>
+          <li>📌 <b>4 个大文件待同步</b>：fake-news(62MB)/beer(180MB)/vehicle/youtube 为 OneDrive 云文件，按需下载超时暂跳过；本地同步后重跑 <code>node bench_build/gen_viz.js</code> 即自动补齐。</li>
+          <li>✅ 双语 viz 标题就位；回归校验新增 viz 断言（9/9 双跑通过）。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.13 远程 648 结构预览 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>✅ <b>每个数据集都有一屏可看的基础面板</b>：远程无本地数据，详情页「⑩ 数据可视化」段改为渲染<b>元数据画像</b>——领域 / 规模 / 下载量 / 点赞 / 可用性（内联 SVG 可用性条），诚实不编造分布。</li>
+          <li>✅ 与本地 9/13 派生可视化共用同一「⑩」段，<b>661 个数据集全覆盖</b>（13 本地 = 分布图，648 远程 = 元数据画像）。</li>
+          <li>✅ 回归校验新增「远程预览」断言：648/648 双跑通过。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.14 中英双语 · 远程 130 基准英译 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>🌐 <b>130 条真实基准长文全英译</b>（writeup + results，保留全部数字 / 指标 / 模型名 / 来源 URL），落 <code>web/data/remote_benchmarks_en.js</code>，EN 模式经 <code>Object.assign</code> 覆盖合并，零风险不改动中文主文件。</li>
+          <li>✅ 经 10 个并行译者智能体初译 + 33 条残留中文二次精修，<b>130/130 英文零中文残留</b>；回归校验 EN 基准 no-CJK 130/130 通过。</li>
+          <li>🔧 详情页 ② 段接入 <code>RB_EN</code> 覆盖逻辑，与本地 <code>RICH_EN</code> 同机制。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.15 英文内部测试 + Vibecoding 枢纽启动 <span class="tag tag-now">已发布</span></div>
+        <ul>
+          <li>🔒 <b>GitHub Token 安全存储</b>：PAT 存入 macOS 钥匙串（<code>security add-internet-password</code>），<b>不写入任何项目文件</b>；<code>.gitignore</code> 加固凭证排除规则（<code>.git-credentials</code> / <code>*.token</code> / <code>.env</code> / <code>.workbuddy/</code>）。git credential helper 配置为 <code>osxkeychain</code>。</li>
+          <li>🌐 <b>英文版改为内部测试</b>：前端隐藏语言切换器，通过 URL 参数 <code>?beta=en</code> 或控制台 <code>setLang('en')</code> 访问英文版；EN 模式显示「内部测试 · EN」标识。i18n 基础设施完整保留，待内容完善后公开。</li>
+          <li>🚀 <b>Vibecoding 资源枢纽架构启动</b>：新建 <code>hub.html</code> 门户 + 6 个子网站 stub（模型中心 / 技术栈百科 / AI 编码工具箱 / 智能体框架 / 项目模板 / 公共 API 目录），覆盖 vibecoding 时代数据→模型→技术栈→编码→智能体→模板→API 全链路。</li>
+          <li>📋 版本路线更新至 v4.0，子网站分阶段上线规划（见下方「Vibecoding 子网站路线」）。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.16 产品型首页 + 子站上线 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>🏠 <b>首页改为产品型首页</b>：面向访客展示核心功能与亮点（海量浏览 / 九段深度卡片 / 数据可视化 / 中英双语 / Vibecoding 枢纽 / 数据不入库），并内嵌「版本规划与后续升级」时间线。</li>
+          <li>🚀 <b>7 个子站正式上线</b>：模型中心 / 技术栈百科 / AI 编码工具箱 / 智能体框架 / 项目模板 / 公共 API 目录 / 实战案例与最佳实践，填充真实内容（平台表 / 任务矩阵 / 对比表 / 范式 / 模板 / API 目录 / 入门案例 + 最佳实践），去掉「规划中 stub」标注，保留「后续计划」升级路线。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.18 项目进阶路径 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>🧭 <b>新增 <code>pathway.html</code>（项目进阶路径）</b>：把枢纽 9 个子站资源串成<strong>通用 8 阶段流水线</strong>（想法→数据→技术栈→编码→智能体→模板→API→上线）+ <strong>4 条典型路径</strong>（零基础入门者 / 数据科学 / AI 应用 / 全栈），每步链接到对应子站资源，兑现"vibecoding 时代的一系列项目进阶流程"核心诉求。</li>
+          <li>🔗 全站导航接入「进阶」入口；枢纽门户新增进阶路径卡片、stats 增「4 进阶路径」；footer 全局升 v2.18。</li>
+          <li>📌 <strong>后续计划（不遗漏）</strong>：子站内锚点深链、交互式选路器、可复制仓库 + 一键部署脚本（与 v3.2 子站内容深化协同）。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v2.19 每个子站案例展示与解析 <span class="tag tag-done">已发布</span></div>
+        <ul>
+          <li>🎯 <b>补齐"案例展示与解析"短板</b>：为 6 个子站（模型 / 技术栈 / AI 编码 / 智能体 / 模板 / API）各新增「案例展示与解析」板块（每个 3–4 个真实选型决策 + 权衡解析），直接回应"每个地方都要有充分案例与解析"。</li>
+          <li>🧩 <b>跨站联动</b>：案例卡之间互链（含 <code>#cases</code> 锚点），<code>playbook.html</code> 增至 9 个案例（入门 6 + 进阶 3，难度分级）并标注"复用"资源，<code>pathway.html</code> 新增「案例解析」把各子站案例串成端到端走查。</li>
+          <li>🔍 <b>搜索增强</b>：<code>gen_search_index.js</code> 现在同时索引 <code>.result</code> 卡片正文 + 表格整行，并深链到 <code>#cases</code>，全局搜索可检索案例内容（条目 ~171 → ~220）。</li>
+          <li>📌 <strong>下一步</strong>：v3.0 双语遗留清零 + 4 个云文件可视化补齐、v3.1 英文版公开、v3.2 子站案例继续深化（仓库/视频演示）。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v3.0 数据集站深度收尾 <span class="tag tag-now">进行中</span></div>
+        <ul>
+          <li>🌐 <b>双语遗留清零（数据集站已实质完成 ✅）</b>
+            <ul>
+              <li>✅ <b>518 诚实档案英文</b>：采用「<code>domain_templates_en.js</code> + detail.js EN 模式回退」方案——EN 模式对无 <code>RB_EN</code> 英文 writeup 的远程数据集，自动改用英文领域模板（20 域全覆盖）；<code>check_render</code> 校验 <b>518/518 英文零中文残留</b>。说明：这是领域级英文兜底，非逐数据集精译（逐数据集 EN writeup 可作后续深层任务）。</li>
+              <li>✅ <b>423 条官方描述</b>：经核查本就是 Kaggle 英文原文，无需翻译，① 段英文就绪。</li>
+              <li>✅ <b>领域模板英文 + UI 文案</b>：<code>domain_templates_en.js</code> 已建并接入 <code>detail.js</code>；<code>i18n.js</code> EN 字典已覆盖全部 UI 键；<code>detail.js</code> 两处硬编码中文（远程质量提示 / 局限通用注记）已改为 <code>tr()</code> 键。</li>
+              <li>🟡 <b>子站表格正文英文</b>：8 子站表格内容仍为中文，属 v3.1 / v3.2 范畴。</li>
+            </ul>
+          </li>
+          <li>🔧 <b>事实偏差精修</b>：✅ <b>cmu-mosi 误分类已修正</b>（主域 Audio/Speech → NLP/Text，多模态情感分析归位）；③/⑤/⑦ 逐数据集精化（目标 0 事实错误）为持续任务。</li>
+          <li>📊 <b>可视化补齐</b>：🟡 当前 <b>9/13</b>。4 个 OneDrive 云文件（fake-news / beer / vehicle / youtube）在沙箱中仍为云占位，<code>read</code> 触发联网下载 → <code>ETIMEDOUT</code> 超时跳过（环境限制，非代码 bug）。需在本机将这 4 个文件标记为「始终保留在设备」并重新同步后，重跑 <code>gen_viz.js</code> 即补齐至 13/13。</li>
+          <li>✍️ <b>质量精修</b>：🟡 57 篇高犹豫词 outlier 重写、基准文压减至 1000–1200 字——待办。</li>
+          <li>📦 <b>体积与体验</b>：🟡 1.9MB 优化 / 懒加载——待办。</li>
+          <li>✅ <b>完成定义进度</b>：<code>check_render.js</code> zh/en 双跑全绿 ✅；518+423 英文零中文残留 ✅（数据集站）；13/13 可视化 🟡（9/13，环境限制）；体积下降 ≥40% 🟡。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v3.1 英文版公开转正 <span class="tag tag-later">规划</span></div>
+        <ul>
+          <li>🌐 <b>公开策略</b>：英文版从「内部测试」（<code>?beta=en</code> 隐藏切换）转为正式公开，重新开放前端语言切换器（默认中文、可记忆）。</li>
+          <li>🗣 <b>全站子站 i18n</b>：6 子站（模型 / 技术栈 / AI 编码 / 智能体 / 模板 / API）+ 实战 / 进阶页 UI 文案接入 <code>i18n.js</code> / <code>lang.js</code>，切换零刷新重渲染。</li>
+          <li>🔍 <b>SEO 与无障碍</b>：<code>&lt;html lang&gt;</code> 元信息随语言切换、hreflang、lang 切换器键盘可达。</li>
+          <li>🧪 <b>内容校验</b>：英文版公开前复核所有页面（661 数据集 + 子站）无中文残留、无未翻译占位。</li>
+          <li>✅ <b>完成定义（DoD）</b>：切换器在首页 / 枢纽 / 所有子站可见可用；661 数据集英文版可正常浏览；回归 zh/en 双跑全绿。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v3.2 子站内容深化（vibecoding 枢纽 2.0） <span class="tag tag-later">规划</span></div>
+        <ul>
+          <li>🤖 <b>模型中心</b>：对比基准（MMLU / HumanEval / MT-Bench / Chatbot Arena ELO）、按显存推荐模型表、微调工具链（LoRA / QLoRA / DPO / Unsloth）、量化方案（GGUF / AWQ / GPTQ / FP8）。</li>
+          <li>🏗 <b>技术栈百科</b>：场景化组合推荐（全栈 / AI 应用 / 数据管线）、性能基准对比、学习路径图。</li>
+          <li>🧠 <b>AI 编码</b>：工具深度评测、Prompt 模板库（编码 / 调试 / 重构 / 测试 / 文档）、vibecoding 最佳实践 checklist。</li>
+          <li>🦾 <b>智能体</b>：架构图解（ReAct / Plan-Execute / Multi-Agent）、框架代码示例对比、生产部署 Checklist、MCP 工具集成。</li>
+          <li>📐 <b>模板</b>：每模板 GitHub 仓库链接 + 一键部署脚本（Vercel / Cloudflare / Railway）+ 架构图 + AI 定制指南。</li>
+          <li>🔌 <b>API</b>：速率限制对比、SDK 语言矩阵、Webhook / Streaming 支持、RAG / Agent 场景组合推荐。</li>
+          <li>✅ <b>完成定义（DoD）</b>：6 子站均含「基准数字 / 组合推荐 / 可复制仓库」至少一类；案例卡与 v2.19 案例解析形成「理论 → 实践 → 仓库」闭环。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v3.3 交互与检索增强 <span class="tag tag-next">部分已交付</span></div>
+        <ul>
+          <li>✅ <b>全局搜索 search.html 已上线（v2.17）</b>：跨 8 个子站 + 661 数据集统一检索，客户端 substring 匹配 + 分级打分 + 关键词高亮，纯前端零后端。索引由 <code>bench_build/gen_search_index.js</code> 从子站 HTML 表格 + 案例卡片自动提取（220+ 条），与 <code>catalog.js</code> 合并。</li>
+          <li>📊 <b>可视化交互</b>：直方图悬停数值 / tooltip、分布对比（如 wine 红/白）、缺失率下钻、移动端图表自适应复查。</li>
+          <li>⚡ <b>性能</b>：首屏懒加载、关键路径预取、Lighthouse 性能 ≥90。</li>
+          <li>🔗 <b>关联导航</b>：数据集 ↔ 模型 ↔ 任务 ↔ 模板的联动（对标 Papers With Code 的数据集↔基线↔榜单），从案例页一键跳到相关数据集 / 模型 / 模板。</li>
+          <li>✅ <b>完成定义（DoD）</b>：搜索覆盖全部子站正文（含案例卡）；至少 2 类可视化交互上线；关联导航在 ≥3 个子站打通。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v4.0 部署上线 <span class="tag tag-later">规划</span></div>
+        <ul>
+          <li>🚀 <b>GitHub Pages 托管</b>：仅元数据 + 文档，凭证绝不入库（<code>.gitignore</code> 已加固）。</li>
+          <li>🔄 <b>CI 自动构建</b>：每次提交运行 <code>bench_build/check_render.js</code>（zh / en 双跑门禁），失败阻断合并。</li>
+          <li>🌐 <b>英文版随部署公开</b>：v3.1 完成的英文版一并上线。</li>
+          <li>📈 <b>可观测</b>：构建产物体积监控、404 巡检、子站链接健康度检查。</li>
+          <li>⚠️ <b>推送策略</b>：每次推送 GitHub 前需用户确认，避免资源消耗 + 凭证泄露。</li>
+          <li>✅ <b>完成定义（DoD）</b>：公开 URL 可访问；CI 门禁生效；回归全绿；凭证 0 入库。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">v4.1+ 进阶功能（候选项 · 按需求取舍） <span class="tag tag-later">展望</span></div>
+        <ul>
+          <li>➕ <b>更多子站</b>：安全中心（OWASP / 密钥管理 / 依赖扫描）、前端框架对比、DevOps 与部署、数据工程（Airflow / dbt）。</li>
+          <li>👥 <b>用户贡献</b>：模板 / 示例社区投稿（需登录体系，单独评估立项）。</li>
+          <li>🤿 <b>AI 问答 / RAG</b>：基于本地数据集元数据答疑（如"哪个数据集适合入门分类？"），可用本地嵌入 + 轻量 LLM。</li>
+          <li>🌏 <b>多语言扩展</b>（日 / 韩 / 欧语）、暗色模式 / 主题切换、子站间交叉推荐引擎。</li>
+          <li>🧭 <b>取舍原则</b>：保持纯静态、零后端依赖；候选按"是否强化 vibecoding 进阶流程"排序；涉及登录 / 动态互动的，先以模拟示例验证再立项。</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">对标项（一次性内化，版本门控复查） <span class="tag tag-later">机制</span></div>
+        <ul>
+          <li>✅ <b>结构化卡片</b>：标题/来源/许可/规模/标签（对标 Kaggle dataset card）→ v2.0 起全量</li>
+          <li>✅ <b>在线预览</b>：远程嵌 Kaggle 预览、本地渲染图表（对标 HF viewer）→ v2.5</li>
+          <li>✅ <b>许可透明</b>：每数据集标 license（对标 Google Dataset Search 使用权限过滤）→ v2.5</li>
+          <li>✅ <b>挂分析样例</b>：本地 notebook + 类目分析框架（对标 Kaggle 公开 notebook）→ v2.0/2.5</li>
+          <li>✅ <b>任务/榜单框架</b>（对标 Papers With Code）→ v3.3</li>
+          <li>📌 不做持续竞品追踪，仅在大版本（v2/v3）复查是否达标</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">用户体系（可选 · 暂缓） <span class="tag tag-later">先不做</span></div>
+        <ul>
+          <li>注册 / 登录 / 动态互动是一揽子后续工作，<b>先不做</b></li>
+          <li>需要登录才能看或互动的页面，当前一律以<b>模拟示例</b>展示，不做强制登录</li>
+          <li>若未来要做，单独立项评估（认证、权限、内容审核等）</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="ver">历史版本存档 <span class="tag tag-later">机制</span></div>
+        <ul>
+          <li>每次发布留存一份版本快照，于 <a href="versions.html">versions.html</a> 完整归档</li>
+          <li>站点纯静态、体积小，可长期保留<b>全部</b>历史版本供对比查看</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>中英双语化 · 分阶段路线 <span class="hint">多步逐渐推进，每步重复校验</span></h2>
+    <table>
+      <thead><tr><th style="width:22%">阶段</th><th style="width:12%">版本</th><th>范围</th><th style="width:14%">状态</th></tr></thead>
+      <tbody>
+        <tr><td>阶段 0 · 换行 / 语义治理</td><td><b>v2.9</b></td><td>全站不合理换行扫描 + <code>renderMd</code> 软换行语义修复</td><td><span class="badge b-ok">已完成</span></td></tr>
+        <tr><td>阶段 1 · 双语基础设施</td><td><b>v2.10</b></td><td>i18n 字典 + 切换器 + 全站 UI 双语 + 3 旗舰本地英译</td><td><span class="badge b-ok">已完成</span></td></tr>
+        <tr><td>阶段 2 · 本地精选 13 全双语</td><td><b>v2.11</b></td><td>剩余 10 个本地数据集结构化字段 + 分析长文英译（iris/students/mushroom 已在 v2.10）</td><td><span class="badge b-ok">已完成</span></td></tr>
+        <tr><td>阶段 3 · 远程 130 基准双语</td><td><b>v2.14</b></td><td>130 条真实基准长文英译（results / source 保留），零中文残留</td><td><span class="badge b-ok">已完成</span></td></tr>
+        <tr><td>阶段 4 · 远程 518 诚实 + 描述双语</td><td><b>v3.0</b></td><td>518 诚实档案 + 423 官方描述英文版（英文版已转内部测试模式）</td><td><span class="badge b-doc">规划</span></td></tr>
+        <tr><td>阶段 5 · 收尾</td><td><b>v3.0</b></td><td>领域模板英文、切换无闪烁、回归全绿、体积 / 懒加载复查</td><td><span class="badge b-doc">规划</span></td></tr>
+      </tbody>
+    </table>
+    <p class="muted">原则：每完成一个阶段都跑 <code>bench_build/check_render.js</code>（现已支持 zh / en 双跑）重复校验，确保零回归；英文数据内容通过各数据集 <code>*En</code> 字段分离，不触碰中文主文件。</p>
+  </div>
+
+  <div class="section">
+    <h2>数据集基础可视化 · 分阶段路线 <span class="hint">每个数据集都应有一屏可看的基础图表</span></h2>
+    <table>
+      <thead><tr><th style="width:24%">阶段</th><th style="width:12%">版本</th><th>范围</th><th style="width:14%">状态</th></tr></thead>
+      <tbody>
+        <tr><td>阶段 A · 生成器 + 渲染器基建</td><td><b>v2.12</b></td><td><code>gen_viz.js</code>（流式派生聚合）+ <code>viz.js</code>（内联 SVG，无 CDN）+ 详情页「⑩ 数据可视化」段 + 双语 viz 标题</td><td><span class="badge b-ok">已完成</span></td></tr>
+        <tr><td>阶段 B · 本地 13 全覆盖</td><td><b>v2.12+</b></td><td>补齐 4 个云文件（fake-news/beer/vehicle/youtube）可视化；OneDrive 同步后重跑生成器即自动补齐</td><td><span class="badge b-doc">进行中</span></td></tr>
+        <tr><td>阶段 C · 远程 648 预览</td><td><b>v2.13</b></td><td>远程无本地数据 → 用可用元数据（规模 / 领域 / 下载量 / 点赞 / 可用性）渲染「数据集画像」面板（内联 SVG 可用性条），诚实不编造分布</td><td><span class="badge b-ok">已完成</span></td></tr>
+        <tr><td>阶段 D · 交互增强</td><td><b>v2.14</b></td><td>直方图悬停数值、分布对比（如 wine 红/白）、缺失率下钻；移动端图表自适应复查</td><td><span class="badge b-doc">规划</span></td></tr>
+      </tbody>
+    </table>
+    <p class="muted">原则：可视化只承载<b>派生统计</b>（密度 / 分布 / 缺失），绝不内嵌完整数据集，恪守「数据不入库」；远程数据集因无本地数据，仅做结构级预览，不编造分布。</p>
+  </div>
+
+  <div class="section">
+    <h2>Vibecoding 子网站路线 <span class="hint">从 Kaggle 数据集站扩展为全栈资源枢纽</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">子站</th><th style="width:10%">版本</th><th>范围</th><th style="width:12%">状态</th></tr></thead>
+      <tbody>
+        <tr><td><b>📊 数据集中心</b>（现有）</td><td><b>v2.14</b></td><td>661 Kaggle 数据集 + 九段卡片 + 可视化 + 中英双语基础设施（英文内部测试）</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>🚀 枢纽门户</b></td><td><b>v2.15</b></td><td><code>hub.html</code> 门户页 + 7 子站导航卡片 + vibecoding 愿景说明</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>🤖 模型中心</b></td><td><b>v2.16</b></td><td>模型平台表 + 任务分类矩阵 + 部署方式对比（已含 10 平台 + 8 任务类型）</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>🏗 技术栈百科</b></td><td><b>v2.16</b></td><td>前端 / 后端 / 数据库 / DevOps / 云平台 / AI·ML 库对比表（已含 50+ 条目）</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>🧠 AI 编码工具箱</b></td><td><b>v2.16</b></td><td>AI 代码助手 / Prompt 工程模式 / AI 原生开发实践（已含 10 工具 + 10 模式）</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>🦾 智能体框架</b></td><td><b>v2.16</b></td><td>Agent 框架 / 设计范式 / 关键组件（已含 10 框架 + 8 范式）</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>📐 项目模板</b></td><td><b>v2.16</b></td><td>全栈 / AI 应用 / 数据管线 / API 服务模板（已含 20+ 模板）</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>🔌 公共 API 目录</b></td><td><b>v2.16</b></td><td>AI/LLM / 数据 / 支付 / 通信 / 开发者工具 API（已含 30+ API）</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>🎯 实战案例与最佳实践</b></td><td><b>v2.16</b></td><td>6 个入门案例（博客 / RAG / 看板 / 插件 / 周报 Agent / 机器人）+ 7 条最佳实践（Spec-first / 测试 / 凭证安全 / 成本 / 部署）</td><td><span class="badge b-ok">已上线</span></td></tr>
+        <tr><td><b>🌐 全站部署</b></td><td><b>v4.0</b></td><td>GitHub Pages 部署 + 英文版公开 + CI 自动构建</td><td><span class="badge b-doc">规划</span></td></tr>
+      </tbody>
+    </table>
+    <p class="muted">原则：从「Kaggle 数据集展示站」演进为「vibecoding 时代全栈资源枢纽」；现有数据集站作为枢纽的「数据集中心」子站，保持独立可用；新子站逐步填充内容，不影响现有功能。</p>
+  </div>
+
+  <div class="section">
+    <h2>安全与凭证管理 <span class="hint">v2.15 新增</span></h2>
+    <table>
+      <thead><tr><th style="width:20%">项目</th><th>措施</th><th style="width:14%">状态</th></tr></thead>
+      <tbody>
+        <tr><td><b>GitHub PAT</b></td><td>存入 macOS 钥匙串（<code>security add-internet-password</code>），<b>不写入任何项目文件</b>；git credential helper = <code>osxkeychain</code></td><td><span class="badge b-ok">已配置</span></td></tr>
+        <tr><td><b>Kaggle API Key</b></td><td><code>.kaggle/kaggle.json</code> 已在 <code>.gitignore</code> 排除，绝不入库</td><td><span class="badge b-ok">已有</span></td></tr>
+        <tr><td><b>.gitignore 加固</b></td><td>新增排除：<code>.git-credentials</code> / <code>*.token</code> / <code>*.secret</code> / <code>.env</code> / <code>.workbuddy/</code></td><td><span class="badge b-ok">已加固</span></td></tr>
+        <tr><td><b>推送策略</b></td><td>每次推送 GitHub 前需用户确认；当前未配置 remote，无自动推送风险</td><td><span class="badge b-ok">安全</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>实施方法 <span class="hint">架构、内容优先级、安全渲染、质量保障</span></h2>
+    <div class="doc-card">
+      <p>完整版见 <a href="迭代版本与实施方法.md">迭代版本与实施方法.md</a>。要点：</p>
+      <ul>
+        <li><b>纯静态、零依赖</b>：HTML/CSS/JS 可离线打开；数据分层（catalog 元数据 / datasets_desc 真实描述 / local_rich 手写精选 / domain_templates 领域模板 / profiles EDA 画像）。</li>
+        <li><b>内容优先级</b>：LOCAL_RICH（手写精选）&gt; DATASETS_DESC（Kaggle 官方真实描述）&gt; DOMAIN_TEMPLATES（领域模板兜底）——根治模板套话。</li>
+        <li><b>安全渲染</b>：描述先全量转义再按白名单重建标签，危险协议替换为 <code>#</code>；长文（&gt;2600 字）折叠。</li>
+        <li><b>数据不入库</b>：Kaggle API 仅校验元数据（凭证本地、gitignored）；原始数据按需 <code>kaggle datasets download</code> 拉取，规避 100MB / LFS / 版权限制。</li>
+        <li><b>质量保障</b>：Node 桩 DOM 校验三分支（本地 / 远程有描述 / 远程无描述）均九段、无 raw markdown、无空占位。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>范围边界：</strong>全程坚持「网页不存储完整数据集」。原始 806MB 数据始终留本地，
+    由下载脚本按需获取；网站只承载元数据、统计与说明文档。
+    <strong>登录体系暂缓</strong>，互动页以模拟示例呈现。
+  </div>
+</div>
+
+<footer>Kaggle 数据集集合 · 静态展示站点 v3.3（双语 + 暗色 + 联动 · 已上线 GitHub Pages） · 数据不入库 · 凭证存钥匙串 · <a href="versions.html" style="color:var(--muted)">历史版本</a> · <a href="hub.html" style="color:var(--muted)">🚀 枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

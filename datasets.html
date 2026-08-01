@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据集浏览 · Kaggle 数据集集合</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">📊 Kaggle 数据集集合</span>
+
+  <span class="links">
+    <a href="hub.html">🚀 枢纽</a>
+    <a href="index.html" data-i18n="nav_overview">总览</a>
+    <a href="datasets.html" class="active" data-i18n="nav_datasets">数据集</a>
+    <a href="process.html" data-i18n="nav_process">过程</a>
+    <a href="roadmap.html" data-i18n="nav_roadmap">版本规划</a>
+    <a href="versions.html" data-i18n="nav_versions">历史版本</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1 data-i18n="pt_datasets">数据集浏览</h1>
+    <p id="sub">加载中…</p>
+  </div>
+
+  <div class="controls">
+    <input id="search" type="search" placeholder="搜索标题或 slug，如 iris / sentiment / youtube" autocomplete="off">
+    <select id="sort">
+      <option value="downloads">排序：下载量 ↓</option>
+      <option value="votes">排序：点赞 ↓</option>
+      <option value="usability">排序：可用性 ↓</option>
+      <option value="updated">排序：更新时间 ↓</option>
+      <option value="title">排序：标题 A→Z</option>
+    </select>
+  </div>
+
+  <div id="chips" class="chips"></div>
+  <div id="count" class="count"></div>
+  <div id="grid" class="grid"></div>
+</div>
+
+<footer>Kaggle 数据集集合 · v2.18 数据集浏览（661 项）· 数据不入库 · <a href="versions.html" style="color:var(--muted)">历史版本</a> · <a href="hub.html" style="color:var(--muted)">🚀 枢纽</a></footer>
+<script src="data/catalog.js"></script>
+<script src="data/domain_templates.js"></script>
+<script src="app.js"></script>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

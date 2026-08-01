@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public API Directory · Vibecoding Hub</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links">
+    <a href="hub_en.html">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html">Models</a>
+    <a href="stacks_en.html">Tech Stacks</a>
+    <a href="ai-coding_en.html">AI Coding</a>
+    <a href="agents_en.html">Agents</a>
+    <a href="templates_en.html">Templates</a>
+    <a href="apis_en.html" class="active">API</a>
+    <a href="roadmap.html">Roadmap</a>
+  <a href="pathway_en.html">Pathway</a> <a href="search.html">🔍 Search</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🔌 Public API Directory</h1>
+    <p>Public APIs commonly used in development · AI/LLM / Data / Payments / Communications / Developer tools · with auth methods and pricing references</p>
+  </div>
+
+  <div class="section">
+    <h2>AI / LLM APIs <span class="hint">LLM inference / embeddings / fine-tuning / multimodal</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">API</th><th style="width:10%">Auth</th><th style="width:12%">Pricing model</th><th>Core capabilities / models</th><th style="width:12%">Free tier</th></tr></thead>
+      <tbody>
+        <tr><td><b>OpenAI</b></td><td>Bearer Token</td><td>Per token</td><td>GPT-4o / o1 / o3 / DALL·E 3 / Whisper / TTS / Embedding / Fine-tuning</td><td>None ($5 for new accounts)</td></tr>
+        <tr><td><b>Anthropic</b></td><td>x-api-key</td><td>Per token</td><td>Claude 3.5 Sonnet / Opus / Haiku, 200K context / Vision / Tool Use / Prompt Caching</td><td>None ($5 for new accounts)</td></tr>
+        <tr><td><b>Google Gemini</b></td><td>API Key</td><td>Per token</td><td>Gemini 2.0 Flash / Pro, 1M+ context / multimodal / Code Execution</td><td>Yes (free tier)</td></tr>
+        <tr><td><b>Cohere</b></td><td>Bearer Token</td><td>Per token</td><td>Command R+ / Embed / Rerank / Classify, RAG-focused models</td><td>Yes (developer tier)</td></tr>
+        <tr><td><b>Mistral</b></td><td>API Key</td><td>Per token</td><td>Mistral Large / Codestral / Pixtral, hosted open-source model APIs</td><td>Yes (free tier)</td></tr>
+        <tr><td><b>Together AI</b></td><td>Bearer Token</td><td>Per token</td><td>200+ open-source model APIs (Llama / Qwen / DeepSeek), 5–10x cheaper than OpenAI</td><td>Yes ($5 for new accounts)</td></tr>
+        <tr><td><b>Replicate</b></td><td>Token</td><td>Per second</td><td>One-click deployment of any open-source model; image / audio / video generation</td><td>None</td></tr>
+        <tr><td><b>Groq</b></td><td>API Key</td><td>Per token</td><td>LPU inference engine, 500+ tokens/s; ultra-fast Llama / Mixtral / Gemma inference</td><td>Yes (free tier)</td></tr>
+        <tr><td><b>DeepSeek</b></td><td>API Key</td><td>Per token</td><td>DeepSeek V3 / R1, strong reasoning at a very low price ($0.27/M input)</td><td>None</td></tr>
+        <tr><td><b>Jina AI</b></td><td>API Key</td><td>Per request</td><td>Embedding / Reranker / Reader (webpage → Markdown) / Classifier</td><td>Yes (1M tokens)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Data APIs <span class="hint">datasets / search / geo / finance</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">API</th><th style="width:10%">Auth</th><th style="width:12%">Pricing</th><th>Core capabilities</th><th style="width:12%">Free tier</th></tr></thead>
+      <tbody>
+        <tr><td><b>Kaggle</b></td><td>API Key</td><td>Free</td><td>Dataset search / download / metadata / competition data</td><td>Completely free</td></tr>
+        <tr><td><b>HuggingFace Hub</b></td><td>Token</td><td>Free</td><td>Model / dataset / Spaces management, Inference API</td><td>Yes (free tier)</td></tr>
+        <tr><td><b>OpenML</b></td><td>API Key</td><td>Free</td><td>ML datasets + experiment management + benchmarking</td><td>Completely free</td></tr>
+        <tr><td><b>Google Dataset Search</b></td><td>None</td><td>Free</td><td>Web-wide dataset search engine (not an API; web search)</td><td>Completely free</td></tr>
+        <tr><td><b>Alpha Vantage</b></td><td>API Key</td><td>Free / paid</td><td>Stocks / forex / crypto / technical indicators; financial data</td><td>25 req/day</td></tr>
+        <tr><td><b>FRED (Fed)</b></td><td>API Key</td><td>Free</td><td>Federal Reserve economic data; US macro indicators</td><td>120 req/min</td></tr>
+        <tr><td><b>World Bank</b></td><td>None</td><td>Free</td><td>Global development indicators / population / GDP / climate data</td><td>Unlimited</td></tr>
+        <tr><td><b>OpenStreetMap</b></td><td>None</td><td>Free</td><td>Map data / Nominatim geocoding / routing</td><td>Yes (rate-limited)</td></tr>
+        <tr><td><b>NASA</b></td><td>API Key</td><td>Free</td><td>APOD / Mars photos / Earth imagery / near-Earth object data</td><td>1,000 req/hour</td></tr>
+        <tr><td><b>News API</b></td><td>API Key</td><td>Free / paid</td><td>Global news aggregation search / headlines / source filtering</td><td>100 req/day</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Payment / Communication / Developer Tool APIs <span class="hint">business infrastructure</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">API</th><th style="width:10%">Category</th><th style="width:12%">Auth</th><th>Core capabilities</th><th style="width:12%">Pricing</th></tr></thead>
+      <tbody>
+        <tr><td><b>Stripe</b></td><td>Payments</td><td>Bearer Token</td><td>Payments / subscriptions / refunds / Connect payouts / webhooks; best-in-class DX</td><td>2.9% + $0.30</td></tr>
+        <tr><td><b>PayPal</b></td><td>Payments</td><td>OAuth 2</td><td>Payments / refunds / mass payouts; global coverage</td><td>3.49% + fixed fee</td></tr>
+        <tr><td><b>Twilio</b></td><td>Comms</td><td>Basic Auth</td><td>SMS / voice / WhatsApp / video / verification codes; communications infrastructure</td><td>Per message/minute</td></tr>
+        <tr><td><b>Resend</b></td><td>Email</td><td>API Key</td><td>Developer-friendly email API with React Email integration; more modern than SendGrid</td><td>3,000 emails/mo free</td></tr>
+        <tr><td><b>SendGrid</b></td><td>Email</td><td>Bearer Token</td><td>Email sending / templates / marketing automation; part of Twilio</td><td>100 emails/day free</td></tr>
+        <tr><td><b>Slack</b></td><td>Collaboration</td><td>OAuth 2</td><td>Messaging / channel management / file uploads / slash commands; team notifications</td><td>Generous free tier</td></tr>
+        <tr><td><b>GitHub</b></td><td>Dev tools</td><td>Token</td><td>Repo / Issue / PR / Actions / Packages / GraphQL API</td><td>5,000 req/hour</td></tr>
+        <tr><td><b>Docker Hub</b></td><td>Containers</td><td>Token</td><td>Image search / builds / webhooks; official Docker registry</td><td>Free</td></tr>
+        <tr><td><b>Cloudflare</b></td><td>CDN / Edge</td><td>API Key</td><td>DNS / cache / WAF / Workers / R2 / D1; full-stack edge computing</td><td>Generous free tier</td></tr>
+        <tr><td><b>Supabase</b></td><td>BaaS</td><td>API Key</td><td>PostgreSQL / Auth / Storage / Realtime / Edge Functions; open-source Firebase alternative</td><td>Free tier</td></tr>
+        <tr><td><b>Vercel</b></td><td>Deployment</td><td>Token</td><td>Project deployment / previews / domain management / Edge Functions / Analytics</td><td>Free tier</td></tr>
+        <tr><td><b>Notion</b></td><td>Knowledge mgmt</td><td>OAuth 2</td><td>Databases / pages / comments / user management; document automation</td><td>Free</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>Case Studies &amp; Analysis <span class="hint">API combos + cost &amp; fallback</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>💳 Paid AI Tool <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Scenario:</b> An AI writing SaaS that needs usage-based billing, subscriptions, and refunds.</p>
+        <p><b>Stack:</b> <b>OpenAI</b> (generation) + <b>Stripe</b> (payments/subscriptions/webhooks).</p>
+        <p><b>Steps:</b> ① User subscribes → Stripe creates Customer + subscription ② the <code>checkout.session.completed</code> webhook grants access ③ metered billing per usage ④ refunds via the Stripe API.</p>
+        <p><b>Analysis:</b> Stripe webhooks are the key to "event-driven provisioning" — never trust payment success on the frontend; follow <a href="playbook_en.html">key security</a> and store the Stripe key in environment variables.</p>
+      </div>
+      <div class="result">
+        <h4>📚 Knowledge Base Backend <span class="status badge b-ok">Intermediate</span></h4>
+        <p><b>Scenario:</b> Wire a full "scrape webpages + vector store + generate" pipeline for a RAG app.</p>
+        <p><b>Stack:</b> <b>Claude</b> (generation) + <b>pgvector/Supabase</b> (vectors) + <b>Jina Reader</b> (webpage-to-Markdown).</p>
+        <p><b>Steps:</b> ① Jina Reader converts URLs into clean Markdown ② chunk and embed into pgvector ③ Claude answers based on retrieved snippets ④ Supabase hosting saves ops work.</p>
+        <p><b>Analysis:</b> Jina Reader saves you from writing your own crawler/cleaning; Supabase bundles PG + Auth + storage — one-stop RAG. See the <a href="models_en.html#cases">Models case</a> "Enterprise RAG".</p>
+      </div>
+      <div class="result">
+        <h4>🎙 Transcription + Voiceover <span class="status badge b-ok">Beginner</span></h4>
+        <p><b>Scenario:</b> Turn meeting recordings into text and generate multilingual summary voiceovers.</p>
+        <p><b>Stack:</b> <b>Whisper</b> (local transcription) + <b>OpenAI TTS / CosyVoice</b> (synthesis) + <b>Cloudflare R2</b> (audio storage).</p>
+        <p><b>Steps:</b> ① Whisper transcribes locally (privacy-friendly, free) ② an LLM translates into the target language ③ TTS synthesizes the voice ④ store in R2 and return the URL.</p>
+        <p><b>Analysis:</b> Local Whisper never sends audio to third parties — compliance-friendly; R2 has no egress fees compared with S3, making it great for audio/video hosting. See <a href="stacks_en.html">Tech Stacks</a> "Cloudflare" for details.</p>
+      </div>
+      <div class="result">
+        <h4>🧩 API Composition &amp; Fallback <span class="status badge b-ok">Advanced</span></h4>
+        <p><b>Principle:</b> Primary model + fallback model + cache + rate limiting — avoid single points of failure and runaway bills.</p>
+        <p><b>Steps:</b> ① Use DeepSeek/Claude as primary, falling back to local Ollama on timeout/rate limit ② add a Redis cache for high-frequency Q&amp;A ③ use <a href="apis_en.html">GitHub API</a> rate-limit headers for client-side throttling.</p>
+        <p><b>Analysis:</b> "Fallback" is a must-have design for production-grade AI apps — users won't notice when the primary API jitters. It is also the implementation of "cost control" from <a href="ai-coding_en.html">AI Coding</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Coming next:</strong> API rate-limit comparisons, an SDK language support matrix, Webhook/Streaming support, and API combo recommendations for vibecoding scenarios (e.g. RAG = OpenAI + Pinecone + Jina Reader). This page's "Case Studies &amp; Analysis" section was added in v2.19.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · Public API Directory · v3.5 live · <a href="hub_en.html" style="color:var(--muted)">Back to hub</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='apis.html',enPage='apis_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

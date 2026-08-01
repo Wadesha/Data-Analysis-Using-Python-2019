@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目模板 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html" class="active">模板</a>
+    <a href="apis.html">API</a>
+    <a href="roadmap.html">规划</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>📐 项目模板</h1>
+    <p>Vibecoding 时代开箱即用的项目脚手架 · 全栈 / AI 应用 / 数据管线 / API 服务</p>
+  </div>
+
+  <div class="section">
+    <h2>全栈应用模板 <span class="hint">前端 + 后端 + 数据库 + 部署一体化</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">模板</th><th style="width:22%">技术栈</th><th>特点 / 适用场景</th><th style="width:14%">部署</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://github.com/vercel/next.js/tree/canary/examples" target="_blank" rel="noopener">Next.js Full-Stack</a></b></td><td>Next.js 15 + Prisma + PostgreSQL + Auth.js</td><td>App Router + RSC + Server Actions，全栈单仓库，Vercel 一键部署</td><td>Vercel</td></tr>
+        <tr><td><b><a href="https://create.t3.gg" target="_blank" rel="noopener">T3 Stack</a></b></td><td>Next.js + tRPC + Prisma + Tailwind + NextAuth</td><td>类型安全端到端，社区生态强，适合中小型全栈应用</td><td>Vercel</td></tr>
+        <tr><td><b><a href="https://nuxt.com/docs/getting-started/installation" target="_blank" rel="noopener">Nuxt Full-Stack</a></b></td><td>Nuxt 3 + Drizzle ORM + PostgreSQL + NuxtAuth</td><td>Vue 生态全栈方案，Nitro 服务端，混合渲染</td><td>Vercel / Netlify</td></tr>
+        <tr><td><b><a href="https://svelte.dev/docs/kit/introduction" target="_blank" rel="noopener">SvelteKit Full-Stack</a></b></td><td>SvelteKit 5 + Lucia Auth + Drizzle + PostgreSQL</td><td>极简全栈，编译时优化，包体积小</td><td>Vercel / Netlify</td></tr>
+        <tr><td><b><a href="https://github.com/tiangolo/full-stack-fastapi-template" target="_blank" rel="noopener">FastAPI + React</a></b></td><td>FastAPI + SQLAlchemy + React + Vite</td><td>Python 后端 + 前端分离，AI/ML 应用首选架构</td><td>Docker / Railway</td></tr>
+        <tr><td><b><a href="https://hono.dev/docs/getting-started/basic" target="_blank" rel="noopener">Hono + React SPA</a></b></td><td>Hono + Drizzle + React + Vite</td><td>Edge 优先全栈，Cloudflare Workers 部署，全球低延迟</td><td>Cloudflare</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>AI 应用模板 <span class="hint">RAG / Chatbot / Agent / 微调</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">模板</th><th style="width:26%">技术栈</th><th>特点 / 适用场景</th><th style="width:10%">类型</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://github.com/langchain-ai/rag-cookbook" target="_blank" rel="noopener">RAG 应用</a></b></td><td>FastAPI + LangChain + pgvector + OpenAI</td><td>文档上传→切块→Embedding→向量存储→检索增强生成，企业知识库标配</td><td>RAG</td></tr>
+        <tr><td><b><a href="https://github.com/vercel/ai-chatbot" target="_blank" rel="noopener">Chatbot UI</a></b></td><td>Next.js + Vercel AI SDK + OpenAI/Anthropic</td><td>流式输出 + 多模型切换 + 对话历史 + Markdown 渲染，ChatGPT 克隆起点</td><td>Chatbot</td></tr>
+        <tr><td><b><a href="https://github.com/langchain-ai/langgraph" target="_blank" rel="noopener">Agent 应用</a></b></td><td>FastAPI + LangGraph + Tools + Memory</td><td>ReAct Agent + 工具调用 + 状态机编排，自定义工具扩展</td><td>Agent</td></tr>
+        <tr><td><b><a href="https://github.com/vercel/ai" target="_blank" rel="noopener">多模态应用</a></b></td><td>Next.js + GPT-4o Vision + Whisper + TTS</td><td>图像/语音/文本混合输入输出，支持上传图片 + 语音对话</td><td>Multimodal</td></tr>
+        <tr><td><b><a href="https://github.com/unslothai/unsloth" target="_blank" rel="noopener">模型微调</a></b></td><td>Python + PEFT + TRL + Unsloth + WandB</td><td>LoRA/QLoRA 微调流水线：数据准备→训练→评估→导出→部署</td><td>Fine-tune</td></tr>
+        <tr><td><b><a href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener">AI 评测平台</a></b></td><td>FastAPI + DeepEval + Promptfoo + Phoenix</td><td>LLM 应用质量评测：准确率 / 幻觉率 / 延迟 / 成本追踪</td><td>Eval</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>数据管线模板 <span class="hint">ETL / ML Pipeline / Stream Processing</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">模板</th><th style="width:26%">技术栈</th><th>特点 / 适用场景</th><th style="width:10%">类型</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://github.com/PrefectHQ/prefect" target="_blank" rel="noopener">ETL 管线</a></b></td><td>Python + DuckDB + Polars + Prefect</td><td>本地 OLAP ETL：CSV/JSON→清洗→转换→DuckDB 分析，轻量无集群</td><td>ETL</td></tr>
+        <tr><td><b><a href="https://github.com/mlflow/mlflow" target="_blank" rel="noopener">ML Pipeline</a></b></td><td>Python + MLflow + DVC + scikit-learn</td><td>实验追踪 + 数据版本控制 + 模型注册 + 部署，可复现 ML 流水线</td><td>ML</td></tr>
+        <tr><td><b><a href="https://github.com/great-expectations/great_expectations" target="_blank" rel="noopener">数据质量监控</a></b></td><td>Python + Great Expectations + Pandas</td><td>数据质量断言 + 异常检测 + 报告生成，数据治理基础</td><td>Quality</td></tr>
+        <tr><td><b><a href="https://clickhouse.com/docs" target="_blank" rel="noopener">实时数据流</a></b></td><td>Python + Kafka + Faust + ClickHouse</td><td>流式数据摄取→处理→实时分析仪表盘，实时数仓架构</td><td>Stream</td></tr>
+        <tr><td><b><a href="https://github.com/duckdb/duckdb" target="_blank" rel="noopener">数据 API 服务</a></b></td><td>FastAPI + DuckDB + Arrow + Flight</td><td>高性能数据查询 API，列式存储 + Apache Arrow 零拷贝传输</td><td>Data API</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>API 服务模板 <span class="hint">REST / GraphQL / gRPC / 微服务</span></h2>
+    <table>
+      <thead><tr><th style="width:18%">模板</th><th style="width:26%">技术栈</th><th>特点 / 适用场景</th><th style="width:10%">类型</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://github.com/tiangolo/fastapi" target="_blank" rel="noopener">REST API</a></b></td><td>FastAPI + Pydantic + SQLAlchemy + Alembic</td><td>自动 OpenAPI 文档 + 类型校验 + 数据库迁移，Python API 首选</td><td>REST</td></tr>
+        <tr><td><b><a href="https://github.com/strawberry-graphql/strawberry" target="_blank" rel="noopener">GraphQL API</a></b></td><td>Python + Strawberry + SQLAlchemy + Ariadne</td><td>Schema-first / Code-first GraphQL，灵活查询 + 订阅</td><td>GraphQL</td></tr>
+        <tr><td><b><a href="https://github.com/grpc/grpc-go" target="_blank" rel="noopener">gRPC 服务</a></b></td><td>Go + grpc-go + Buf + Protocol Buffers</td><td>高性能 RPC + 流式通信 + 代码生成，微服务间通信</td><td>gRPC</td></tr>
+        <tr><td><b><a href="https://github.com/gin-gonic/gin" target="_blank" rel="noopener">微服务脚手架</a></b></td><td>Go + Gin + Docker + K8s + Istio</td><td>服务网格 + 健康检查 + 链路追踪 + 熔断降级</td><td>Microservice</td></tr>
+        <tr><td><b><a href="https://github.com/trpc/trpc" target="_blank" rel="noopener">BFF 层</a></b></td><td>TypeScript + tRPC + TRPC-OpenAPI</td><td>Backend-for-Frontend，按客户端定制 API，类型安全</td><td>BFF</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>案例展示与解析 <span class="hint">套模板 → 用 AI 快速定制</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>🚀 SaaS 落地页 <span class="status badge b-ok">入门</span></h4>
+        <p><b>场景：</b>初创要一个能收邮件订阅、展示定价的营销页，当天上线。</p>
+        <p><b>选型：</b><b>Next.js Full-Stack</b> 模板（App Router + Tailwind + Auth.js）。</p>
+        <p><b>步骤：</b>① 克隆模板 ② 让 Cursor 改 Hero/定价/FAQ 文案与配色 ③ 接 <a href="apis.html">Resend</a> 做订阅 ④ <code>vercel --prod</code> 部署。</p>
+        <p><b>解析：</b>模板省掉路由/构建/部署地基；AI 只改「表达层」，业务逻辑(订阅)靠 API 接上。<a href="pathway.html">进阶路径</a>「入门者」即此最短路径。</p>
+      </div>
+      <div class="result">
+        <h4>📚 公司文档问答 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>把内部 Wiki 变成可问答助手，员工用自然语言查制度/流程。</p>
+        <p><b>选型：</b><b>RAG 应用</b> 模板（FastAPI + LangChain + pgvector + OpenAI）。</p>
+        <p><b>步骤：</b>① 替换数据源为 Wiki 导出 ② 调切块大小与 Embedding 模型 ③ 加访问鉴权 ④ 套 UI 模板。</p>
+        <p><b>解析：</b>模板的「脚手架」不变，只换数据接入层；这正是 <a href="models.html#cases">模型案例</a>「企业 RAG 选型」的工程落地。</p>
+      </div>
+      <div class="result">
+        <h4>🗂 本地数据 ETL <span class="status badge b-ok">入门</span></h4>
+        <p><b>场景：</b>把每日导出的多份 CSV 清洗、关联、产出分析表，无集群。</p>
+        <p><b>选型：</b><b>ETL 管线</b> 模板（Python + DuckDB + Polars + Prefect）。</p>
+        <p><b>步骤：</b>① 用 Polars 读 CSV 清洗 ② DuckDB 做跨表 JOIN/聚合 ③ Prefect 编排每日任务 ④ 输出 Parquet/报表。</p>
+        <p><b>解析：</b>嵌入式 OLAP 免数据库运维，单机即可处理千万行；比 pandas 内存效率更高。<a href="stacks.html">技术栈</a>「DuckDB」详述。</p>
+      </div>
+      <div class="result">
+        <h4>🤖 微调自有模型 <span class="status badge b-ok">深度</span></h4>
+        <p><b>场景：</b>通用 LLM 答不好自家领域术语，要定制。</p>
+        <p><b>选型：</b><b>模型微调</b> 模板（PEFT + TRL + Unsloth + WandB）。</p>
+        <p><b>步骤：</b>① 准备领域 SFT 数据(问答对) ② Unsloth 加速 LoRA 训练 ③ 用 DeepEval 评测 ④ 导出接推理。</p>
+        <p><b>解析：</b>QLoRA 让单卡可训 7B~13B；先评测再上线避免「自以为变强」。<a href="models.html">模型</a>「微调工具链」后续将补全。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>后续计划：</strong>每个模板的 GitHub 仓库链接 + 一键部署脚本 + 架构图 + vibecoding 适配指南（如何用 AI 快速定制模板）。本页「案例展示与解析」已于 v2.19 补充。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · 项目模板 · v3.5 已上线 · <a href="hub.html" style="color:var(--muted)">返回枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='templates.html',enPage='templates_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

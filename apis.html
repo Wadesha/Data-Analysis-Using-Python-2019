@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公共 API 目录 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html" class="active">API</a>
+    <a href="roadmap.html">规划</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🔌 公共 API 目录</h1>
+    <p>开发常用公共 API 汇总 · AI/LLM / 数据 / 支付 / 通信 / 开发者工具 · 含认证方式与定价参考</p>
+  </div>
+
+  <div class="section">
+    <h2>AI / LLM API <span class="hint">大模型推理 / 嵌入 / 微调 / 多模态</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">API</th><th style="width:10%">认证</th><th style="width:12%">定价模式</th><th>核心能力 / 模型</th><th style="width:12%">免费额度</th></tr></thead>
+      <tbody>
+        <tr><td><b>OpenAI</b></td><td>Bearer Token</td><td>按 Token</td><td>GPT-4o / o1 / o3 / DALL·E 3 / Whisper / TTS / Embedding / Fine-tuning</td><td>无（新号 $5）</td></tr>
+        <tr><td><b>Anthropic</b></td><td>x-api-key</td><td>按 Token</td><td>Claude 3.5 Sonnet / Opus / Haiku，200K 上下文 / Vision / Tool Use / Prompt Caching</td><td>无（新号 $5）</td></tr>
+        <tr><td><b>Google Gemini</b></td><td>API Key</td><td>按 Token</td><td>Gemini 2.0 Flash / Pro，1M+ 上下文 / 多模态 / Code Execution</td><td>有（免费层）</td></tr>
+        <tr><td><b>Cohere</b></td><td>Bearer Token</td><td>按 Token</td><td>Command R+ / Embed / Rerank / Classify，RAG 专用模型</td><td>有（开发者层）</td></tr>
+        <tr><td><b>Mistral</b></td><td>API Key</td><td>按 Token</td><td>Mistral Large / Codestral / Pixtral，开源模型 API 托管</td><td>有（免费层）</td></tr>
+        <tr><td><b>Together AI</b></td><td>Bearer Token</td><td>按 Token</td><td>200+ 开源模型 API（Llama / Qwen / DeepSeek），比 OpenAI 便宜 5-10x</td><td>有（$5 新号）</td></tr>
+        <tr><td><b>Replicate</b></td><td>Token</td><td>按秒计费</td><td>任意开源模型一键部署，图像 / 音频 / 视频生成</td><td>无</td></tr>
+        <tr><td><b>Groq</b></td><td>API Key</td><td>按 Token</td><td>LPU 推理引擎，500+ tokens/s，Llama / Mixtral / Gemma 极速推理</td><td>有（免费层）</td></tr>
+        <tr><td><b>DeepSeek</b></td><td>API Key</td><td>按 Token</td><td>DeepSeek V3 / R1，推理能力强，价格极低（$0.27/M input）</td><td>无</td></tr>
+        <tr><td><b>Jina AI</b></td><td>API Key</td><td>按请求</td><td>Embedding / Reranker / Reader（网页→Markdown）/ Classifier</td><td>有（100万 token）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>数据 API <span class="hint">数据集 / 搜索 / 地理 / 金融</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">API</th><th style="width:10%">认证</th><th style="width:12%">定价</th><th>核心能力</th><th style="width:12%">免费额度</th></tr></thead>
+      <tbody>
+        <tr><td><b>Kaggle</b></td><td>API Key</td><td>免费</td><td>数据集搜索 / 下载 / 元数据 / Competition 数据</td><td>完全免费</td></tr>
+        <tr><td><b>HuggingFace Hub</b></td><td>Token</td><td>免费</td><td>模型 / 数据集 / Spaces 管理，Inference API</td><td>有（免费层）</td></tr>
+        <tr><td><b>OpenML</b></td><td>API Key</td><td>免费</td><td>ML 数据集 + 实验管理 + 基准测试</td><td>完全免费</td></tr>
+        <tr><td><b>Google Dataset Search</b></td><td>无</td><td>免费</td><td>全网数据集搜索引擎（非 API，网页搜索）</td><td>完全免费</td></tr>
+        <tr><td><b>Alpha Vantage</b></td><td>API Key</td><td>免费 / 付费</td><td>股票 / 外汇 / 加密货币 / 技术指标，金融数据</td><td>25 次/天</td></tr>
+        <tr><td><b>FRED (Fed)</b></td><td>API Key</td><td>免费</td><td>美联储经济数据，美国宏观经济指标</td><td>120 次/分钟</td></tr>
+        <tr><td><b>World Bank</b></td><td>无</td><td>免费</td><td>全球发展指标 / 人口 / GDP / 气候数据</td><td>无限制</td></tr>
+        <tr><td><b>OpenStreetMap</b></td><td>无</td><td>免费</td><td>地图数据 / Nominatim 地理编码 / 路线规划</td><td>有（限制频率）</td></tr>
+        <tr><td><b>NASA</b></td><td>API Key</td><td>免费</td><td>APOD / 火星照片 / 地球影像 / 近地天体数据</td><td>1000 次/小时</td></tr>
+        <tr><td><b>News API</b></td><td>API Key</td><td>免费 / 付费</td><td>全球新闻聚合搜索 / 头条 / 来源过滤</td><td>100 次/天</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>支付 / 通信 / 开发者工具 API <span class="hint">业务基础设施</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">API</th><th style="width:10%">类别</th><th style="width:12%">认证</th><th>核心能力</th><th style="width:12%">定价</th></tr></thead>
+      <tbody>
+        <tr><td><b>Stripe</b></td><td>支付</td><td>Bearer Token</td><td>支付 / 订阅 / 退款 / Connect 分账 / Webhook，开发体验最佳</td><td>2.9% + $0.30</td></tr>
+        <tr><td><b>PayPal</b></td><td>支付</td><td>OAuth 2</td><td>支付 / 退款 / 批量付款，全球覆盖</td><td>3.49% + 固定费</td></tr>
+        <tr><td><b>Twilio</b></td><td>通信</td><td>Basic Auth</td><td>SMS / 语音 / WhatsApp / 视频 / 验证码，通信基础设施</td><td>按条/分钟</td></tr>
+        <tr><td><b>Resend</b></td><td>邮件</td><td>API Key</td><td>开发者友好的邮件 API，React Email 集成，比 SendGrid 更现代</td><td>3000 封/月免费</td></tr>
+        <tr><td><b>SendGrid</b></td><td>邮件</td><td>Bearer Token</td><td>邮件发送 / 模板 / 营销自动化，Twilio 旗下</td><td>100 封/天免费</td></tr>
+        <tr><td><b>Slack</b></td><td>协作</td><td>OAuth 2</td><td>消息发送 / 频道管理 / 文件上传 / Slash 命令，团队通知</td><td>免费层充足</td></tr>
+        <tr><td><b>GitHub</b></td><td>开发工具</td><td>Token</td><td>Repo / Issue / PR / Actions / Packages / GraphQL API</td><td>5000 次/小时</td></tr>
+        <tr><td><b>Docker Hub</b></td><td>容器</td><td>Token</td><td>镜像搜索 / 构建 / Webhook，Docker 官方 Registry</td><td>免费</td></tr>
+        <tr><td><b>Cloudflare</b></td><td>CDN / Edge</td><td>API Key</td><td>DNS / 缓存 / WAF / Workers / R2 / D1，边缘计算全栈</td><td>免费层充足</td></tr>
+        <tr><td><b>Supabase</b></td><td>BaaS</td><td>API Key</td><td>PostgreSQL / Auth / Storage / Realtime / Edge Functions，开源 Firebase 替代</td><td>免费层</td></tr>
+        <tr><td><b>Vercel</b></td><td>部署</td><td>Token</td><td>项目部署 / 预览 / 域名管理 / Edge Functions / Analytics</td><td>免费层</td></tr>
+        <tr><td><b>Notion</b></td><td>知识管理</td><td>OAuth 2</td><td>数据库 / 页面 / 评论 / 用户管理，文档自动化</td><td>免费</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>案例展示与解析 <span class="hint">API 组合 + 成本与降级</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>💳 付费 AI 工具 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>一个 AI 写作 SaaS，要对用量收费、处理订阅与退款。</p>
+        <p><b>选型：</b><b>OpenAI</b>(生成) + <b>Stripe</b>(支付/订阅/Webhook)。</p>
+        <p><b>步骤：</b>① 用户订阅→Stripe 创建 Customer+订阅 ② <code>checkout.session.completed</code> Webhook 开通权限 ③ 调用按量计费 ④ 退款走 Stripe API。</p>
+        <p><b>解析：</b>Stripe Webhook 是「事件驱动开通」的关键，别在前端信任支付成功；用 <a href="playbook.html">密钥安全</a> 把 Stripe Key 存环境变量。</p>
+      </div>
+      <div class="result">
+        <h4>📚 知识库后端 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>给 RAG 应用接「抓取网页+向量存储+生成」的完整链路。</p>
+        <p><b>选型：</b><b>Claude</b>(生成) + <b>pgvector/Supabase</b>(向量) + <b>Jina Reader</b>(网页转 Markdown)。</p>
+        <p><b>步骤：</b>① Jina Reader 把 URL 转干净 Markdown ② 切块 Embedding 入 pgvector ③ Claude 基于检索片段回答 ④ Supabase 托管省运维。</p>
+        <p><b>解析：</b>Jina Reader 省去自写爬虫/清洗；Supabase 把 PG+Auth+存储打包，RAG 一站到位。对应 <a href="models.html#cases">模型案例</a>「企业 RAG」。</p>
+      </div>
+      <div class="result">
+        <h4>🎙 语音转录 + 配音 <span class="status badge b-ok">入门</span></h4>
+        <p><b>场景：</b>把会议录音转文字并生成多语言摘要配音。</p>
+        <p><b>选型：</b><b>Whisper</b>(本地转写) + <b>OpenAI TTS / CosyVoice</b>(合成) + <b>Cloudflare R2</b>(存音频)。</p>
+        <p><b>步骤：</b>① Whisper 本地转写(隐私/免费) ② LLM 翻成目标语言 ③ TTS 合成语音 ④ 存 R2 返回 URL。</p>
+        <p><b>解析：</b>本地 Whisper 不传音频到第三方，合规友好；R2 比 S3 免出站流量费，适合音视频托管。<a href="stacks.html">技术栈</a>「Cloudflare」详述。</p>
+      </div>
+      <div class="result">
+        <h4>🧩 API 组合与降级 <span class="status badge b-ok">深度</span></h4>
+        <p><b>原则：</b>主模型 + 兜底模型 + 缓存 + 限流，避免单点故障与账单失控。</p>
+        <p><b>步骤：</b>① 主用 DeepSeek/Claude，超时/限流降级到本地 Ollama ② 高频问答加 Redis 缓存 ③ 用 <a href="apis.html">GitHub API</a> 限流头做客户端节流。</p>
+        <p><b>解析：</b>「降级」是生产级 AI 应用的必备设计——主 API 抖动时用户无感。这也是 <a href="ai-coding.html">AI 编码</a>「成本控制」的落地。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>后续计划：</strong>API 速率限制对比、SDK 语言支持矩阵、Webhook/Streaming 支持情况、vibecoding 场景下的 API 组合推荐（如 RAG = OpenAI + Pinecone + Jina Reader）。本页「案例展示与解析」已于 v2.19 补充。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · 公共 API 目录 · v3.5 已上线 · <a href="hub.html" style="color:var(--muted)">返回枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='apis.html',enPage='apis_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>模型中心 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html" class="active">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html">API</a>
+    <a href="roadmap.html">规划</a>
+  <a href="pathway.html">进阶</a> <a href="search.html">🔍 搜索</a></span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🤖 模型中心</h1>
+    <p>预训练模型注册与对比 · 按平台 / 任务类型 / 部署方式分类 · 覆盖 LLM / 视觉 / 语音 / 多模态</p>
+  </div>
+
+  <div class="section">
+    <h2>模型平台 <span class="hint">主流模型托管与分发平台</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">平台</th><th style="width:10%">类型</th><th>说明</th><th style="width:12%">部署方式</th><th style="width:10%">许可证</th></tr></thead>
+      <tbody>
+        <tr><td><b>HuggingFace</b></td><td>开源模型库</td><td>全球最大的开源模型托管平台，50 万+ 模型，支持 Transformers / Diffusers / PEFT 等生态，Hub + Inference API + Spaces</td><td>云端 / 本地</td><td>Apache 2.0 (框架)</td></tr>
+        <tr><td><b>ModelScope</b></td><td>开源模型库</td><td>阿里达摩院模型社区，中文模型丰富（Qwen / ChatGLM / Baichuan），兼容 HuggingFace 接口</td><td>云端 / 本地</td><td>Apache 2.0</td></tr>
+        <tr><td><b>OpenAI API</b></td><td>闭源 API</td><td>GPT-4o / o1 / o3 / DALL·E 3 / Whisper / TTS，行业标杆，Function Calling / Assistants API / Batch API</td><td>仅 API</td><td>商用</td></tr>
+        <tr><td><b>Anthropic API</b></td><td>闭源 API</td><td>Claude 3.5 Sonnet / Opus / Haiku，200K 上下文窗口，Tool Use / Vision / Prompt Caching</td><td>仅 API</td><td>商用</td></tr>
+        <tr><td><b>Google Gemini</b></td><td>闭源 API</td><td>Gemini 2.0 Flash / Pro / Ultra，原生多模态（文本+图像+音频+视频），1M+ 上下文</td><td>API / Vertex AI</td><td>商用</td></tr>
+        <tr><td><b>Ollama</b></td><td>本地运行</td><td>一键本地部署开源 LLM（Llama 3 / Qwen / Mistral / Phi-3），跨平台，REST API + CLI</td><td>本地</td><td>MIT</td></tr>
+        <tr><td><b>vLLM</b></td><td>推理引擎</td><td>高吞吐 LLM 推理引擎，PagedAttention 优化，支持张量并行 / 量化 / 流式输出，兼容 OpenAI API</td><td>本地 / 云端</td><td>Apache 2.0</td></tr>
+        <tr><td><b>Replicate</b></td><td>云端推理</td><td>按次付费的模型推理平台，一键部署任意开源模型，支持 GPU 自动扩缩容</td><td>仅 API</td><td>商用</td></tr>
+        <tr><td><b>Together AI</b></td><td>云端推理</td><td>开源 LLM 托管平台，Llama / Qwen / DeepSeek 等模型 API，支持 Fine-tuning</td><td>仅 API</td><td>商用</td></tr>
+        <tr><td><b>llama.cpp</b></td><td>本地推理</td><td>C++ 实现的 LLaMA 推理库，GGUF 量化格式，CPU/GPU 混合推理，极低资源消耗</td><td>本地</td><td>MIT</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>按任务类型分类 <span class="hint">模型能力矩阵</span></h2>
+    <table>
+      <thead><tr><th style="width:14%">任务类型</th><th style="width:22%">代表模型</th><th>典型应用场景</th><th style="width:14%">推荐入门</th></tr></thead>
+      <tbody>
+        <tr><td><b>💬 LLM 对话</b></td><td>GPT-4o / Claude 3.5 / Llama 3.1 / Qwen 2.5 / DeepSeek V3</td><td>聊天助手 / 代码生成 / 文档摘要 / 翻译 / 问答系统</td><td>Ollama + Llama 3.1</td></tr>
+        <tr><td><b>👁 视觉理解</b></td><td>GPT-4o Vision / Claude 3.5 Vision / LLaVA / Qwen-VL</td><td>图像描述 / OCR / 图表理解 / 视觉问答 / 缺陷检测</td><td>LLaVA (本地)</td></tr>
+        <tr><td><b>🎨 图像生成</b></td><td>Stable Diffusion 3 / DALL·E 3 / FLUX / Midjourney</td><td>文生图 / 图生图 / Inpainting / 风格迁移 / Logo 设计</td><td>SD WebUI / ComfyUI</td></tr>
+        <tr><td><b>🎙 语音识别</b></td><td>Whisper / Paraformer / SenseVoice</td><td>语音转文字 / 会议纪要 / 字幕生成 / 实时翻译</td><td>Whisper (本地)</td></tr>
+        <tr><td><b>🔊 语音合成</b></td><td>OpenAI TTS / ChatTTS / CosyVoice / Bark</td><td>文字转语音 / 有声书 / 虚拟人配音 / 多语言播报</td><td>CosyVoice</td></tr>
+        <tr><td><b>🔗 多模态</b></td><td>GPT-4o / Gemini 2.0 / Qwen-Omni</td><td>图文混合输入 / 视频理解 / 跨模态检索 / 多模态推理</td><td>Gemini API</td></tr>
+        <tr><td><b>📐 Embedding</b></td><td>text-embedding-3 / BGE / GTE / Jina</td><td>语义搜索 / RAG 检索 / 聚类分析 / 相似度匹配</td><td>BGE-large (本地)</td></tr>
+        <tr><td><b>🎯 重排序</b></td><td>Cohere Rerank / BGE-Reranker / Jina Reranker</td><td>RAG 二阶段检索 / 搜索结果优化 / 推荐排序</td><td>BGE-Reranker</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>部署方式对比 <span class="hint">选型参考</span></h2>
+    <table>
+      <thead><tr><th style="width:16%">方式</th><th style="width:12%">延迟</th><th style="width:12%">成本</th><th style="width:12%">隐私</th><th>适用场景</th></tr></thead>
+      <tbody>
+        <tr><td><b>闭源 API</b> (OpenAI/Claude)</td><td>低 (200-800ms)</td><td>按 Token 计费</td><td>数据上传第三方</td><td>快速原型 / 非敏感数据 / 需要最强能力</td></tr>
+        <tr><td><b>开源 API</b> (Together/Replicate)</td><td>中 (300-1200ms)</td><td>按次/小时计费</td><td>数据上传第三方</td><td>需要开源模型 / 成本敏感 / 弹性扩缩</td></tr>
+        <tr><td><b>本地 GPU</b> (vLLM/Ollama)</td><td>极低 (10-100ms)</td><td>硬件一次性投入</td><td>完全私有</td><td>敏感数据 / 高频调用 / 离线场景</td></tr>
+        <tr><td><b>本地 CPU</b> (llama.cpp)</td><td>高 (500-5000ms)</td><td>零额外成本</td><td>完全私有</td><td>无 GPU / 轻量模型 / 边缘设备</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="cases">
+    <h2>案例展示与解析 <span class="hint">真实选型决策与权衡</span></h2>
+    <div class="results">
+      <div class="result">
+        <h4>💬 客服问答机器人 <span class="status badge b-ok">入门</span></h4>
+        <p><b>场景：</b>电商站需要 7×24 自动回答物流 / 退换货问题，日均约 2 万次咨询，含订单查询等敏感操作。</p>
+        <p><b>选型：</b>通用问题用 <b>Claude Haiku</b>（便宜、200K 上下文）承接 80%；涉及用户订单时切到 <b>Ollama + Llama 3.1</b> 本地部署，数据不出内网。</p>
+        <p><b>步骤：</b>① 用 Claude 写 FAQ 抽取脚本 ② 接 Function Calling 查订单 API ③ 成本敏感走 Haiku、隐私问题走本地，做「成本感知路由」。</p>
+        <p><b>解析：</b>闭源 API 延迟低但按 Token 计费，2 万次/日量级月成本可控；纯本地隐私最佳但需 GPU。混合路由兼顾两者——正是 <a href="ai-coding.html">AI 编码</a>「成本感知路由」的落地。</p>
+      </div>
+      <div class="result">
+        <h4>📚 企业 RAG 知识库 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>把 5 万份内部文档变成可问答的知识库，要求答案有出处、不胡编。</p>
+        <p><b>选型：</b><b>BGE-large</b> 本地 Embedding（数据不出域）+ <b>Cohere Rerank</b> 二阶段精排 + <b>GPT-4o</b> 生成；向量存 <b>pgvector</b>。</p>
+        <p><b>步骤：</b>① 文档切块(512 token)→BGE 向量化入 pgvector ② 召回 Top-20→Cohere 重排取 Top-5 ③ 拼「仅基于下文回答」Prompt 让 GPT-4o 生成并附引用。</p>
+        <p><b>解析：</b>单阶段向量检索召回率有限，加 Reranker 后答案相关性显著提升；Embedding 用本地模型既省钱又满足合规。<a href="apis.html">API</a>「Cohere」与 <a href="stacks.html">技术栈</a>「pgvector」在此组合。</p>
+      </div>
+      <div class="result">
+        <h4>🖼 多模态内容审核 <span class="status badge b-ok">进阶</span></h4>
+        <p><b>场景：</b>UGC 平台需同时理解图文（用户配文 + 图片）判断是否违规，峰值 QPS 高。</p>
+        <p><b>选型：</b>常规图文用 <b>Gemini 2.0 Flash</b>（便宜、1M 上下文、原生多模态）；疑难长图/视频帧用 <b>GPT-4o</b> 兜底。</p>
+        <p><b>步骤：</b>① 图片+文本拼成一个多模态请求 ② 路由：短内容走 Gemini Flash、长上下文走 Gemini Pro、争议样本走 GPT-4o 人工复核队列。</p>
+        <p><b>解析：</b>多模态模型原生支持图文混合输入，比「OCR+LLM」两段式更简单；用 <a href="models.html#deploy">部署方式对比</a> 的思路做按难度路由，把贵模型留给难样本。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>后续计划：</strong>模型对比基准（MMLU / HumanEval / MT-Bench）、按显存推荐模型表、微调工具链（LoRA / QLoRA / DPO）指南、模型量化方案对比（GGUF / AWQ / GPTQ）。本页「案例展示与解析」已于 v2.19 补充。
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · 模型中心 · v3.1 已上线 · <a href="hub.html" style="color:var(--muted)">返回枢纽</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='models.html',enPage='models_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全局搜索 · Vibecoding 资源枢纽</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding 资源枢纽</span>
+  <span class="links">
+    <a href="hub.html">枢纽</a>
+    <a href="datasets.html">数据集</a>
+    <a href="models.html">模型</a>
+    <a href="stacks.html">技术栈</a>
+    <a href="ai-coding.html">AI 编码</a>
+    <a href="agents.html">智能体</a>
+    <a href="templates.html">模板</a>
+    <a href="apis.html">API</a>
+    <a href="playbook.html">实战</a>
+    <a href="pathway.html">进阶</a>
+    <a href="roadmap.html">规划</a>
+    <a href="search.html" class="active">🔍 搜索</a>
+  </span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1 id="hero-t">🔍 全局搜索</h1>
+    <p id="hero-p">跨 8 个子站 + 661 个 Kaggle 数据集统一检索 · 纯前端、零后端、数据不入库</p>
+  </div>
+
+  <div class="section">
+    <div class="search-box">
+      <input id="q" type="search" placeholder="输入关键词，如 React / RAG / 糖尿病 / 智能体 / 模板…" autocomplete="off" />
+      <div class="search-filters" id="filters">
+        <button data-f="all" class="active">全部</button>
+        <button data-f="dataset">数据集</button>
+        <button data-f="sub">子站资源</button>
+      </div>
+    </div>
+    <div id="stats" class="muted" style="margin:10px 2px;"></div>
+    <div id="results"></div>
+    <div id="empty" class="empty" style="display:none;">
+      <p id="empty-p">未找到匹配项。试试更短的关键词，或切换筛选（全部 / 数据集 / 子站资源）。</p>
+    </div>
+  </div>
+</div>
+
+<footer>Vibecoding 资源枢纽 · 全局搜索 · v2.18 已上线 · 数据不入库 · 凭证存钥匙串 · <a href="hub.html" style="color:var(--muted)">返回枢纽</a></footer>
+
+<script src="data/catalog.js"></script>
+<script src="data/search_index.js"></script>
+<script src="lang.js"></script>
+<script>
+(function () {
+  var CATALOG = window.CATALOG || { items: [] };
+  var INDEX = window.SEARCH_INDEX || [];
+  var qEl = document.getElementById('q');
+  var resultsEl = document.getElementById('results');
+  var statsEl = document.getElementById('stats');
+  var emptyEl = document.getElementById('empty');
+  var filtersEl = document.getElementById('filters');
+  var activeFilter = 'all';
+
+  // 双语 UI 文案（按 window.LANG 切换；索引条目带 g 字段按语言过滤）
+  var lang = (window.LANG === 'en') ? 'en' : 'zh';
+  var dict = {
+    zh: {
+      hero_t: '🔍 全局搜索',
+      hero_p: '跨 8 个子站 + 661 个 Kaggle 数据集统一检索 · 纯前端、零后端、数据不入库',
+      ph: '输入关键词，如 React / RAG / 糖尿病 / 智能体 / 模板…',
+      all: '全部', dataset: '数据集', sub: '子站资源',
+      empty: '未找到匹配项。试试更短的关键词，或切换筛选（全部 / 数据集 / 子站资源）。',
+      g_ds: '📊 数据集', g_sub: '🧩 子站资源',
+      local: '本地含数据', remote: '远程',
+      matched: function (n, d, s) { return '匹配 ' + n + ' 条（数据集 ' + d + ' · 子站资源 ' + s + '）'; },
+      total: function (n, d, s) { return '共 ' + n + ' 条可检索（数据集 ' + d + ' · 子站资源 ' + s + '）· 输入关键词开始检索'; }
+    },
+    en: {
+      hero_t: '🔍 Global Search',
+      hero_p: 'Search 8 hub sub-sites + 661 Kaggle datasets · pure front-end, zero backend, no data hosted',
+      ph: 'Keywords, e.g. React / RAG / diabetes / agent / template…',
+      all: 'All', dataset: 'Datasets', sub: 'Hub resources',
+      empty: 'No matches. Try a shorter keyword, or switch the filter (All / Datasets / Hub resources).',
+      g_ds: '📊 Datasets', g_sub: '🧩 Hub resources',
+      local: 'local data included', remote: 'remote',
+      matched: function (n, d, s) { return n + ' matches (datasets ' + d + ' · hub resources ' + s + ')'; },
+      total: function (n, d, s) { return n + ' entries searchable (datasets ' + d + ' · hub resources ' + s + ') · type to search'; }
+    }
+  };
+  var T = dict[lang];
+  document.getElementById('hero-t').textContent = T.hero_t;
+  document.getElementById('hero-p').textContent = T.hero_p;
+  document.getElementById('empty-p').textContent = T.empty;
+  qEl.placeholder = T.ph;
+  filtersEl.querySelector('[data-f="all"]').textContent = T.all;
+  filtersEl.querySelector('[data-f="dataset"]').textContent = T.dataset;
+  filtersEl.querySelector('[data-f="sub"]').textContent = T.sub;
+
+  // 构建统一检索索引
+  var idx = [];
+  // 数据集
+  (CATALOG.items || []).forEach(function (it) {
+    idx.push({
+      type: 'dataset',
+      title: it.title || it.ref,
+      ref: it.ref,
+      dom: (it.domains || []).join(' '),
+      url: 'dataset.html?id=' + encodeURIComponent(it.ref),
+      sub: (it.local ? T.local : T.remote) + (it.size ? ' · ' + it.size : '')
+    });
+  });
+  // 子站资源（按当前语言过滤 g 字段）
+  INDEX.forEach(function (e) {
+    if (e.g && e.g !== lang) return;
+    idx.push({
+      type: 'sub',
+      title: e.t,
+      cat: e.c,
+      sec: e.s,
+      url: e.p,
+      dom: e.d || '',
+      sub: e.c + (e.s ? ' · ' + e.s : '')
+    });
+  });
+
+  function scoreItem(item, q) {
+    var s = 0;
+    var title = (item.title || '').toLowerCase();
+    var hay = (title + ' ' + (item.dom || '') + ' ' + (item.cat || '') + ' ' + (item.sec || '')).toLowerCase();
+    if (title.indexOf(q) === 0) s += 5;          // 标题前缀
+    else if (title.indexOf(q) > -1) s += 3;      // 标题包含
+    if (item.type === 'dataset' && item.dom && item.dom.toLowerCase().indexOf(q) > -1) s += 2; // 领域匹配
+    if (item.type === 'sub' && hay.indexOf(q) > -1) s += 1; // 章节/分类匹配
+    return s;
+  }
+
+  function highlight(text, q) {
+    if (!q) return text;
+    var i = text.toLowerCase().indexOf(q);
+    if (i < 0) return text;
+    return text.slice(0, i) + '<mark>' + text.slice(i, i + q.length) + '</mark>' + text.slice(i + q.length);
+  }
+
+  function render() {
+    var q = (qEl.value || '').trim().toLowerCase();
+    var list = idx;
+    if (activeFilter !== 'all') list = list.filter(function (x) { return x.type === activeFilter; });
+    if (q) {
+      list = list.map(function (x) { return { x: x, s: scoreItem(x, q) }; })
+                 .filter(function (o) { return o.s > 0; })
+                 .sort(function (a, b) { return b.s - a.s; })
+                 .map(function (o) { return o.x; });
+    } else {
+      list = list.slice(); // 无关键词时展示全部（按类型）
+    }
+    list = list.slice(0, 80);
+
+    if (!list.length) {
+      resultsEl.innerHTML = '';
+      emptyEl.style.display = 'block';
+      statsEl.textContent = '';
+      return;
+    }
+    emptyEl.style.display = 'none';
+
+    var html = '';
+    var shown = 0;
+    // 分组：数据集 / 子站资源
+    var groups = [
+      { key: 'dataset', label: T.g_ds, items: list.filter(function (x) { return x.type === 'dataset'; }) },
+      { key: 'sub', label: T.g_sub, items: list.filter(function (x) { return x.type === 'sub'; }) }
+    ];
+    groups.forEach(function (g) {
+      if (!g.items.length) return;
+      html += '<div class="res-group"><h3>' + g.label + ' <span class="cnt">' + g.items.length + '</span></h3>';
+      g.items.forEach(function (x) {
+        shown++;
+        var icon = x.type === 'dataset' ? '📊' : '🧩';
+        html += '<a class="res" href="' + x.url + '">' +
+                  '<span class="res-ic">' + icon + '</span>' +
+                  '<span class="res-main">' +
+                    '<span class="res-t">' + highlight(x.title, q) + '</span>' +
+                    '<span class="res-sub">' + highlight(x.sub, q) + '</span>' +
+                  '</span>' +
+                '</a>';
+      });
+      html += '</div>';
+    });
+
+    resultsEl.innerHTML = html;
+    var totalDs = idx.filter(function (x) { return x.type === 'dataset'; }).length;
+    var totalSub = idx.filter(function (x) { return x.type === 'sub'; }).length;
+    statsEl.textContent = q
+      ? T.matched(shown, totalDs, totalSub)
+      : T.total(totalDs + totalSub, totalDs, totalSub);
+  }
+
+  qEl.addEventListener('input', render);
+  filtersEl.addEventListener('click', function (e) {
+    if (e.target && e.target.dataset.f) {
+      activeFilter = e.target.dataset.f;
+      Array.prototype.forEach.call(filtersEl.children, function (b) { b.classList.remove('active'); });
+      e.target.classList.add('active');
+      render();
+    }
+  });
+
+  // 支持 ?q= 直达
+  var params = new URLSearchParams(location.search);
+  var init = params.get('q');
+  if (init) qEl.value = init;
+  render();
+  qEl.focus();
+})();
+</script>
+<script src="theme.js"></script>
+<script>
+/* 搜索页语言切换：文案与索引均按语言构建，切换后整页重载最简可靠 */
+window.setLang = function (l) { localStorage.setItem('lang', l); location.reload(); };
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibecoding Hub · Project Portal</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<style>
+  .hub-nav { gap: 10px; }
+  .hub-nav a { font-size: 13px; }
+  .sub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .sub-card {
+    display: block; background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 20px 18px; box-shadow: var(--shadow);
+    transition: .15s; color: var(--ink); text-decoration: none;
+    border-top: 4px solid var(--accent);
+  }
+  .sub-card:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(31,35,40,.12); }
+  .sub-card .icon { font-size: 32px; margin-bottom: 8px; }
+  .sub-card h3 { margin: 0 0 6px; font-size: 17px; color: var(--ink); }
+  .sub-card p { margin: 0 0 10px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .sub-card .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .sub-card .tags span { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+  .sub-card .status { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; margin-left: 6px; }
+  .vision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .vision-card { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
+  .vision-card h4 { margin: 0 0 6px; font-size: 14.5px; color: var(--accent); }
+  .vision-card p { margin: 0; font-size: 12.8px; color: var(--muted); line-height: 1.6; }
+  @media (max-width: 720px) { .sub-grid { grid-template-columns: 1fr; } .hub-nav { gap: 8px; } .hub-nav a { font-size: 12px; } }
+</style>
+</head>
+<body>
+<nav>
+  <span class="brand">🚀 Vibecoding Hub</span>
+  <span class="links hub-nav">
+    <a href="hub_en.html" class="active">Hub</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="models_en.html">Models</a>
+    <a href="stacks_en.html">Tech Stacks</a>
+    <a href="ai-coding_en.html">AI Coding</a>
+    <a href="agents_en.html">Agents</a>
+    <a href="templates_en.html">Templates</a>
+    <a href="apis_en.html">API</a>
+    <a href="playbook_en.html">Playbook</a>
+    <a href="pathway_en.html">Pathway</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="index.html">Kaggle Site</a>
+    <a href="search.html">🔍 Search</a>
+  </span>
+  <span id="lang-toggle"></span>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🚀 Vibecoding Hub</h1>
+    <p>A full-stack resource portal for the AI-assisted development era · Datasets / Models / Tech Stacks / AI Coding Tools / Agent Frameworks / Project Templates / Public APIs / Hands-on Cases</p>
+    <form class="hub-search" action="search.html" method="get">
+      <input type="search" name="q" placeholder="🔍 Search across the site: datasets / models / stacks / cases…" autocomplete="off" />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="num">9</div><div class="label">Sub-sites</div></div>
+    <div class="stat"><div class="num">661</div><div class="label">Datasets</div></div>
+    <div class="stat"><div class="num">50+</div><div class="label">Tech stacks</div></div>
+    <div class="stat"><div class="num">20+</div><div class="label">AI coding tools</div></div>
+    <div class="stat"><div class="num">15+</div><div class="label">Agent frameworks</div></div>
+    <div class="stat"><div class="num">100+</div><div class="label">Public APIs</div></div>
+    <div class="stat"><div class="num">4</div><div class="label">Pathways</div></div>
+  </div>
+
+  <div class="section">
+    <h2>Sub-site Navigation <span class="hint">click a card to enter the sub-site</span></h2>
+    <div class="sub-grid">
+
+      <a class="sub-card" href="datasets.html">
+        <div class="icon">📊</div>
+        <h3>Datasets Hub<span class="status badge b-ok">live</span></h3>
+        <p>661 public Kaggle datasets (13 local + 648 remote), nine-section card details + derived visualizations + real benchmark provenance. Where this project started.</p>
+        <div class="tags"><span>Kaggle</span><span>UCI</span><span>HuggingFace</span><span>OpenML</span></div>
+      </a>
+
+      <a class="sub-card" href="models_en.html">
+        <div class="icon">🤖</div>
+        <h3>Model Hub<span class="status badge b-ok">live</span></h3>
+        <p>Pretrained model registry &amp; comparison: HuggingFace / ModelScope / OpenAI / Anthropic / Google / Ollama, categorized by task type (LLM / vision / audio / multimodal).</p>
+        <div class="tags"><span>LLM</span><span>Vision</span><span>Audio</span><span>Local deployment</span></div>
+      </a>
+
+      <a class="sub-card" href="stacks_en.html">
+        <div class="icon">🏗</div>
+        <h3>Stack Encyclopedia<span class="status badge b-ok">live</span></h3>
+        <p>A panorama of mainstream development stacks: frontend / backend / database / DevOps / cloud platforms / AI·ML libraries, with selection advice &amp; comparisons.</p>
+        <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>K8s</span></div>
+      </a>
+
+      <a class="sub-card" href="ai-coding_en.html">
+        <div class="icon">🧠</div>
+        <h3>AI Coding Toolbox<span class="status badge b-ok">live</span></h3>
+        <p>Core vibecoding tools: GitHub Copilot / Cursor / Claude Code / Windsurf / Codeium, with prompt engineering patterns and AI-native development practices.</p>
+        <div class="tags"><span>Copilot</span><span>Cursor</span><span>Prompt</span><span>RAG</span></div>
+      </a>
+
+      <a class="sub-card" href="agents_en.html">
+        <div class="icon">🦾</div>
+        <h3>Agent Frameworks<span class="status badge b-ok">live</span></h3>
+        <p>AI agent development frameworks &amp; patterns: LangGraph / CrewAI / AutoGPT / BabyAGI, with design paradigms like ReAct / Plan-Execute / Tool Use.</p>
+        <div class="tags"><span>LangGraph</span><span>CrewAI</span><span>ReAct</span><span>Tool Use</span></div>
+      </a>
+
+      <a class="sub-card" href="templates_en.html">
+        <div class="icon">📐</div>
+        <h3>Project Templates<span class="status badge b-ok">live</span></h3>
+        <p>Ready-to-use project scaffolds for the vibecoding era: full-stack / AI apps / data pipelines / API services, with one-click starter configs.</p>
+        <div class="tags"><span>Next.js</span><span>RAG</span><span>ETL</span><span>Microservice</span></div>
+      </a>
+
+      <a class="sub-card" href="apis_en.html">
+        <div class="icon">🔌</div>
+        <h3>Public API Directory<span class="status badge b-ok">live</span></h3>
+        <p>Public APIs commonly used in development: AI/LLM / data / payments / comms / developer tools, with auth methods, quotas, and pricing references.</p>
+        <div class="tags"><span>OpenAI</span><span>Stripe</span><span>GitHub</span><span>Twilio</span></div>
+      </a>
+
+      <a class="sub-card" href="playbook_en.html">
+        <div class="icon">🎯</div>
+        <h3>Playbook: Cases &amp; Best Practices<span class="status badge b-ok">live</span></h3>
+        <p>6 beginner-friendly cases (blog / RAG / dashboard / extension / weekly-report agent / bot) + 7 reusable vibecoding principles.</p>
+        <div class="tags"><span>Beginner cases</span><span>Best practices</span><span>Spec-first</span><span>Security</span></div>
+      </a>
+
+      <a class="sub-card" href="pathway_en.html">
+        <div class="icon">🧭</div>
+        <h3>Project Pathways<span class="status badge b-ok">live</span></h3>
+        <p>The 8 resources strung into an executable roadmap: a universal 8-stage pipeline + 4 typical paths (beginner / data science / AI apps / full-stack), each step pointing to a sub-site.</p>
+        <div class="tags"><span>Progression</span><span>Path picking</span><span>Pipeline</span><span>vibecoding</span></div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>The Vibecoding Era <span class="hint">why this hub exists</span></h2>
+    <div class="vision-grid">
+      <div class="vision-card">
+        <h4>📋 What is Vibecoding</h4>
+        <p>Coined by Andrej Karpathy, it is a development paradigm where you describe requirements in natural language and AI generates the code. Developers shift from "writing code" to "describing intent + reviewing code".</p>
+      </div>
+      <div class="vision-card">
+        <h4>🎯 Hub Positioning</h4>
+        <p>A one-stop resource portal: data → models → stacks → coding tools → agents → templates → APIs → playbook, covering the entire AI-assisted development lifecycle and reducing context switching.</p>
+      </div>
+      <div class="vision-card">
+        <h4>🔄 Relationship with the Kaggle Site</h4>
+        <p>The existing Kaggle dataset site (<a href="index.html">index.html</a>) serves as the hub's "Datasets Hub" sub-site, live since v2.14; all other sub-sites went live with v2.16.</p>
+      </div>
+      <div class="vision-card">
+        <h4>📋 Version Roadmap</h4>
+        <p>v2.15 English internal beta + hub launch → v2.16 product homepage + all sub-sites live (incl. playbook) → v3.0 deep polish → v4.0 deployment. See <a href="roadmap.html">Version Roadmap</a>.</p>
+      </div>
+      <div class="vision-card">
+        <h4>🔐 Security Constraints</h4>
+        <p>All credentials (Kaggle API / GitHub PAT) live in the macOS Keychain, never in the repo; raw data never enters the repo; user confirmation is required before pushing to GitHub.</p>
+      </div>
+      <div class="vision-card">
+        <h4>🌐 Bilingual Strategy</h4>
+        <p>Chinese-first with an English internal beta (access via <code>?beta=en</code>). The English version stays hidden from the frontend until the content is polished enough to go public.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Current status:</strong> Datasets Hub live since v2.14 (661 datasets + nine-section cards + visualizations + CN/EN bilingual infrastructure);
+    v2.15 kicked off the hub (English internal beta + token security); v2.16 product homepage + 7 sub-sites — Models / Tech Stacks / AI Coding / Agents / Templates / API / Playbook — all live;
+    v2.17 site-wide search; <strong>v2.18 Project Pathways</strong> (stringing the 9 sub-sites into 1 pipeline + 4 typical paths).
+    <strong>Not pushed to GitHub</strong>; in local development.
+  </div>
+</div>
+
+<footer>Vibecoding Hub · v2.18 live · no data hosted · credentials in keychain · <a href="roadmap.html" style="color:var(--muted)">Version Roadmap</a></footer>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script>
+(function(){
+  var zhPage='hub.html',enPage='hub_en.html';
+  var l=localStorage.getItem('lang')||'zh';
+  var isEn=location.pathname.indexOf('_en')>=0;
+  if(l==='en'&&!isEn){location.replace(enPage);return;}
+  if(l!=='en'&&isEn){location.replace(zhPage);return;}
+  window.setLang=function(c){localStorage.setItem('lang',c);location.href=(c==='en')?enPage:zhPage;};
+})();
+</script>
+<script src="theme.js"></script>
+</body>
+</html>
